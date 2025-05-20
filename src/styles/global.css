@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styling for the wiki */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+.prose {
+  @apply text-neutral-800 dark:text-neutral-200;
+  max-width: 65ch;
+}
+
+.prose h1 {
+  @apply text-2xl sm:text-3xl font-bold mt-8 mb-4 text-neutral-900 dark:text-white;
+}
+
+.prose h2 {
+  @apply text-xl sm:text-2xl font-semibold mt-8 mb-4 text-neutral-900 dark:text-white pb-2 border-b border-neutral-200 dark:border-neutral-800;
+}
+
+.prose h3 {
+  @apply text-lg sm:text-xl font-semibold mt-6 mb-3 text-neutral-900 dark:text-white;
+}
+
+.prose h4 {
+  @apply text-base sm:text-lg font-medium mt-5 mb-2 text-neutral-900 dark:text-white;
+}
+
+.prose p {
+  @apply my-4 leading-7;
+}
+
+.prose a {
+  @apply text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 no-underline hover:underline;
+}
+
+.prose ul {
+  @apply my-4 list-disc pl-6;
+}
+
+.prose ol {
+  @apply my-4 list-decimal pl-6;
+}
+
+.prose li {
+  @apply my-1;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-neutral-300 dark:border-neutral-700 pl-4 my-4 italic;
+}
+
+.prose img {
+  @apply my-4 rounded-lg;
+}
+
+.prose code {
+  @apply px-1.5 py-0.5 bg-neutral-100 dark:bg-neutral-800 rounded text-sm;
+}
+
+.prose pre {
+  @apply p-4 bg-neutral-100 dark:bg-neutral-800 rounded-lg overflow-x-auto text-sm my-4;
+}
+
+.prose pre code {
+  @apply bg-transparent p-0;
+}
+
+.prose table {
+  @apply w-full border-collapse my-4;
+}
+
+.prose thead {
+  @apply bg-neutral-100 dark:bg-neutral-800;
+}
+
+.prose th {
+  @apply border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left;
+}
+
+.prose td {
+  @apply border border-neutral-200 dark:border-neutral-700 px-4 py-2;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-neutral-100 dark:bg-neutral-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-neutral-300 dark:bg-neutral-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neutral-400 dark:bg-neutral-600;
+}
+
+/* Page transitions */
+main {
+  transition: opacity 0.2s ease;
+}
+
+/* Theme transition */
+html.transitioning * {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Container max width */
+.container {
+  @apply mx-auto max-w-7xl;
+}

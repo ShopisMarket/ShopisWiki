@@ -1,0 +1,165 @@
+---
+const currentPath = Astro.url.pathname;
+
+// Navigation structure
+const navigation = [
+  {
+    title: 'Getting Started',
+    items: [
+      { title: 'Introduction', href: '/' },
+      { title: 'What is Shoppland?', href: '/introduction/what-is-shoppland' },
+      { title: 'User Interface', href: '/introduction/user-interface' }
+    ]
+  },
+  {
+    title: 'User Guide',
+    items: [
+      { title: 'Creating an Account', href: '/user-guide/creating-an-account' },
+      { title: 'Browsing Products', href: '/user-guide/browsing-products' },
+      { title: 'Shopping Cart', href: '/user-guide/shopping-cart' },
+      { title: 'Checkout Process', href: '/user-guide/checkout-process' },
+      { title: 'Managing Orders', href: '/user-guide/managing-orders' }
+    ]
+  },
+  {
+    title: 'Features',
+    items: [
+      { title: 'Product Categories', href: '/features/product-categories' },
+      { title: 'Search Functionality', href: '/features/search-functionality' },
+      { title: 'Wishlists', href: '/features/wishlists' },
+      { title: 'Reviews and Ratings', href: '/features/reviews-and-ratings' },
+      { title: 'Promotions', href: '/features/promotions' }
+    ]
+  },
+  {
+    title: 'Seller Information',
+    items: [
+      { title: 'Becoming a Seller', href: '/seller-info/becoming-a-seller' },
+      { title: 'Product Management', href: '/seller-info/product-management' },
+      { title: 'Order Fulfillment', href: '/seller-info/order-fulfillment' },
+      { title: 'Analytics', href: '/seller-info/analytics' }
+    ]
+  },
+  {
+    title: 'Technical',
+    items: [
+      { title: 'API Documentation', href: '/technical/api-documentation' },
+      { title: 'System Requirements', href: '/technical/system-requirements' },
+      { title: 'Mobile App', href: '/technical/mobile-app' }
+    ]
+  }
+];
+
+// Helper to determine if a link is active
+const isActive = (href: string) => {
+  if (href === '/') {
+    return currentPath === '/';
+  }
+  return currentPath.startsWith(href);
+};
+---
+
+<aside class="hidden lg:block w-64 flex-shrink-0 border-r border-neutral-200 dark:border-neutral-800 h-[calc(100vh-4rem)] sticky top-16 overflow-y-auto py-6 pr-4">
+  <nav class="space-y-6">
+    {navigation.map((section) => (
+      <div>
+        <h3 class="text-sm font-medium text-neutral-500 dark:text-neutral-400 uppercase tracking-wider mb-2">
+          {section.title}
+        </h3>
+        <ul class="space-y-1">
+          {section.items.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class={`block px-3 py-2 text-sm rounded-md ${
+                  isActive(item.href)
+                    ? 'bg-primary-50 text-primary-700 dark:bg-primary-900/20 dark:text-primary-400 font-medium'
+                    : 'text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800'
+                }`}
+              >
+                {item.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </nav>
+</aside>
+
+<div class="lg:hidden fixed bottom-4 right-4 z-50">
+  <button
+    id="sidebar-toggle"
+    class="bg-primary-600 hover:bg-primary-700 dark:bg-primary-700 dark:hover:bg-primary-600 text-white rounded-full p-3 shadow-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900"
+    aria-label="Toggle navigation"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </button>
+</div>
+
+<div id="mobile-sidebar" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden" aria-hidden="true"></div>
+<div id="mobile-sidebar-panel" class="fixed inset-y-0 left-0 z-50 w-full max-w-xs bg-white dark:bg-neutral-900 shadow-xl transform -translate-x-full transition-transform duration-300 lg:hidden">
+  <div class="flex items-center justify-between p-4 border-b border-neutral-200 dark:border-neutral-800">
+    <h2 class="text-xl font-bold">Navigation</h2>
+    <button id="close-sidebar" class="p-2 rounded-md text-neutral-500 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+  
+  <nav class="p-4 overflow-y-auto h-[calc(100vh-4rem)]">
+    <div class="space-y-6">
+      {navigation.map((section) => (
+        <div>
+          <h3 class="text-sm font-medium text-neutral-500 dark:text-neutral-400 uppercase tracking-wider mb-2">
+            {section.title}
+          </h3>
+          <ul class="space-y-1">
+            {section.items.map((item) => (
+              <li>
+                <a
+                  href={item.href}
+                  class={`block px-3 py-2 text-sm rounded-md ${
+                    isActive(item.href)
+                      ? 'bg-primary-50 text-primary-700 dark:bg-primary-900/20 dark:text-primary-400 font-medium'
+                      : 'text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800'
+                  }`}
+                >
+                  {item.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </nav>
+</div>
+
+<script>
+  const sidebarToggle = document.getElementById('sidebar-toggle');
+  const closeSidebar = document.getElementById('close-sidebar');
+  const mobileSidebar = document.getElementById('mobile-sidebar');
+  const mobileSidebarPanel = document.getElementById('mobile-sidebar-panel');
+  
+  sidebarToggle?.addEventListener('click', () => {
+    mobileSidebar?.classList.remove('hidden');
+    mobileSidebarPanel?.classList.remove('-translate-x-full');
+    document.body.classList.add('overflow-hidden');
+  });
+  
+  const close = () => {
+    mobileSidebar?.classList.add('hidden');
+    mobileSidebarPanel?.classList.add('-translate-x-full');
+    document.body.classList.remove('overflow-hidden');
+  };
+  
+  closeSidebar?.addEventListener('click', close);
+  mobileSidebar?.addEventListener('click', close);
+</script>

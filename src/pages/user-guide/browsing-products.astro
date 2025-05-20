@@ -1,0 +1,207 @@
+---
+import WikiLayout from '../../layouts/WikiLayout.astro';
+import TableOfContents from '../../components/TableOfContents.astro';
+import InfoBox from '../../components/InfoBox.astro';
+
+const pageTitle = "Browsing Products";
+
+const headings = [
+  { depth: 2, slug: "navigation-basics", text: "Navigation Basics" },
+  { depth: 2, slug: "search-functionality", text: "Search Functionality" },
+  { depth: 3, slug: "basic-search", text: "Basic Search" },
+  { depth: 3, slug: "advanced-search", text: "Advanced Search" },
+  { depth: 2, slug: "browsing-categories", text: "Browsing Categories" },
+  { depth: 2, slug: "filters-and-sorting", text: "Filters and Sorting" },
+  { depth: 2, slug: "product-listings", text: "Product Listings" },
+  { depth: 2, slug: "product-details", text: "Product Details" },
+  { depth: 2, slug: "saving-products", text: "Saving Products for Later" }
+];
+---
+
+<WikiLayout title={pageTitle}>
+  <div class="flex justify-between items-center">
+    <h1 class="text-3xl font-bold mb-8">{pageTitle}</h1>
+    <div class="flex gap-2">
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        View history
+      </a>
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        Discussion
+      </a>
+    </div>
+  </div>
+
+  <TableOfContents headings={headings} />
+
+  <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-6">
+    Shoppland offers multiple ways to discover and browse products. This guide explains the various navigation and browsing features available to help you find exactly what you're looking for.
+  </p>
+
+  <h2 id="navigation-basics">Navigation Basics</h2>
+  <p>
+    The Shoppland interface is designed to make navigation intuitive and efficient. The main navigation elements include:
+  </p>
+  <ul>
+    <li><strong>Header Bar</strong>: Contains the search bar, account menu, cart icon, and main category navigation</li>
+    <li><strong>Main Menu</strong>: Accessible via the menu icon, showing all product categories and special sections</li>
+    <li><strong>Homepage Sections</strong>: Featured products, deals, and category shortcuts</li>
+    <li><strong>Footer</strong>: Links to help resources, company information, and legal pages</li>
+  </ul>
+
+  <p>
+    For mobile users, the navigation adapts to provide a streamlined experience optimized for smaller screens, with 
+    the main menu accessible through a hamburger icon and a simplified header.
+  </p>
+
+  <h2 id="search-functionality">Search Functionality</h2>
+  
+  <h3 id="basic-search">Basic Search</h3>
+  <p>
+    The search bar is prominently located at the top of every page on Shoppland. To perform a basic search:
+  </p>
+  <ol>
+    <li>Click or tap on the search bar</li>
+    <li>Type in keywords related to the product you're looking for</li>
+    <li>Press Enter or tap the search icon</li>
+    <li>Browse the search results displayed on the results page</li>
+  </ol>
+
+  <InfoBox type="success" title="Search Tips">
+    For more effective searches, try using specific product names, brands, or model numbers. The search system also recognizes common misspellings and provides suggestions.
+  </InfoBox>
+
+  <h3 id="advanced-search">Advanced Search</h3>
+  <p>
+    For more refined searches, Shoppland offers advanced search options:
+  </p>
+  <ol>
+    <li>Click on the "Advanced" link next to the search bar</li>
+    <li>Specify parameters such as:
+      <ul>
+        <li>Price range</li>
+        <li>Brand</li>
+        <li>Category</li>
+        <li>Customer rating</li>
+        <li>Shipping options</li>
+        <li>Special deals</li>
+      </ul>
+    </li>
+    <li>Click "Search" to see results matching your criteria</li>
+  </ol>
+
+  <h2 id="browsing-categories">Browsing Categories</h2>
+  <p>
+    Shoppland organizes products into intuitive categories and subcategories:
+  </p>
+  <ol>
+    <li>Access categories through the main menu or category bar on the homepage</li>
+    <li>Click on a main category (e.g., Electronics, Fashion, Home) to see subcategories</li>
+    <li>Navigate through subcategories to narrow down your browsing</li>
+    <li>Use breadcrumb navigation at the top of category pages to track your location and move back up the hierarchy</li>
+  </ol>
+
+  <div class="my-6 border border-neutral-200 dark:border-neutral-800 rounded-lg overflow-hidden">
+    <img 
+      src="https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+      alt="Product categories on e-commerce website"
+      class="w-full h-auto"
+      loading="lazy"
+    />
+    <div class="p-3 text-sm text-neutral-600 dark:text-neutral-400 bg-neutral-50 dark:bg-neutral-800">
+      Shoppland's category navigation system makes it easy to browse through different product types.
+    </div>
+  </div>
+
+  <h2 id="filters-and-sorting">Filters and Sorting</h2>
+  <p>
+    Once you're viewing products in a category or search results, you can refine your view using filters and sorting options:
+  </p>
+  <ul>
+    <li>
+      <strong>Filters</strong>: Located in the sidebar, filters allow you to narrow down products by specific attributes:
+      <ul>
+        <li>Price range</li>
+        <li>Brand</li>
+        <li>Size/dimensions</li>
+        <li>Color</li>
+        <li>Rating</li>
+        <li>Product-specific attributes (e.g., screen size for TVs, material for clothing)</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Sorting</strong>: At the top of the product list, sorting options include:
+      <ul>
+        <li>Price (low to high or high to low)</li>
+        <li>Relevance</li>
+        <li>Best sellers</li>
+        <li>Customer rating</li>
+        <li>Newest arrivals</li>
+      </ul>
+    </li>
+  </ul>
+
+  <InfoBox type="info" title="Filter Combinations">
+    You can apply multiple filters simultaneously to find exactly what you're looking for. Active filters will appear at the top of the results and can be removed individually.
+  </InfoBox>
+
+  <h2 id="product-listings">Product Listings</h2>
+  <p>
+    In category and search result pages, products are displayed in a grid format. Each product listing includes:
+  </p>
+  <ul>
+    <li>Product image</li>
+    <li>Product name</li>
+    <li>Price (and original price if on sale)</li>
+    <li>Average rating and number of reviews</li>
+    <li>Quick action buttons (add to cart, add to wishlist)</li>
+    <li>Shipping information (free shipping icon, delivery estimate)</li>
+    <li>Special badges (e.g., "Best Seller", "New", "Sale")</li>
+  </ul>
+  <p>
+    You can switch between grid view and list view using the view toggle buttons at the top of the product listings. 
+    List view provides more detailed information about each product without requiring you to click through to the product page.
+  </p>
+
+  <h2 id="product-details">Product Details</h2>
+  <p>
+    Clicking on a product takes you to its detailed page, which contains comprehensive information:
+  </p>
+  <ul>
+    <li>Multiple product images and sometimes videos</li>
+    <li>Complete product description</li>
+    <li>Technical specifications</li>
+    <li>Price information, including any applicable discounts</li>
+    <li>Shipping and return policy details</li>
+    <li>Seller information</li>
+    <li>Customer reviews and ratings</li>
+    <li>Related products</li>
+    <li>Buying options (quantity, color, size, etc.)</li>
+    <li>Add to cart and wishlist buttons</li>
+  </ul>
+  <p>
+    The product details page is designed to provide all the information you need to make an informed purchase decision.
+  </p>
+
+  <h2 id="saving-products">Saving Products for Later</h2>
+  <p>
+    Shoppland offers several ways to save products for future reference:
+  </p>
+  <ul>
+    <li>
+      <strong>Wishlist</strong>: Add items to your wishlist by clicking the heart icon on product listings or product 
+      detail pages. Access your wishlist from the account menu.
+    </li>
+    <li>
+      <strong>Save for Later</strong>: When viewing your cart, you can move items to "Save for Later" if you're not 
+      ready to purchase them yet but want to keep track of them.
+    </li>
+    <li>
+      <strong>Collections</strong>: Create custom collections (e.g., "Gift Ideas", "Home Renovation") and add products 
+      to organize your saved items.
+    </li>
+  </ul>
+
+  <InfoBox type="warning" title="Account Required">
+    To save products using wishlists and collections, you need to be signed in to your Shoppland account. If you're browsing while signed out, you'll be prompted to sign in when attempting to save items.
+  </InfoBox>
+</WikiLayout>
