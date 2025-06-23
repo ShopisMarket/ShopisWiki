@@ -1,0 +1,160 @@
+---
+import WikiLayout from '../../layouts/WikiLayout.astro';
+import TableOfContents from '../../components/TableOfContents.astro';
+import InfoBox from '../../components/InfoBox.astro';
+
+const pageTitle = "Introduction to Shoppis";
+
+const headings = [
+  { depth: 2, slug: "welcome", text: "Welcome to Shoppis" },
+  { depth: 2, slug: "first-steps", text: "Your First Steps" },
+  { depth: 2, slug: "core-concepts", text: "Core Concepts" },
+  { depth: 2, slug: "getting-help", text: "Getting Help" }
+];
+---
+
+<WikiLayout title={pageTitle}>
+  <div class="flex justify-between items-center">
+    <h1 class="text-3xl font-bold mb-8">{pageTitle}</h1>
+    <div class="flex gap-2">
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        View history
+      </a>
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        Discussion
+      </a>
+    </div>
+  </div>
+
+  <TableOfContents headings={headings} />
+
+  <h2 id="welcome">Welcome to Shoppis</h2>
+  <p>
+    Congratulations on choosing Shoppis for your shopping and list management needs! This introduction will help you 
+    understand the basics of using Shoppis and get you started on your journey to smarter, more organized shopping.
+  </p>
+  <p>
+    Shoppis is more than just a shopping list app - it's your personal shopping assistant that learns from your habits, 
+    helps you save money, and makes shopping a breeze. Whether you're new to digital shopping tools or switching from 
+    another app, this guide will help you get the most out of Shoppis from day one.
+  </p>
+
+  <InfoBox type="success" title="Quick Start">
+    New to Shoppis? Start by creating your first shopping list using voice commands - just say "Add milk to my grocery list" and watch the magic happen!
+  </InfoBox>
+
+  <h2 id="first-steps">Your First Steps</h2>
+  <p>
+    Getting started with Shoppis is simple and intuitive. Here's what you should do first:
+  </p>
+  <ol>
+    <li>
+      <strong>Create Your Account</strong>: Sign up with your email or social media account. This ensures your lists 
+      are saved and synced across all your devices.
+    </li>
+    <li>
+      <strong>Set Up Your Profile</strong>: Add your preferences, dietary restrictions, and favorite stores to get 
+      personalized recommendations.
+    </li>
+    <li>
+      <strong>Create Your First List</strong>: Start with a simple grocery list. Try using voice commands by tapping 
+      the microphone icon and saying items aloud.
+    </li>
+    <li>
+      <strong>Explore Voice Features</strong>: Practice adding items using natural language like "Add organic bananas" 
+      or "I need bread for tomorrow."
+    </li>
+    <li>
+      <strong>Try Barcode Scanning</strong>: Use the camera feature to scan product barcodes for instant, accurate additions.
+    </li>
+    <li>
+      <strong>Set Your First Budget</strong>: Establish spending goals to start tracking your expenses and savings.
+    </li>
+  </ol>
+
+  <div class="my-6 border border-neutral-200 dark:border-neutral-800 rounded-lg overflow-hidden">
+    <img 
+      src="https://github.com/ShopListApp/Shopisdisplay/blob/main/images/mock1.png?raw=true" 
+      alt="Person using smartphone for shopping"
+      class="w-full h-auto"
+      loading="lazy"
+    />
+    <div class="p-3 text-sm text-neutral-600 dark:text-neutral-400 bg-neutral-50 dark:bg-neutral-800">
+      Getting started with Shoppis is as easy as speaking your shopping list aloud.
+    </div>
+  </div>
+
+  <h2 id="core-concepts">Core Concepts</h2>
+  <p>
+    Understanding these key concepts will help you make the most of Shoppis:
+  </p>
+  <ul>
+    <li>
+      <strong>Smart Lists</strong>: Your shopping lists automatically organize items by category and can suggest 
+      quantities based on your purchase history.
+    </li>
+    <li>
+      <strong>Voice Recognition</strong>: Shoppis understands natural language, so you can speak normally when adding 
+      items. Say "Add two pounds of ground beef" and it will understand both the item and quantity.
+    </li>
+    <li>
+      <strong>Barcode Intelligence</strong>: Scanning a barcode doesn't just add the item - it includes brand information, 
+      nutritional data, and price history when available.
+    </li>
+    <li>
+      <strong>Shared Lists</strong>: Family members can collaborate on the same list in real-time. When someone adds 
+      or checks off an item, everyone sees the update instantly.
+    </li>
+    <li>
+      <strong>Budget Tracking</strong>: Set spending limits for different categories (groceries, household items, etc.) 
+      and get alerts when you're approaching your limits.
+    </li>
+    <li>
+      <strong>Purchase History</strong>: Shoppis remembers what you buy and when, making it easy to reorder regular items 
+      and track spending patterns.
+    </li>
+    <li>
+      <strong>Smart Notifications</strong>: Get reminders about items you frequently buy, sales at your favorite stores, 
+      and when you're running low on essentials.
+    </li>
+  </ul>
+
+  <InfoBox type="info" title="Learning Curve">
+    Most users become comfortable with Shoppis's core features within their first week of use. The app learns your preferences quickly, making suggestions more accurate over time.
+  </InfoBox>
+
+  <h2 id="getting-help">Getting Help</h2>
+  <p>
+    If you need assistance while using Shoppis, help is always available:
+  </p>
+  <ul>
+    <li>
+      <strong>In-App Help</strong>: Tap the help icon (?) in any screen for context-specific guidance and tips.
+    </li>
+    <li>
+      <strong>Tutorial Mode</strong>: Enable tutorial mode in settings to get step-by-step guidance for new features.
+    </li>
+    <li>
+      <strong>This Wiki</strong>: Browse through the comprehensive guides and documentation available here.
+    </li>
+    <li>
+      <strong>Video Tutorials</strong>: Watch short video guides for visual learners, available in the app and on our website.
+    </li>
+    <li>
+      <strong>Community Forum</strong>: Connect with other Shoppis users to share tips and get advice.
+    </li>
+    <li>
+      <strong>Customer Support</strong>: Contact our support team directly through the app or website for personalized assistance.
+    </li>
+  </ul>
+
+  <InfoBox type="warning" title="Privacy Note">
+    Shoppis takes your privacy seriously. Your shopping data is encrypted and never shared with third parties. You can review and control your data settings at any time in the Privacy section of your account.
+  </InfoBox>
+
+  <p>
+    Ready to dive deeper? Continue to the <a href="/getting-started/user-interface">User Interface Overview</a> 
+    to learn about navigating the app, or jump straight to <a href="/user-guide/create-an-account">Create an Account</a> 
+    to get started with your Shoppis journey.
+  </p>
+</WikiLayout>
