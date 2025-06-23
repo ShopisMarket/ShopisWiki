@@ -1,0 +1,228 @@
+---
+import WikiLayout from '../../layouts/WikiLayout.astro';
+import TableOfContents from '../../components/TableOfContents.astro';
+import InfoBox from '../../components/InfoBox.astro';
+
+const pageTitle = "Create an Account";
+
+const headings = [
+  { depth: 2, slug: "why-create-account", text: "Why Create an Account?" },
+  { depth: 2, slug: "signup-process", text: "Sign-Up Process" },
+  { depth: 2, slug: "account-verification", text: "Account Verification" },
+  { depth: 2, slug: "profile-setup", text: "Profile Setup" },
+  { depth: 2, slug: "privacy-settings", text: "Privacy Settings" },
+  { depth: 2, slug: "troubleshooting", text: "Troubleshooting" }
+];
+---
+
+<WikiLayout title={pageTitle}>
+  <div class="flex justify-between items-center">
+    <h1 class="text-3xl font-bold mb-8">{pageTitle}</h1>
+    <div class="flex gap-2">
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        View history
+      </a>
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        Discussion
+      </a>
+    </div>
+  </div>
+
+  <TableOfContents headings={headings} />
+
+  <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-6">
+    Creating a Shoppis account unlocks the full potential of the app, including cloud sync, shared lists, and personalized features. This guide walks you through the simple account creation process.
+  </p>
+
+  <h2 id="why-create-account">Why Create an Account?</h2>
+  <p>
+    While you can use basic features of Shoppis without an account, creating one provides significant benefits:
+  </p>
+  <ul>
+    <li>
+      <strong>Cloud Sync</strong>: Access your lists from any device - phone, tablet, or computer
+    </li>
+    <li>
+      <strong>Backup Protection</strong>: Never lose your lists, even if you lose your device
+    </li>
+    <li>
+      <strong>List Sharing</strong>: Collaborate with family and friends on shared shopping lists
+    </li>
+    <li>
+      <strong>Purchase History</strong>: Track your spending and shopping patterns over time
+    </li>
+    <li>
+      <strong>Personalized Suggestions</strong>: AI-powered recommendations based on your shopping habits
+    </li>
+    <li>
+      <strong>Budget Tracking</strong>: Set and monitor spending goals across categories
+    </li>
+    <li>
+      <strong>Premium Features</strong>: Access to advanced analytics and exclusive features
+    </li>
+  </ul>
+
+  <InfoBox type="success" title="Free Account">
+    Creating a Shoppis account is completely free and takes less than 2 minutes. No credit card required!
+  </InfoBox>
+
+  <h2 id="signup-process">Sign-Up Process</h2>
+  <p>
+    Getting started with Shoppis is quick and straightforward. You have several options for creating your account:
+  </p>
+
+  <h3>Option 1: Email Sign-Up</h3>
+  <ol>
+    <li>Open the Shoppis app or visit the website</li>
+    <li>Tap "Sign Up" or "Create Account"</li>
+    <li>Enter your email address</li>
+    <li>Create a secure password (minimum 8 characters)</li>
+    <li>Confirm your password</li>
+    <li>Accept the Terms of Service and Privacy Policy</li>
+    <li>Tap "Create Account"</li>
+  </ol>
+
+  <h3>Option 2: Social Media Sign-Up</h3>
+  <p>For faster registration, you can sign up using your existing social media accounts:</p>
+  <ul>
+    <li><strong>Google</strong>: Sign up with your Google account</li>
+    <li><strong>Apple</strong>: Use Sign in with Apple (iOS users)</li>
+    <li><strong>Facebook</strong>: Connect with your Facebook account</li>
+  </ul>
+  <p>
+    When using social sign-up, Shoppis only accesses basic profile information (name and email). 
+    We never post to your social media accounts or access your contacts without permission.
+  </p>
+
+  <div class="my-6 border border-neutral-200 dark:border-neutral-800 rounded-lg overflow-hidden">
+    <img 
+      src="https://github.com/ShopListApp/Shopisdisplay/blob/main/images/deviceDisplays/Accountcreate_mockup.png?raw=true" 
+      alt="Secure account creation process"
+      class="w-full h-auto"
+      loading="lazy"
+    />
+    <div class="p-3 text-sm text-neutral-600 dark:text-neutral-400 bg-neutral-50 dark:bg-neutral-800">
+      Your account security is our top priority with encrypted data and secure authentication.
+    </div>
+  </div>
+
+  <h2 id="account-verification">Account Verification</h2>
+  <p>
+    After creating your account, you'll need to verify your email address:
+  </p>
+  <ol>
+    <li>Check your email inbox for a verification message from Shoppis</li>
+    <li>Open the email and click the "Verify Email" button</li>
+    <li>You'll be redirected to confirm your verification</li>
+    <li>Return to the app to complete your setup</li>
+  </ol>
+
+  <InfoBox type="warning" title="Email Verification">
+    Don't see the verification email? Check your spam folder and make sure to add noreply@shoppis.com to your contacts. You can request a new verification email from the app if needed.
+  </InfoBox>
+
+  <h2 id="profile-setup">Profile Setup</h2>
+  <p>
+    Once your account is verified, you'll be guided through setting up your profile:
+  </p>
+  <ul>
+    <li>
+      <strong>Personal Information</strong>:
+      <ul>
+        <li>Display name (how others see you in shared lists)</li>
+        <li>Profile picture (optional)</li>
+        <li>Location (for local deals and store suggestions)</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Shopping Preferences</strong>:
+      <ul>
+        <li>Dietary restrictions and preferences</li>
+        <li>Favorite stores and brands</li>
+        <li>Budget preferences and currency</li>
+        <li>Household size</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Notification Settings</strong>:
+      <ul>
+        <li>List sharing notifications</li>
+        <li>Budget alerts</li>
+        <li>Deal notifications</li>
+        <li>Reminder preferences</li>
+      </ul>
+    </li>
+  </ul>
+
+  <InfoBox type="info" title="Optional Setup">
+    All profile setup steps are optional and can be completed later. You can start using Shoppis immediately after account verification and customize your profile over time.
+  </InfoBox>
+
+  <h2 id="privacy-settings">Privacy Settings</h2>
+  <p>
+    Shoppis gives you complete control over your privacy and data:
+  </p>
+  <ul>
+    <li>
+      <strong>Data Sharing</strong>: Choose what information to share with other users
+    </li>
+    <li>
+      <strong>Analytics</strong>: Opt in or out of usage analytics to help improve the app
+    </li>
+    <li>
+      <strong>Marketing Communications</strong>: Control promotional emails and notifications
+    </li>
+    <li>
+      <strong>Location Services</strong>: Manage location-based features and store suggestions
+    </li>
+    <li>
+      <strong>Data Export</strong>: Download your data at any time
+    </li>
+    <li>
+      <strong>Account Deletion</strong>: Permanently delete your account and all associated data
+    </li>
+  </ul>
+
+  <h2 id="troubleshooting">Troubleshooting</h2>
+  <p>
+    Having trouble creating your account? Here are solutions to common issues:
+  </p>
+
+  <h3>Email Already in Use</h3>
+  <p>
+    If you see "Email already registered," you may have created an account previously. Try:
+  </p>
+  <ul>
+    <li>Using the "Forgot Password" option to reset your password</li>
+    <li>Checking if you signed up with a social media account</li>
+    <li>Contacting support if you can't access your original account</li>
+  </ul>
+
+  <h3>Password Requirements</h3>
+  <p>
+    Your password must meet these security requirements:
+  </p>
+  <ul>
+    <li>At least 8 characters long</li>
+    <li>Include at least one uppercase letter</li>
+    <li>Include at least one lowercase letter</li>
+    <li>Include at least one number</li>
+    <li>Special characters are recommended but not required</li>
+  </ul>
+
+  <h3>Verification Email Issues</h3>
+  <p>
+    If you don't receive the verification email:
+  </p>
+  <ul>
+    <li>Wait 5-10 minutes (emails can be delayed)</li>
+    <li>Check your spam/junk folder</li>
+    <li>Ensure you entered the correct email address</li>
+    <li>Request a new verification email from the app</li>
+    <li>Contact support if the problem persists</li>
+  </ul>
+
+  <InfoBox type="success" title="Account Created Successfully">
+    Once your account is set up, you're ready to start creating smart shopping lists! Continue to <a href="/user-guide/add-manage-lists">Add & Manage Lists</a> to learn how to create your first list.
+  </InfoBox>
+</WikiLayout>
