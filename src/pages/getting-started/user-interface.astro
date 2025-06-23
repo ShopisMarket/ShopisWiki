@@ -1,0 +1,223 @@
+---
+import WikiLayout from '../../layouts/WikiLayout.astro';
+import TableOfContents from '../../components/TableOfContents.astro';
+import InfoBox from '../../components/InfoBox.astro';
+
+const pageTitle = "User Interface Overview";
+
+const headings = [
+  { depth: 2, slug: "main-navigation", text: "Main Navigation" },
+  { depth: 2, slug: "home-screen", text: "Home Screen" },
+  { depth: 2, slug: "list-interface", text: "List Interface" },
+  { depth: 2, slug: "voice-controls", text: "Voice Controls" },
+  { depth: 2, slug: "scanner-interface", text: "Scanner Interface" },
+  { depth: 2, slug: "settings-menu", text: "Settings Menu" }
+];
+---
+
+<WikiLayout title={pageTitle}>
+  <div class="flex justify-between items-center">
+    <h1 class="text-3xl font-bold mb-8">{pageTitle}</h1>
+    <div class="flex gap-2">
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        View history
+      </a>
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        Discussion
+      </a>
+    </div>
+  </div>
+
+  <TableOfContents headings={headings} />
+
+  <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-6">
+    Shoppis features an intuitive interface designed for quick access to all your shopping tools. This guide will help you navigate the app efficiently and discover all the features at your fingertips.
+  </p>
+
+  <h2 id="main-navigation">Main Navigation</h2>
+  <p>
+    The main navigation in Shoppis is designed for one-handed use and quick access to essential features:
+  </p>
+  <ul>
+    <li>
+      <strong>Bottom Tab Bar</strong>: The primary navigation includes:
+      <ul>
+        <li><strong>Lists</strong>: Access all your shopping lists</li>
+        <li><strong>Scanner</strong>: Quick access to barcode scanning</li>
+        <li><strong>Voice</strong>: Voice command center</li>
+        <li><strong>Insights</strong>: Budget tracking and analytics</li>
+        <li><strong>Profile</strong>: Account settings and preferences</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Top Header</strong>: Contains search, notifications, and context-specific actions
+    </li>
+    <li>
+      <strong>Floating Action Button</strong>: Quick add button that adapts based on your current screen
+    </li>
+  </ul>
+
+  <InfoBox type="info" title="Accessibility">
+    Shoppis supports voice navigation, large text options, and high contrast modes for users with accessibility needs. Enable these features in Settings > Accessibility.
+  </InfoBox>
+
+  <h2 id="home-screen">Home Screen</h2>
+  <p>
+    Your home screen provides a personalized dashboard with quick access to your most important information:
+  </p>
+  <ul>
+    <li>
+      <strong>Active Lists</strong>: Your current shopping lists with item counts and last updated times
+    </li>
+    <li>
+      <strong>Quick Actions</strong>: One-tap access to create new lists, scan barcodes, or use voice commands
+    </li>
+    <li>
+      <strong>Smart Suggestions</strong>: AI-powered recommendations based on your shopping patterns
+    </li>
+    <li>
+      <strong>Budget Overview</strong>: Current spending status and budget alerts
+    </li>
+    <li>
+      <strong>Recent Activity</strong>: Your latest purchases and list updates
+    </li>
+    <li>
+      <strong>Deals & Offers</strong>: Personalized discounts and student offers (if applicable)
+    </li>
+  </ul>
+
+  <div class="my-6 border border-neutral-200 dark:border-neutral-800 rounded-lg overflow-hidden">
+    <img 
+      src="https://github.com/ShopListApp/Shopisdisplay/blob/main/images/mock2.png?raw=true" 
+      alt="Mobile app interface design"
+      class="w-full h-auto"
+      loading="lazy"
+    />
+    <div class="p-3 text-sm text-neutral-600 dark:text-neutral-400 bg-neutral-50 dark:bg-neutral-800">
+      Shoppis's clean interface puts all essential features within easy reach.
+    </div>
+  </div>
+
+  <h2 id="list-interface">List Interface</h2>
+  <p>
+    The list interface is where you'll spend most of your time in Shoppis. It's optimized for both creating and using lists:
+  </p>
+  <ul>
+    <li>
+      <strong>List Header</strong>: Shows list name, item count, estimated total, and sharing status
+    </li>
+    <li>
+      <strong>Add Item Bar</strong>: Type, speak, or scan to add items quickly
+    </li>
+    <li>
+      <strong>Category Sections</strong>: Items automatically organized by category (produce, dairy, etc.)
+    </li>
+    <li>
+      <strong>Item Cards</strong>: Each item shows name, quantity, estimated price, and quick actions
+    </li>
+    <li>
+      <strong>Check-off System</strong>: Tap items to mark as purchased - they move to a "completed" section
+    </li>
+    <li>
+      <strong>Swipe Actions</strong>: Swipe left or right on items for quick edit, delete, or duplicate actions
+    </li>
+  </ul>
+
+  <InfoBox type="success" title="Pro Tip">
+   Long-press any item to access advanced options like setting specific brands, adding notes, or marking as priority items.
+  </InfoBox>
+
+  <h2 id="voice-controls">Voice Controls</h2>
+  <p>
+    Voice control is one of Shoppis's standout features, accessible from anywhere in the app:
+  </p>
+  <ul>
+    <li>
+      <strong>Voice Button</strong>: Large microphone icon available on most screens
+    </li>
+    <li>
+      <strong>Always Listening Mode</strong>: Optional hands-free mode that responds to "Hey Shoppis"
+    </li>
+    <li>
+      <strong>Visual Feedback</strong>: Real-time transcription shows what Shoppis is hearing
+    </li>
+    <li>
+      <strong>Command Suggestions</strong>: Helpful prompts show you what you can say
+    </li>
+    <li>
+      <strong>Multi-language Support</strong>: Voice recognition works in multiple languages
+    </li>
+  </ul>
+  <p>
+    Common voice commands include:
+  </p>
+  <ul>
+    <li>"Add [item] to my [list name]"</li>
+    <li>"Create a new list called [name]"</li>
+    <li>"How much have I spent this month?"</li>
+    <li>"Show me my grocery list"</li>
+    <li>"Mark [item] as purchased"</li>
+  </ul>
+
+  <h2 id="scanner-interface">Scanner Interface</h2>
+  <p>
+    The barcode scanner provides instant product recognition and addition to your lists:
+  </p>
+  <ul>
+    <li>
+      <strong>Camera View</strong>: Full-screen camera with scanning overlay
+    </li>
+    <li>
+      <strong>Auto-focus</strong>: Automatic focusing on barcodes for quick scanning
+    </li>
+    <li>
+      <strong>Product Preview</strong>: Shows product information before adding to list
+    </li>
+    <li>
+      <strong>Batch Scanning</strong>: Scan multiple items in succession
+    </li>
+    <li>
+      <strong>Manual Entry</strong>: Option to type barcode numbers if scanning isn't working
+    </li>
+    <li>
+      <strong>History</strong>: Recently scanned items for quick re-adding
+    </li>
+  </ul>
+
+  <InfoBox type="warning" title="Camera Permissions">
+    Make sure to grant camera permissions when prompted to use the barcode scanner feature. You can manage these permissions in your device's settings.
+  </InfoBox>
+
+  <h2 id="settings-menu">Settings Menu</h2>
+  <p>
+    The settings menu allows you to customize Shoppis to match your preferences:
+  </p>
+  <ul>
+    <li>
+      <strong>Account Settings</strong>: Profile information, password, and account management
+    </li>
+    <li>
+      <strong>Preferences</strong>: Default list settings, currency, measurement units
+    </li>
+    <li>
+      <strong>Privacy & Security</strong>: Data controls, sharing permissions, and security options
+    </li>
+    <li>
+      <strong>Notifications</strong>: Customize alerts, reminders, and notification timing
+    </li>
+    <li>
+      <strong>Voice Settings</strong>: Language, sensitivity, and voice command preferences
+    </li>
+    <li>
+      <strong>Display</strong>: Theme selection, text size, and accessibility options
+    </li>
+    <li>
+      <strong>Data & Sync</strong>: Backup settings, sync preferences, and data export
+    </li>
+    <li>
+      <strong>Help & Support</strong>: Tutorials, FAQ, and contact information</li>
+  </ul>
+  <p>
+    Take some time to explore the settings menu to personalize your Shoppis experience. The app works great with default settings, but customization can make it even more efficient for your specific needs.
+  </p>
+</WikiLayout>
