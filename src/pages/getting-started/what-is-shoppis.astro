@@ -1,0 +1,157 @@
+---
+import WikiLayout from '../../layouts/WikiLayout.astro';
+import TableOfContents from '../../components/TableOfContents.astro';
+import InfoBox from '../../components/InfoBox.astro';
+
+const pageTitle = "What is Shoppis?";
+
+const headings = [
+  { depth: 2, slug: "platform-overview", text: "Platform Overview" },
+  { depth: 2, slug: "core-mission", text: "Core Mission" },
+  { depth: 2, slug: "key-benefits", text: "Key Benefits" },
+  { depth: 2, slug: "how-it-works", text: "How It Works" },
+  { depth: 2, slug: "target-users", text: "Who Uses Shoppis?" }
+];
+---
+
+<WikiLayout title={pageTitle}>
+  <div class="flex justify-between items-center">
+    <h1 class="text-3xl font-bold mb-8">{pageTitle}</h1>
+    <div class="flex gap-2">
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        View history
+      </a>
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        Discussion
+      </a>
+    </div>
+  </div>
+
+  <TableOfContents headings={headings} />
+
+  <h2 id="platform-overview">Platform Overview</h2>
+  <p>
+    Shoppis is a revolutionary shopping list and grocery management application that transforms how you plan, shop, and manage your purchases. 
+    Built with modern technology and user-centric design, Shoppis combines artificial intelligence, voice recognition, and barcode scanning 
+    to create the most intuitive shopping experience possible.
+  </p>
+  <p>
+    Unlike traditional shopping apps, Shoppis goes beyond simple list-making. It's your personal shopping assistant that learns your 
+    preferences, suggests items based on your habits, helps you stick to budgets, and ensures you never forget an essential item again.
+  </p>
+
+  <div class="my-6 border border-neutral-200 dark:border-neutral-800 rounded-lg overflow-hidden">
+    <img 
+      src="https://github.com/ShopListApp/Shopisdisplay/blob/main/images/mockup.jpg?raw=true" 
+      alt="Smart shopping with mobile technology"
+      class="w-full h-auto"
+      loading="lazy"
+    />
+    <div class="p-3 text-sm text-neutral-600 dark:text-neutral-400 bg-neutral-50 dark:bg-neutral-800">
+      Shoppis brings smart technology to everyday shopping, making it more efficient and organized.
+    </div>
+  </div>
+
+  <h2 id="core-mission">Core Mission</h2>
+  <p>
+    Our mission is to eliminate the stress and inefficiency from shopping by providing intelligent tools that adapt to your lifestyle. 
+    We believe shopping should be quick, organized, and even enjoyable. Shoppis empowers users to:
+  </p>
+  <ul>
+    <li>Save time through smart automation and voice commands</li>
+    <li>Reduce food waste by better planning and tracking</li>
+    <li>Stay within budget with intelligent spending insights</li>
+    <li>Collaborate seamlessly with family and friends</li>
+    <li>Make informed decisions with purchase history and analytics</li>
+  </ul>
+
+  <InfoBox type="success" title="Smart Shopping Revolution">
+    Shoppis users report saving an average of 2 hours per week on shopping-related tasks and reducing their grocery spending by 15% through better planning and budget tracking.
+  </InfoBox>
+
+  <h2 id="key-benefits">Key Benefits</h2>
+  <p>
+    Shoppis offers numerous advantages over traditional shopping methods and basic list apps:
+  </p>
+  <ul>
+    <li>
+      <strong>Voice-Powered Convenience</strong>: Add items to your list hands-free while cooking, driving, or multitasking
+    </li>
+    <li>
+      <strong>Instant Barcode Recognition</strong>: Scan products to add them instantly with accurate names and details
+    </li>
+    <li>
+      <strong>Intelligent Suggestions</strong>: AI-powered recommendations based on your shopping patterns and preferences
+    </li>
+    <li>
+      <strong>Real-Time Collaboration</strong>: Share lists with family members and see updates instantly across all devices
+    </li>
+    <li>
+      <strong>Budget Management</strong>: Set spending goals and track expenses with detailed category breakdowns
+    </li>
+    <li>
+      <strong>Cross-Platform Sync</strong>: Access your lists from any device - phone, tablet, or computer
+    </li>
+    <li>
+      <strong>Offline Functionality</strong>: Continue using your lists even without internet connection
+    </li>
+  </ul>
+
+  <h2 id="how-it-works">How It Works</h2>
+  <p>
+    Shoppis simplifies shopping through an intuitive three-step process:
+  </p>
+  <ol>
+    <li>
+      <strong>Create & Organize</strong>: Build your shopping lists using voice commands, barcode scanning, or manual entry. 
+      Organize items by categories, stores, or custom groups.
+    </li>
+    <li>
+      <strong>Plan & Budget</strong>: Set budget goals, get price estimates, and receive smart suggestions for meal planning 
+      and bulk buying opportunities.
+    </li>
+    <li>
+      <strong>Shop & Track</strong>: Use your organized lists while shopping, check off items as you go, and track your 
+      spending in real-time. Review your purchase history and analytics afterward.
+    </li>
+  </ol>
+
+  <InfoBox type="info" title="Getting Started">
+    Ready to try Shoppis? Download the app from your device's app store or visit our web application. Creating an account takes less than a minute, and you can start building your first smart shopping list immediately.
+  </InfoBox>
+
+  <h2 id="target-users">Who Uses Shoppis?</h2>
+  <p>
+    Shoppis is designed for anyone who wants to make their shopping more efficient and organized:
+  </p>
+  <ul>
+    <li>
+      <strong>Busy Families</strong>: Parents juggling work and household management who need to coordinate shopping with 
+      their partners and keep track of family needs
+    </li>
+    <li>
+      <strong>Budget-Conscious Shoppers</strong>: Individuals and families looking to control spending and make informed 
+      purchasing decisions
+    </li>
+    <li>
+      <strong>Meal Planners</strong>: People who plan their meals in advance and need organized grocery lists to support 
+      their cooking goals
+    </li>
+    <li>
+      <strong>Students</strong>: College students managing limited budgets who benefit from student discounts and spending 
+      tracking features
+    </li>
+    <li>
+      <strong>Seniors</strong>: Older adults who appreciate voice commands and large, clear interfaces for easier shopping 
+      management
+    </li>
+    <li>
+      <strong>Small Business Owners</strong>: Restaurant owners, caterers, and other business owners who need to manage 
+      inventory and supplies efficiently
+    </li>
+  </ul>
+  <p>
+    Whether you're shopping for groceries, household supplies, or planning special events, Shoppis adapts to your specific 
+    needs and shopping style.
+  </p>
+</WikiLayout>
