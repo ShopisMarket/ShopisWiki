@@ -5,5 +5,5 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://shoppland-wiki.netlify.app',
+  site: 'https://shoppis-wiki.netlify.app',
 });
