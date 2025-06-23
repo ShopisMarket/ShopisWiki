@@ -1,0 +1,216 @@
+---
+import WikiLayout from '../../layouts/WikiLayout.astro';
+import TableOfContents from '../../components/TableOfContents.astro';
+import InfoBox from '../../components/InfoBox.astro';
+
+const pageTitle = "Voice Recognition";
+
+const headings = [
+  { depth: 2, slug: "overview", text: "Voice Recognition Overview" },
+  { depth: 2, slug: "getting-started", text: "Getting Started with Voice" },
+  { depth: 2, slug: "voice-commands", text: "Voice Commands" },
+  { depth: 2, slug: "natural-language", text: "Natural Language Processing" },
+  { depth: 2, slug: "multilingual-support", text: "Multilingual Support" },
+  { depth: 2, slug: "troubleshooting", text: "Troubleshooting Voice Issues" }
+];
+---
+
+<WikiLayout title={pageTitle}>
+  <div class="flex justify-between items-center">
+    <h1 class="text-3xl font-bold mb-8">{pageTitle}</h1>
+    <div class="flex gap-2">
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        View history
+      </a>
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        Discussion
+      </a>
+    </div>
+  </div>
+
+  <TableOfContents headings={headings} />
+
+  <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-6">
+    Shoppis's advanced voice recognition technology allows you to manage your shopping lists hands-free using natural speech. This powerful feature makes adding items, creating lists, and managing your shopping effortless.
+  </p>
+
+  <h2 id="overview">Voice Recognition Overview</h2>
+  <p>
+    Voice recognition is one of Shoppis's most innovative features, powered by advanced AI that understands natural language and context. Unlike basic voice-to-text systems, Shoppis's voice recognition:
+  </p>
+  <ul>
+    <li>Understands context and intent, not just individual words</li>
+    <li>Recognizes product names, brands, and quantities automatically</li>
+    <li>Works in noisy environments with advanced noise cancellation</li>
+    <li>Learns your speech patterns and preferences over time</li>
+    <li>Supports multiple languages and accents</li>
+    <li>Processes commands offline for privacy and speed</li>
+  </ul>
+
+  <InfoBox type="success" title="Hands-Free Shopping">
+    Voice recognition is perfect for busy moments - add items while cooking, driving, or when your hands are full. Just speak naturally and Shoppis handles the rest!
+  </InfoBox>
+
+  <h2 id="getting-started">Getting Started with Voice</h2>
+  <p>
+    Setting up voice recognition in Shoppis is simple:
+  </p>
+  <ol>
+    <li>
+      <strong>Grant Microphone Permission</strong>: When prompted, allow Shoppis to access your device's microphone
+    </li>
+    <li>
+      <strong>Choose Your Language</strong>: Select your preferred language in Settings > Voice > Language
+    </li>
+    <li>
+      <strong>Voice Training (Optional)</strong>: Complete the brief voice training to improve accuracy
+    </li>
+    <li>
+      <strong>Test Basic Commands</strong>: Try saying "Add milk to my grocery list" to test the feature
+    </li>
+    <li>
+      <strong>Enable Always Listening (Optional)</strong>: Turn on "Hey Shoppis" wake phrase for hands-free activation
+    </li>
+  </ol>
+
+  <div class="my-6 border border-neutral-200 dark:border-neutral-800 rounded-lg overflow-hidden">
+    <img 
+      src="https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+      alt="Person using voice commands on smartphone"
+      class="w-full h-auto"
+      loading="lazy"
+    />
+    <div class="p-3 text-sm text-neutral-600 dark:text-neutral-400 bg-neutral-50 dark:bg-neutral-800">
+      Voice recognition makes shopping list management effortless and hands-free.
+    </div>
+  </div>
+
+  <h2 id="voice-commands">Voice Commands</h2>
+  <p>
+    Shoppis recognizes a wide variety of voice commands. Here are the most useful ones:
+  </p>
+
+  <h3>Adding Items</h3>
+  <ul>
+    <li>"Add [item] to my list"</li>
+    <li>"I need [item]"</li>
+    <li>"Put [item] on my grocery list"</li>
+    <li>"Add [quantity] [item]" (e.g., "Add two pounds of ground beef")</li>
+    <li>"Add [brand] [item]" (e.g., "Add Heinz ketchup")</li>
+  </ul>
+
+  <h3>List Management</h3>
+  <ul>
+    <li>"Create a new list called [name]"</li>
+    <li>"Show me my [list name]"</li>
+    <li>"Delete [item] from my list"</li>
+    <li>"Mark [item] as purchased"</li>
+    <li>"Clear my completed items"</li>
+  </ul>
+
+  <h3>Information Queries</h3>
+  <ul>
+    <li>"How many items are on my list?"</li>
+    <li>"What's my budget for this month?"</li>
+    <li>"How much have I spent on groceries?"</li>
+    <li>"When did I last buy [item]?"</li>
+    <li>"Show me my purchase history"</li>
+  </ul>
+
+  <h3>Smart Suggestions</h3>
+  <ul>
+    <li>"What should I add to my list?"</li>
+    <li>"Suggest items for dinner tonight"</li>
+    <li>"What am I running low on?"</li>
+    <li>"Add my usual grocery items"</li>
+  </ul>
+
+  <InfoBox type="info" title="Natural Speech">
+    You don't need to memorize exact commands. Shoppis understands natural speech, so "I'm out of milk" works just as well as "Add milk to my list."
+  </InfoBox>
+
+  <h2 id="natural-language">Natural Language Processing</h2>
+  <p>
+    Shoppis's natural language processing goes beyond simple keyword recognition:
+  </p>
+  <ul>
+    <li>
+      <strong>Context Understanding</strong>: "Add more bananas" understands you want to increase quantity
+    </li>
+    <li>
+      <strong>Brand Recognition</strong>: "I need Coca-Cola" automatically adds the specific brand
+    </li>
+    <li>
+      <strong>Quantity Parsing</strong>: "Two dozen eggs" correctly interprets as 24 eggs
+    </li>
+    <li>
+      <strong>Category Intelligence</strong>: "Add vegetables for salad" suggests lettuce, tomatoes, cucumbers
+    </li>
+    <li>
+      <strong>Meal Planning</strong>: "Add ingredients for spaghetti" adds pasta, sauce, and cheese
+    </li>
+    <li>
+      <strong>Dietary Preferences</strong>: Considers your dietary restrictions in suggestions
+    </li>
+  </ul>
+
+  <h3>Advanced Natural Language Examples</h3>
+  <ul>
+    <li>"I'm making tacos tomorrow, what do I need?" → Suggests tortillas, ground beef, cheese, lettuce, etc.</li>
+    <li>"Add healthy snacks for the kids" → Suggests fruits, yogurt, crackers based on your preferences</li>
+    <li>"We're having guests this weekend" → Asks about meal plans and suggests party supplies</li>
+    <li>"I'm running low on cleaning supplies" → Reviews your usual cleaning products and suggests refills</li>
+  </ul>
+
+  <h2 id="multilingual-support">Multilingual Support</h2>
+  <p>
+    Shoppis supports voice recognition in multiple languages and can even handle mixed-language conversations:
+  </p>
+  <ul>
+    <li><strong>Supported Languages</strong>: English, Spanish, French, German, Italian, Portuguese, Dutch, and more</li>
+    <li><strong>Accent Recognition</strong>: Understands various regional accents within each language</li>
+    <li><strong>Code-Switching</strong>: Handles mixed-language speech (e.g., "Add leche to my list")</li>
+    <li><strong>Product Names</strong>: Recognizes international product names and brands</li>
+    <li><strong>Cultural Context</strong>: Understands culturally-specific food items and shopping terms</li>
+  </ul>
+
+  <InfoBox type="warning" title="Language Settings">
+    Make sure to set your primary language in Settings > Voice > Language for the best recognition accuracy. You can change this setting at any time.
+  </InfoBox>
+
+  <h2 id="troubleshooting">Troubleshooting Voice Issues</h2>
+  <p>
+    If you're experiencing issues with voice recognition, try these solutions:
+  </p>
+
+  <h3>Poor Recognition Accuracy</h3>
+  <ul>
+    <li>Speak clearly and at a normal pace</li>
+    <li>Reduce background noise when possible</li>
+    <li>Complete voice training in Settings > Voice > Training</li>
+    <li>Check that your language setting matches your speech</li>
+    <li>Update the app to the latest version</li>
+  </ul>
+
+  <h3>Microphone Issues</h3>
+  <ul>
+    <li>Check microphone permissions in your device settings</li>
+    <li>Ensure no other apps are using the microphone</li>
+    <li>Test your microphone with other apps to rule out hardware issues</li>
+    <li>Clean your device's microphone opening</li>
+    <li>Restart the app if microphone access seems blocked</li>
+  </ul>
+
+  <h3>Commands Not Working</h3>
+  <ul>
+    <li>Try rephrasing your command more simply</li>
+    <li>Use the item's common name rather than brand names for better recognition</li>
+    <li>Speak the command as a complete sentence</li>
+    <li>Check if the feature requires an internet connection</li>
+    <li>Review the command examples in this guide</li>
+  </ul>
+
+  <InfoBox type="success" title="Voice Recognition Tips">
+    For best results: speak naturally, use common product names, and don't worry about perfect grammar. Shoppis is designed to understand how people naturally talk about shopping!
+  </InfoBox>
+</WikiLayout>
