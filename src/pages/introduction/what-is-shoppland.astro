@@ -3,16 +3,14 @@ import WikiLayout from '../../layouts/WikiLayout.astro';
 import TableOfContents from '../../components/TableOfContents.astro';
 import InfoBox from '../../components/InfoBox.astro';
 
-const pageTitle = "What is Shoppland?";
+const pageTitle = "What is Shoppis?";
 
 const headings = [
   { depth: 2, slug: "platform-overview", text: "Platform Overview" },
-  { depth: 2, slug: "history", text: "History" },
-  { depth: 2, slug: "mission-and-vision", text: "Mission and Vision" },
-  { depth: 3, slug: "mission", text: "Mission" },
-  { depth: 3, slug: "vision", text: "Vision" },
-  { depth: 2, slug: "business-model", text: "Business Model" },
-  { depth: 2, slug: "core-principles", text: "Core Principles" }
+  { depth: 2, slug: "core-mission", text: "Core Mission" },
+  { depth: 2, slug: "key-benefits", text: "Key Benefits" },
+  { depth: 2, slug: "how-it-works", text: "How It Works" },
+  { depth: 2, slug: "target-users", text: "Who Uses Shoppis?" }
 ];
 ---
 
@@ -33,111 +31,127 @@ const headings = [
 
   <h2 id="platform-overview">Platform Overview</h2>
   <p>
-    Shoppland is a comprehensive e-commerce platform that serves as a marketplace connecting buyers and sellers. 
-    It provides a digital space where customers can browse, compare, and purchase a wide variety of products from 
-    multiple vendors, all within a unified, user-friendly interface.
+    Shoppis is a revolutionary shopping list and grocery management application that transforms how you plan, shop, and manage your purchases. 
+    Built with modern technology and user-centric design, Shoppis combines artificial intelligence, voice recognition, and barcode scanning 
+    to create the most intuitive shopping experience possible.
   </p>
   <p>
-    The platform is designed to be accessible to users of all technical abilities, offering a streamlined shopping 
-    experience with features such as intuitive navigation, detailed product listings, secure payment processing, 
-    and reliable order tracking.
+    Unlike traditional shopping apps, Shoppis goes beyond simple list-making. It's your personal shopping assistant that learns your 
+    preferences, suggests items based on your habits, helps you stick to budgets, and ensures you never forget an essential item again.
   </p>
 
   <div class="my-6 border border-neutral-200 dark:border-neutral-800 rounded-lg overflow-hidden">
     <img 
-      src="https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-      alt="E-commerce shopping concept"
+      src="https://github.com/ShopListApp/Shopisdisplay/blob/main/images/mockup.png?raw=true" 
+      alt="Smart shopping with mobile technology"
       class="w-full h-auto"
       loading="lazy"
     />
     <div class="p-3 text-sm text-neutral-600 dark:text-neutral-400 bg-neutral-50 dark:bg-neutral-800">
-      Shoppland provides a seamless online shopping experience across various device types.
+      Shoppis brings smart technology to everyday shopping, making it more efficient and organized.
     </div>
   </div>
 
-  <h2 id="history">History</h2>
+  <h2 id="core-mission">Core Mission</h2>
   <p>
-    Shoppland was founded in 2023 by a team of e-commerce enthusiasts and technology innovators who recognized 
-    the need for a more user-centric online marketplace. The founding team sought to address common pain points 
-    in existing e-commerce platforms, such as complex navigation, unreliable vendor quality, and cumbersome 
-    checkout processes.
-  </p>
-  <p>
-    The beta version of Shoppland launched in June 2023, initially focusing on electronics and home goods. 
-    After gathering user feedback and refining the platform, Shoppland officially launched to the public in 
-    September 2023, expanding to include fashion, beauty, and specialty goods categories.
-  </p>
-  <p>
-    Since its launch, Shoppland has experienced rapid growth, attracting both independent sellers and established 
-    brands to its marketplace. The platform continues to evolve with regular updates and new features based on 
-    user feedback and market trends.
-  </p>
-
-  <h2 id="mission-and-vision">Mission and Vision</h2>
-  
-  <h3 id="mission">Mission</h3>
-  <p>
-    Shoppland's mission is to create a transparent, accessible, and enjoyable e-commerce ecosystem that empowers 
-    both buyers and sellers. We strive to provide a platform where consumers can discover quality products with 
-    confidence and where sellers can reach their target audience effectively.
-  </p>
-
-  <h3 id="vision">Vision</h3>
-  <p>
-    Our vision is to become the world's most trusted and innovative e-commerce marketplace, setting new standards 
-    for online shopping experiences. We aim to build a global community where commerce is not just about transactions 
-    but about creating meaningful connections between products, sellers, and buyers.
-  </p>
-
-  <InfoBox type="info" title="Company Values">
-    Shoppland operates on the core values of transparency, quality, innovation, and community. These principles guide 
-    all aspects of our platform development and business decisions.
-  </InfoBox>
-
-  <h2 id="business-model">Business Model</h2>
-  <p>
-    Shoppland operates as a marketplace platform, connecting buyers with a diverse range of sellers. The business 
-    model is primarily based on the following revenue streams:
+    Our mission is to eliminate the stress and inefficiency from shopping by providing intelligent tools that adapt to your lifestyle. 
+    We believe shopping should be quick, organized, and even enjoyable. Shoppis empowers users to:
   </p>
   <ul>
-    <li><strong>Commission Fees</strong>: Shoppland takes a percentage of each transaction completed on the platform.</li>
-    <li><strong>Subscription Plans</strong>: Sellers can opt for premium subscription plans that offer additional features and lower commission rates.</li>
-    <li><strong>Advertising</strong>: Vendors can purchase featured spots and promotional placements to increase their visibility.</li>
-    <li><strong>Value-Added Services</strong>: Additional services such as enhanced analytics, marketing tools, and fulfillment options are available for sellers.</li>
+    <li>Save time through smart automation and voice commands</li>
+    <li>Reduce food waste by better planning and tracking</li>
+    <li>Stay within budget with intelligent spending insights</li>
+    <li>Collaborate seamlessly with family and friends</li>
+    <li>Make informed decisions with purchase history and analytics</li>
   </ul>
-  <p>
-    This model allows Shoppland to maintain a free shopping experience for consumers while providing valuable 
-    services to sellers and ensuring the sustainability and growth of the platform.
-  </p>
 
-  <h2 id="core-principles">Core Principles</h2>
+  <InfoBox type="success" title="Smart Shopping Revolution">
+    Shoppis users report saving an average of 2 hours per week on shopping-related tasks and reducing their grocery spending by 15% through better planning and budget tracking.
+  </InfoBox>
+
+  <h2 id="key-benefits">Key Benefits</h2>
   <p>
-    Shoppland's platform is built around several core principles that define its approach to e-commerce:
+    Shoppis offers numerous advantages over traditional shopping methods and basic list apps:
+  </p>
+  <ul>
+    <li>
+      <strong>Voice-Powered Convenience</strong>: Add items to your list hands-free while cooking, driving, or multitasking
+    </li>
+    <li>
+      <strong>Instant Barcode Recognition</strong>: Scan products to add them instantly with accurate names and details
+    </li>
+    <li>
+      <strong>Intelligent Suggestions</strong>: AI-powered recommendations based on your shopping patterns and preferences
+    </li>
+    <li>
+      <strong>Real-Time Collaboration</strong>: Share lists with family members and see updates instantly across all devices
+    </li>
+    <li>
+      <strong>Budget Management</strong>: Set spending goals and track expenses with detailed category breakdowns
+    </li>
+    <li>
+      <strong>Cross-Platform Sync</strong>: Access your lists from any device - phone, tablet, or computer
+    </li>
+    <li>
+      <strong>Offline Functionality</strong>: Continue using your lists even without internet connection
+    </li>
+  </ul>
+
+  <h2 id="how-it-works">How It Works</h2>
+  <p>
+    Shoppis simplifies shopping through an intuitive three-step process:
   </p>
   <ol>
     <li>
-      <strong>User-Centric Design</strong>: Every feature and interface element is designed with the user's needs and 
-      experience in mind, ensuring intuitive navigation and ease of use.
+      <strong>Create & Organize</strong>: Build your shopping lists using voice commands, barcode scanning, or manual entry. 
+      Organize items by categories, stores, or custom groups.
     </li>
     <li>
-      <strong>Quality Assurance</strong>: Shoppland maintains strict standards for sellers and products listed on the 
-      platform, including verification processes and customer review systems.
+      <strong>Plan & Budget</strong>: Set budget goals, get price estimates, and receive smart suggestions for meal planning 
+      and bulk buying opportunities.
     </li>
     <li>
-      <strong>Security and Trust</strong>: Advanced security measures protect user data and financial information, 
-      while transparent policies build trust between all platform participants.
-    </li>
-    <li>
-      <strong>Inclusive Commerce</strong>: Shoppland is committed to creating opportunities for businesses of all 
-      sizes, from individual artisans to large corporations.
-    </li>
-    <li>
-      <strong>Continuous Innovation</strong>: The platform regularly incorporates new technologies and features to 
-      improve the shopping and selling experience.
+      <strong>Shop & Track</strong>: Use your organized lists while shopping, check off items as you go, and track your 
+      spending in real-time. Review your purchase history and analytics afterward.
     </li>
   </ol>
+
+  <InfoBox type="info" title="Getting Started">
+    Ready to try Shoppis? Download the app from your device's app store or visit our web application. Creating an account takes less than a minute, and you can start building your first smart shopping list immediately.
+  </InfoBox>
+
+  <h2 id="target-users">Who Uses Shoppis?</h2>
   <p>
-    These principles have guided Shoppland's development since its inception and continue to shape its evolution 
-    as a leading e-commerce marketplace.
+    Shoppis is designed for anyone who wants to make their shopping more efficient and organized:
+  </p>
+  <ul>
+    <li>
+      <strong>Busy Families</strong>: Parents juggling work and household management who need to coordinate shopping with 
+      their partners and keep track of family needs
+    </li>
+    <li>
+      <strong>Budget-Conscious Shoppers</strong>: Individuals and families looking to control spending and make informed 
+      purchasing decisions
+    </li>
+    <li>
+      <strong>Meal Planners</strong>: People who plan their meals in advance and need organized grocery lists to support 
+      their cooking goals
+    </li>
+    <li>
+      <strong>Students</strong>: College students managing limited budgets who benefit from student discounts and spending 
+      tracking features
+    </li>
+    <li>
+      <strong>Seniors</strong>: Older adults who appreciate voice commands and large, clear interfaces for easier shopping 
+      management
+    </li>
+    <li>
+      <strong>Small Business Owners</strong>: Restaurant owners, caterers, and other business owners who need to manage 
+      inventory and supplies efficiently
+    </li>
+  </ul>
+  <p>
+    Whether you're shopping for groceries, household supplies, or planning special events, Shoppis adapts to your specific 
+    needs and shopping style.
   </p>
 </WikiLayout>
