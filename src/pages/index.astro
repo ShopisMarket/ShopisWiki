@@ -3,11 +3,11 @@ import WikiLayout from '../layouts/WikiLayout.astro';
 import TableOfContents from '../components/TableOfContents.astro';
 import InfoBox from '../components/InfoBox.astro';
 
-const pageTitle = "Welcome to Shoppland Wiki";
+const pageTitle = "Welcome to Shoppis Wiki";
 
 // These would typically come from a content management system or markdown files
 const headings = [
-  { depth: 2, slug: "about-shoppland", text: "About Shoppland" },
+  { depth: 2, slug: "about-shoppis", text: "About Shoppis" },
   { depth: 2, slug: "getting-started", text: "Getting Started" },
   { depth: 2, slug: "how-to-use-this-wiki", text: "How to Use This Wiki" },
   { depth: 2, slug: "key-features", text: "Key Features" },
@@ -30,40 +30,41 @@ const headings = [
   <TableOfContents headings={headings} />
 
   <InfoBox type="info" title="Wiki Status">
-    This wiki is continuously updated with the latest information about Shoppland. Last updated: May 2025.
+    This wiki is continuously updated with the latest information about Shoppis. Last updated: January 2025.
   </InfoBox>
 
-  <h2 id="about-shoppland">About Shoppland</h2>
+  <h2 id="about-shoppis">About Shoppis</h2>
   <p>
-    Shoppland is a comprehensive e-commerce platform designed to connect buyers and sellers in a seamless online shopping experience. 
-    Launched in 2023, Shoppland has quickly grown to become one of the most user-friendly and feature-rich online marketplaces.
+    Shoppis is an innovative shopping list and grocery management application designed to streamline your shopping experience. 
+    Launched in 2024, Shoppis combines cutting-edge technology with intuitive design to help users create, manage, and share 
+    shopping lists efficiently.
   </p>
   <p>
-    With a focus on intuitive design and customer satisfaction, Shoppland offers a wide range of products across multiple categories, 
-    from electronics and fashion to home goods and specialty items. The platform provides tools for both shoppers and sellers to 
-    engage in secure, efficient transactions.
+    With features like voice recognition, barcode scanning, and smart notifications, Shoppis transforms the traditional 
+    shopping list into a powerful tool for budget management, meal planning, and collaborative shopping. Whether you're 
+    shopping for groceries, planning meals, or managing household supplies, Shoppis adapts to your lifestyle.
   </p>
 
   <h2 id="getting-started">Getting Started</h2>
   <p>
-    New to Shoppland? This section will help you understand the basics of using the platform, whether you're looking to shop or sell.
+    New to Shoppis? This section will help you understand the basics of using the application and its key features.
   </p>
   <ul>
-    <li><a href="/introduction/what-is-shoppland">What is Shoppland?</a> - An overview of the platform and its purpose</li>
-    <li><a href="/user-guide/creating-an-account">Creating an Account</a> - Step-by-step guide to setting up your Shoppland account</li>
-    <li><a href="/user-guide/browsing-products">Browsing Products</a> - How to navigate and find products on Shoppland</li>
-    <li><a href="/seller-info/becoming-a-seller">Becoming a Seller</a> - Information for those interested in selling on Shoppland</li>
+    <li><a href="/getting-started/what-is-shoppis">What is Shoppis?</a> - An overview of the application and its purpose</li>
+    <li><a href="/getting-started/introduction">Introduction</a> - Getting familiar with Shoppis</li>
+    <li><a href="/getting-started/user-interface-overview">User Interface Overview</a> - Navigate the app with confidence</li>
+    <li><a href="/user-guide/create-an-account">Create an Account</a> - Step-by-step guide to setting up your Shoppis account</li>
   </ul>
 
   <h2 id="how-to-use-this-wiki">How to Use This Wiki</h2>
   <p>
-    This wiki is organized into several main sections, each focusing on different aspects of Shoppland:
+    This wiki is organized into several main sections, each focusing on different aspects of Shoppis:
   </p>
   <ol>
     <li><strong>Getting Started</strong> - Basic information for new users</li>
-    <li><strong>User Guide</strong> - Detailed instructions for using Shoppland as a shopper</li>
-    <li><strong>Features</strong> - In-depth explanations of Shoppland's capabilities</li>
-    <li><strong>Seller Information</strong> - Resources for sellers and vendors</li>
+    <li><strong>User Guide</strong> - Detailed instructions for using Shoppis features</li>
+    <li><strong>Features</strong> - In-depth explanations of Shoppis's capabilities</li>
+    <li><strong>Shopping Insights</strong> - Analytics and reporting features</li>
     <li><strong>Technical</strong> - Technical specifications and API documentation</li>
   </ol>
   <p>
@@ -77,18 +78,19 @@ const headings = [
 
   <h2 id="key-features">Key Features</h2>
   <p>
-    Shoppland offers a variety of features designed to enhance the online shopping experience:
+    Shoppis offers a variety of features designed to enhance your shopping and planning experience:
   </p>
   <ul>
-    <li><strong>User-Friendly Interface</strong> - Intuitive design that makes navigation and shopping simple</li>
-    <li><strong>Secure Transactions</strong> - Advanced security measures to protect user data and financial information</li>
-    <li><strong>Comprehensive Search</strong> - Powerful search functionality to help users find exactly what they're looking for</li>
-    <li><strong>Reviews and Ratings</strong> - Community-driven product evaluations to guide purchasing decisions</li>
-    <li><strong>Wishlist Feature</strong> - Save items for future reference or purchase</li>
-    <li><strong>Seller Dashboard</strong> - Tools for sellers to manage inventory, orders, and analytics</li>
-    <li><strong>Mobile Compatibility</strong> - Responsive design and dedicated mobile app for shopping on the go</li>
+    <li><strong>Voice Recognition</strong> - Add items to your list using voice commands</li>
+    <li><strong>Barcode Scanner</strong> - Quickly add products by scanning their barcodes</li>
+    <li><strong>Smart Notifications</strong> - Get reminders and suggestions based on your shopping patterns</li>
+    <li><strong>List Sharing</strong> - Collaborate with family and friends on shared shopping lists</li>
+    <li><strong>Purchase Tracking</strong> - Monitor your spending and track purchase history</li>
+    <li><strong>Planning Assistant</strong> - AI-powered meal planning and shopping suggestions</li>
+    <li><strong>Cross-Device Sync</strong> - Access your lists from any device, anywhere</li>
+    <li><strong>Budget Goals</strong> - Set and track spending goals with detailed analytics</li>
   </ul>
   <p>
-    Explore the wiki to learn more about these features and how to make the most of your Shoppland experience.
+    Explore the wiki to learn more about these features and how to make the most of your Shoppis experience.
   </p>
 </WikiLayout>
