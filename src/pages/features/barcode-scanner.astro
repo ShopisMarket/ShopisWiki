@@ -1,0 +1,266 @@
+---
+import WikiLayout from '../../layouts/WikiLayout.astro';
+import TableOfContents from '../../components/TableOfContents.astro';
+import InfoBox from '../../components/InfoBox.astro';
+
+const pageTitle = "Barcode Scanner";
+
+const headings = [
+  { depth: 2, slug: "scanner-overview", text: "Scanner Overview" },
+  { depth: 2, slug: "how-to-scan", text: "How to Scan Barcodes" },
+  { depth: 2, slug: "supported-formats", text: "Supported Barcode Formats" },
+  { depth: 2, slug: "product-information", text: "Product Information" },
+  { depth: 2, slug: "batch-scanning", text: "Batch Scanning" },
+  { depth: 2, slug: "troubleshooting", text: "Troubleshooting Scanner Issues" }
+];
+---
+
+<WikiLayout title={pageTitle}>
+  <div class="flex justify-between items-center">
+    <h1 class="text-3xl font-bold mb-8">{pageTitle}</h1>
+    <div class="flex gap-2">
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        View history
+      </a>
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        Discussion
+      </a>
+    </div>
+  </div>
+
+  <TableOfContents headings={headings} />
+
+  <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-6">
+    Shoppis's intelligent barcode scanner makes adding products to your lists incredibly fast and accurate. Simply point your camera at any barcode to instantly add products with complete information.
+  </p>
+
+  <h2 id="scanner-overview">Scanner Overview</h2>
+  <p>
+    The Shoppis barcode scanner uses advanced computer vision technology to quickly recognize and decode various barcode formats. Key features include:
+  </p>
+  <ul>
+    <li>
+      <strong>Instant Recognition</strong>: Scans most barcodes in under a second
+    </li>
+    <li>
+      <strong>Auto-Focus</strong>: Automatically focuses on barcodes for optimal scanning
+    </li>
+    <li>
+      <strong>Low-Light Performance</strong>: Works well in dim lighting conditions
+    </li>
+    <li>
+      <strong>Multiple Format Support</strong>: Recognizes UPC, EAN, QR codes, and more
+    </li>
+    <li>
+      <strong>Product Database</strong>: Access to millions of products with detailed information
+    </li>
+    <li>
+      <strong>Offline Capability</strong>: Basic scanning works without internet connection
+    </li>
+  </ul>
+
+  <InfoBox type="success" title="Speed and Accuracy">
+    The barcode scanner is often faster than typing product names and ensures 100% accuracy in product identification, including specific brands and sizes.
+  </InfoBox>
+
+  <h2 id="how-to-scan">How to Scan Barcodes</h2>
+  <p>
+    Using the barcode scanner is straightforward:
+  </p>
+  <ol>
+    <li>
+      <strong>Access the Scanner</strong>:
+      <ul>
+        <li>Tap the scanner icon in the bottom navigation</li>
+        <li>Use the camera button when adding items to a list</li>
+        <li>Say "Scan barcode" using voice commands</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Position Your Camera</strong>:
+      <ul>
+        <li>Hold your device 4-8 inches from the barcode</li>
+        <li>Ensure the barcode fits within the scanning frame</li>
+        <li>Keep the camera steady for best results</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Scan the Code</strong>:
+      <ul>
+        <li>The scanner automatically detects and scans barcodes</li>
+        <li>You'll see a green highlight when scanning is successful</li>
+        <li>Product information appears immediately</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Add to List</strong>:
+      <ul>
+        <li>Review the product information</li>
+        <li>Select the list to add the item to</li>
+        <li>Adjust quantity if needed</li>
+        <li>Tap "Add to List" to confirm</li>
+      </ul>
+    </li>
+  </ol>
+
+  <div class="my-6 border border-neutral-200 dark:border-neutral-800 rounded-lg overflow-hidden">
+    <img 
+      src="https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+      alt="Scanning barcode with smartphone"
+      class="w-full h-auto"
+      loading="lazy"
+    />
+    <div class="p-3 text-sm text-neutral-600 dark:text-neutral-400 bg-neutral-50 dark:bg-neutral-800">
+      The barcode scanner provides instant product recognition and detailed information.
+    </div>
+  </div>
+
+  <h2 id="supported-formats">Supported Barcode Formats</h2>
+  <p>
+    Shoppis supports all major barcode formats commonly found on consumer products:
+  </p>
+  <ul>
+    <li>
+      <strong>UPC-A</strong>: Standard 12-digit barcodes used in North America
+    </li>
+    <li>
+      <strong>UPC-E</strong>: Compressed 6-digit version of UPC-A
+    </li>
+    <li>
+      <strong>EAN-13</strong>: 13-digit European Article Number, used internationally
+    </li>
+    <li>
+      <strong>EAN-8</strong>: 8-digit version for smaller products
+    </li>
+    <li>
+      <strong>Code 128</strong>: High-density barcode for various applications
+    </li>
+    <li>
+      <strong>QR Codes</strong>: Two-dimensional codes that can contain product URLs
+    </li>
+    <li>
+      <strong>Data Matrix</strong>: Square barcodes often used on small items
+    </li>
+    <li>
+      <strong>PDF417</strong>: Stacked linear barcode format
+    </li>
+  </ul>
+
+  <InfoBox type="info" title="International Support">
+    Shoppis recognizes barcodes from products worldwide, automatically detecting the format and retrieving appropriate product information for your region.
+  </InfoBox>
+
+  <h2 id="product-information">Product Information</h2>
+  <p>
+    When you scan a barcode, Shoppis retrieves comprehensive product information:
+  </p>
+  <ul>
+    <li>
+      <strong>Basic Details</strong>:
+      <ul>
+        <li>Product name and brand</li>
+        <li>Package size and weight</li>
+        <li>Product category</li>
+        <li>Manufacturer information</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Nutritional Information</strong>:
+      <ul>
+        <li>Calories per serving</li>
+        <li>Macronutrients (protein, carbs, fat)</li>
+        <li>Vitamins and minerals</li>
+        <li>Allergen information</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Pricing Data</strong>:
+      <ul>
+        <li>Average retail price</li>
+        <li>Price history and trends</li>
+        <li>Store-specific pricing (where available)</li>
+        <li>Deal alerts and coupons</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Additional Features</strong>:
+      <ul>
+        <li>Product images</li>
+        <li>Customer reviews and ratings</li>
+        <li>Similar product suggestions</li>
+        <li>Sustainability information</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2 id="batch-scanning">Batch Scanning</h2>
+  <p>
+    For efficiency, Shoppis supports batch scanning to add multiple items quickly:
+  </p>
+  <ol>
+    <li>
+      <strong>Enable Batch Mode</strong>: Tap the batch scan icon in the scanner interface
+    </li>
+    <li>
+      <strong>Scan Multiple Items</strong>: Scan barcodes one after another without stopping
+    </li>
+    <li>
+      <strong>Review Items</strong>: See all scanned items in a list before adding
+    </li>
+    <li>
+      <strong>Edit Quantities</strong>: Adjust quantities for each item as needed
+    </li>
+    <li>
+      <strong>Add All Items</strong>: Confirm to add all items to your selected list
+    </li>
+  </ol>
+
+  <InfoBox type="success" title="Batch Scanning Tips">
+    Batch scanning is perfect for restocking pantry items or adding multiple products from a recipe. You can scan up to 50 items in a single batch session.
+  </InfoBox>
+
+  <h2 id="troubleshooting">Troubleshooting Scanner Issues</h2>
+  <p>
+    If you're having trouble with the barcode scanner, try these solutions:
+  </p>
+
+  <h3>Scanner Won't Start</h3>
+  <ul>
+    <li>Check camera permissions in your device settings</li>
+    <li>Ensure no other apps are using the camera</li>
+    <li>Restart the Shoppis app</li>
+    <li>Update to the latest app version</li>
+    <li>Restart your device if the issue persists</li>
+  </ul>
+
+  <h3>Barcode Not Recognized</h3>
+  <ul>
+    <li>Clean your camera lens</li>
+    <li>Ensure adequate lighting</li>
+    <li>Hold the camera steady and at the right distance (4-8 inches)</li>
+    <li>Try different angles if the barcode is curved or damaged</li>
+    <li>Use manual entry if the barcode is unreadable</li>
+  </ul>
+
+  <h3>Slow Scanning Performance</h3>
+  <ul>
+    <li>Close other apps to free up device resources</li>
+    <li>Ensure you have adequate lighting</li>
+    <li>Clean the camera lens</li>
+    <li>Check your internet connection for product lookups</li>
+    <li>Update the app to the latest version</li>
+  </ul>
+
+  <h3>Wrong Product Information</h3>
+  <ul>
+    <li>Verify you scanned the correct barcode</li>
+    <li>Check if the product has multiple variants</li>
+    <li>Report incorrect information using the "Report Error" button</li>
+    <li>Use manual entry to add the correct product details</li>
+    <li>Contact support for persistent database issues</li>
+  </ul>
+
+  <InfoBox type="warning" title="Camera Permissions">
+    The barcode scanner requires camera access to function. If you denied camera permissions initially, you can enable them in your device's Settings > Apps > Shoppis > Permissions.
+  </InfoBox>
+</WikiLayout>
