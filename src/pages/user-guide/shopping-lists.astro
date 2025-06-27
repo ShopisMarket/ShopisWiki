@@ -1,0 +1,246 @@
+---
+import WikiLayout from '../../layouts/WikiLayout.astro';
+import TableOfContents from '../../components/TableOfContents.astro';
+import InfoBox from '../../components/InfoBox.astro';
+
+const pageTitle = "Shopping Lists";
+
+const headings = [
+  { depth: 2, slug: "list-types", text: "Types of Shopping Lists" },
+  { depth: 2, slug: "smart-features", text: "Smart List Features" },
+  { depth: 2, slug: "shopping-mode", text: "Shopping Mode" },
+  { depth: 2, slug: "offline-access", text: "Offline Access" },
+  { depth: 2, slug: "list-sharing", text: "List Sharing & Collaboration" },
+  { depth: 2, slug: "completion-tracking", text: "Completion Tracking" },
+  { depth: 2, slug: "history-analytics", text: "Shopping History & Analytics" }
+];
+---
+
+<WikiLayout title={pageTitle}>
+  <div class="flex justify-between items-center">
+    <h1 class="text-3xl font-bold mb-8">{pageTitle}</h1>
+    <div class="flex gap-2">
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        View history
+      </a>
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        Discussion
+      </a>
+    </div>
+  </div>
+
+  <TableOfContents headings={headings} />
+
+  <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-6">
+    Master the art of efficient shopping with Shoppis's intelligent list system. From smart categorization to real-time collaboration, discover how to make every shopping trip more organized and productive.
+  </p>
+
+  <h2 id="list-types">Types of Shopping Lists</h2>
+  <p>
+    Shoppis supports various types of shopping lists, each optimized for different shopping scenarios:
+  </p>
+
+  <div class="my-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20">
+      <h4 class="font-semibold mb-2 text-green-800 dark:text-green-300">🛒 Grocery Lists</h4>
+      <p class="text-sm text-green-700 dark:text-green-300">Perfect for weekly shopping with automatic categorization by store sections.</p>
+    </div>
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20">
+      <h4 class="font-semibold mb-2 text-blue-800 dark:text-blue-300">🍽️ Meal Planning</h4>
+      <p class="text-sm text-blue-700 dark:text-blue-300">Recipe-based lists with ingredient calculations and nutritional info.</p>
+    </div>
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20">
+      <h4 class="font-semibold mb-2 text-purple-800 dark:text-purple-300">🏠 Household Items</h4>
+      <p class="text-sm text-purple-700 dark:text-purple-300">Cleaning supplies, toiletries, and home essentials with reorder alerts.</p>
+    </div>
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20">
+      <h4 class="font-semibold mb-2 text-orange-800 dark:text-orange-300">🎉 Event Planning</h4>
+      <p class="text-sm text-orange-700 dark:text-orange-300">Party supplies, decorations, and special occasion items.</p>
+    </div>
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-pink-50 to-rose-50 dark:from-pink-900/20 dark:to-rose-900/20">
+      <h4 class="font-semibold mb-2 text-pink-800 dark:text-pink-300">🎁 Gift Lists</h4>
+      <p class="text-sm text-pink-700 dark:text-pink-300">Holiday and birthday shopping with budget tracking and recipient notes.</p>
+    </div>
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-indigo-50 to-blue-50 dark:from-indigo-900/20 dark:to-blue-900/20">
+      <h4 class="font-semibold mb-2 text-indigo-800 dark:text-indigo-300">🏪 Store-Specific</h4>
+      <p class="text-sm text-indigo-700 dark:text-indigo-300">Lists organized by specific stores with aisle navigation.</p>
+    </div>
+  </div>
+
+  <h2 id="smart-features">Smart List Features</h2>
+  <p>
+    Shoppis's intelligent features make your shopping lists more than just simple item collections:
+  </p>
+
+  <div class="my-6 bg-gradient-to-r from-neutral-50 to-gray-50 dark:from-neutral-800 dark:to-gray-800 p-6 rounded-lg border border-neutral-200 dark:border-neutral-700">
+    <h4 class="text-lg font-semibold mb-4">🤖 AI-Powered Intelligence</h4>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <h5 class="font-medium mb-2">Smart Suggestions</h5>
+        <ul class="text-sm space-y-1">
+          <li>• Predicts items you might need</li>
+          <li>• Suggests quantities based on usage</li>
+          <li>• Recommends complementary items</li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-medium mb-2">Auto-Organization</h5>
+        <ul class="text-sm space-y-1">
+          <li>• Groups items by store sections</li>
+          <li>• Optimizes shopping route</li>
+          <li>• Prioritizes frequently bought items</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <ul>
+    <li><strong>Price Tracking</strong>: Monitor price changes and get deal alerts</li>
+    <li><strong>Nutritional Insights</strong>: See nutritional information for food items</li>
+    <li><strong>Seasonal Suggestions</strong>: Get recommendations based on time of year</li>
+    <li><strong>Brand Preferences</strong>: Remember your preferred brands automatically</li>
+    <li><strong>Quantity Intelligence</strong>: Suggest optimal quantities based on household size</li>
+  </ul>
+
+  <InfoBox type="success" title="Smart Shopping Stats">
+    Users who enable smart suggestions save an average of 23% on their grocery bills and reduce food waste by 31%.
+  </InfoBox>
+
+  <h2 id="shopping-mode">Shopping Mode</h2>
+  <p>
+    When you're ready to shop, activate Shopping Mode for an optimized in-store experience:
+  </p>
+  <ol>
+    <li><strong>Large Text Display</strong>: Easy-to-read items while walking</li>
+    <li><strong>One-Tap Checking</strong>: Quick item completion</li>
+    <li><strong>Running Total</strong>: Real-time budget tracking</li>
+    <li><strong>Store Map Integration</strong>: Navigate to item locations</li>
+    <li><strong>Voice Commands</strong>: Hands-free operation while shopping</li>
+  </ol>
+
+  <div class="my-6 border border-neutral-200 dark:border-neutral-800 rounded-lg overflow-hidden">
+    <img 
+      src="https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+      alt="Shopping with smartphone in grocery store"
+      class="w-full h-auto"
+      loading="lazy"
+    />
+    <div class="p-3 text-sm text-neutral-600 dark:text-neutral-400 bg-neutral-50 dark:bg-neutral-800">
+      Shopping Mode transforms your phone into the perfect shopping companion.
+    </div>
+  </div>
+
+  <h2 id="offline-access">Offline Access</h2>
+  <p>
+    Never worry about poor cell service in stores. Shoppis works completely offline:
+  </p>
+  <ul>
+    <li><strong>Full List Access</strong>: View and edit all your lists without internet</li>
+    <li><strong>Offline Sync</strong>: Changes sync automatically when connection returns</li>
+    <li><strong>Cached Data</strong>: Product information available offline</li>
+    <li><strong>Voice Recognition</strong>: Basic voice commands work offline</li>
+  </ul>
+
+  <InfoBox type="info" title="Offline Capabilities">
+    Shoppis stores up to 30 days of shopping data locally, ensuring you can access your lists even in areas with no cellular coverage.
+  </InfoBox>
+
+  <h2 id="list-sharing">List Sharing & Collaboration</h2>
+  <p>
+    Share lists with family members and friends for collaborative shopping:
+  </p>
+
+  <div class="my-6 overflow-x-auto">
+    <table class="w-full border-collapse border border-neutral-200 dark:border-neutral-800">
+      <thead class="bg-neutral-50 dark:bg-neutral-800">
+        <tr>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Permission Level</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Can View</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Can Add Items</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Can Delete Items</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Can Share</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 font-medium">Owner</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 font-medium">Editor</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">❌</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 font-medium">Contributor</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">❌</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">❌</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 font-medium">Viewer</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">❌</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">❌</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">❌</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="completion-tracking">Completion Tracking</h2>
+  <p>
+    Track your shopping progress with detailed completion metrics:
+  </p>
+  <ul>
+    <li><strong>Progress Bar</strong>: Visual completion percentage</li>
+    <li><strong>Item Status</strong>: Pending, completed, or skipped</li>
+    <li><strong>Time Tracking</strong>: How long shopping trips take</li>
+    <li><strong>Efficiency Metrics</strong>: Items per minute, route optimization</li>
+  </ul>
+
+  <h2 id="history-analytics">Shopping History & Analytics</h2>
+  <p>
+    Gain insights into your shopping patterns with comprehensive analytics:
+  </p>
+
+  <div class="my-6 bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 p-6 rounded-lg border border-indigo-200 dark:border-indigo-800">
+    <h4 class="text-lg font-semibold mb-4 text-indigo-800 dark:text-indigo-300">📊 Shopping Analytics Dashboard</h4>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div class="text-center">
+        <div class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">127</div>
+        <div class="text-sm text-indigo-700 dark:text-indigo-300">Shopping Trips</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">$2,847</div>
+        <div class="text-sm text-indigo-700 dark:text-indigo-300">Total Spent</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">18 min</div>
+        <div class="text-sm text-indigo-700 dark:text-indigo-300">Avg Trip Time</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">92%</div>
+        <div class="text-sm text-indigo-700 dark:text-indigo-300">List Completion</div>
+      </div>
+    </div>
+  </div>
+
+  <ul>
+    <li><strong>Spending Trends</strong>: Monthly and yearly spending patterns</li>
+    <li><strong>Frequency Analysis</strong>: Most and least purchased items</li>
+    <li><strong>Store Comparison</strong>: Price differences across stores</li>
+    <li><strong>Seasonal Patterns</strong>: How your shopping changes throughout the year</li>
+    <li><strong>Budget Performance</strong>: How well you stick to your budgets</li>
+  </ul>
+
+  <InfoBox type="warning" title="Data Privacy">
+    All shopping analytics are processed locally on your device and encrypted in the cloud. Your shopping data is never shared with third parties or used for advertising.
+  </InfoBox>
+</WikiLayout>
