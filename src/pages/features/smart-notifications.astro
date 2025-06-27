@@ -1,0 +1,260 @@
+---
+import WikiLayout from '../../layouts/WikiLayout.astro';
+import TableOfContents from '../../components/TableOfContents.astro';
+import InfoBox from '../../components/InfoBox.astro';
+
+const pageTitle = "Smart Notifications";
+
+const headings = [
+  { depth: 2, slug: "notification-types", text: "Types of Smart Notifications" },
+  { depth: 2, slug: "location-based", text: "Location-Based Alerts" },
+  { depth: 2, slug: "time-based", text: "Time-Based Reminders" },
+  { depth: 2, slug: "deal-alerts", text: "Deal & Price Alerts" },
+  { depth: 2, slug: "inventory-notifications", text: "Inventory Notifications" },
+  { depth: 2, slug: "customization", text: "Customizing Notifications" },
+  { depth: 2, slug: "privacy-settings", text: "Privacy & Settings" }
+];
+---
+
+<WikiLayout title={pageTitle}>
+  <div class="flex justify-between items-center">
+    <h1 class="text-3xl font-bold mb-8">{pageTitle}</h1>
+    <div class="flex gap-2">
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        View history
+      </a>
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        Discussion
+      </a>
+    </div>
+  </div>
+
+  <TableOfContents headings={headings} />
+
+  <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-6">
+    Shoppis's smart notification system ensures you never miss important shopping opportunities, deals, or reminders. Learn how to configure intelligent alerts that adapt to your lifestyle and shopping patterns.
+  </p>
+
+  <h2 id="notification-types">Types of Smart Notifications</h2>
+  <p>
+    Shoppis offers various types of intelligent notifications designed to enhance your shopping experience:
+  </p>
+
+  <div class="my-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20">
+      <h4 class="font-semibold mb-2 text-blue-800 dark:text-blue-300">📍 Location-Based</h4>
+      <p class="text-sm text-blue-700 dark:text-blue-300">Alerts when you're near stores with items on your list</p>
+    </div>
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20">
+      <h4 class="font-semibold mb-2 text-green-800 dark:text-green-300">⏰ Time-Based</h4>
+      <p class="text-sm text-green-700 dark:text-green-300">Reminders based on your shopping schedule and habits</p>
+    </div>
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20">
+      <h4 class="font-semibold mb-2 text-orange-800 dark:text-orange-300">💰 Deal Alerts</h4>
+      <p class="text-sm text-orange-700 dark:text-orange-300">Notifications about sales and discounts on your items</p>
+    </div>
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20">
+      <h4 class="font-semibold mb-2 text-purple-800 dark:text-purple-300">📦 Inventory</h4>
+      <p class="text-sm text-purple-700 dark:text-purple-300">Alerts when you're running low on essentials</p>
+    </div>
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-pink-50 to-rose-50 dark:from-pink-900/20 dark:to-rose-900/20">
+      <h4 class="font-semibold mb-2 text-pink-800 dark:text-pink-300">🎉 Event-Based</h4>
+      <p class="text-sm text-pink-700 dark:text-pink-300">Reminders for holidays, parties, and special occasions</p>
+    </div>
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-indigo-50 to-blue-50 dark:from-indigo-900/20 dark:to-blue-900/20">
+      <h4 class="font-semibold mb-2 text-indigo-800 dark:text-indigo-300">👥 Collaborative</h4>
+      <p class="text-sm text-indigo-700 dark:text-indigo-300">Updates about shared list activities and changes</p>
+    </div>
+  </div>
+
+  <InfoBox type="success" title="Notification Intelligence">
+    Shoppis's AI analyzes over 50 factors including your location, schedule, purchase history, and preferences to deliver perfectly timed notifications with 94% relevance accuracy.
+  </InfoBox>
+
+  <h2 id="location-based">Location-Based Alerts</h2>
+  <p>
+    Get notified about shopping opportunities when you're in the right place at the right time:
+  </p>
+  <ul>
+    <li><strong>Store Proximity Alerts</strong>: Notifications when you're near stores with items on your list</li>
+    <li><strong>Geofenced Reminders</strong>: Custom alerts for specific store locations</li>
+    <li><strong>Route Optimization</strong>: Suggestions for efficient shopping routes</li>
+    <li><strong>Nearby Deals</strong>: Alerts about sales at stores in your vicinity</li>
+    <li><strong>Alternative Store Suggestions</strong>: Notifications about better prices at nearby competitors</li>
+  </ul>
+
+  <div class="my-6 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
+    <h4 class="text-lg font-semibold mb-4 text-blue-800 dark:text-blue-300">🗺️ Location Features</h4>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <h5 class="font-medium mb-2">Smart Geofencing</h5>
+        <ul class="text-sm space-y-1">
+          <li>• Customizable alert radius (0.1-5 miles)</li>
+          <li>• Multiple store location support</li>
+          <li>• Traffic-aware timing</li>
+          <li>• Store hours integration</li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-medium mb-2">Privacy Controls</h5>
+        <ul class="text-sm space-y-1">
+          <li>• Location data stays on device</li>
+          <li>• Opt-out available anytime</li>
+          <li>• Precise location not required</li>
+          <li>• Battery optimization included</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <h2 id="time-based">Time-Based Reminders</h2>
+  <p>
+    Receive timely reminders based on your shopping patterns and schedule:
+  </p>
+  <ul>
+    <li><strong>Weekly Shopping Reminders</strong>: Alerts based on your typical shopping frequency</li>
+    <li><strong>Pre-Event Notifications</strong>: Reminders before parties, holidays, or special occasions</li>
+    <li><strong>Meal Planning Alerts</strong>: Notifications to plan meals and create shopping lists</li>
+    <li><strong>Expiration Warnings</strong>: Alerts about items nearing expiration dates</li>
+    <li><strong>Restock Reminders</strong>: Notifications when it's time to replenish regular items</li>
+  </ul>
+
+  <div class="my-6 overflow-x-auto">
+    <table class="w-full border-collapse border border-neutral-200 dark:border-neutral-800">
+      <thead class="bg-neutral-50 dark:bg-neutral-800">
+        <tr>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Reminder Type</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Default Timing</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Customizable</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">AI Learning</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Weekly Shopping</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Sunday 6 PM</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Meal Planning</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Saturday 10 AM</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Expiration Alerts</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">2 days before</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">❌</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Restock Items</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Based on usage</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="deal-alerts">Deal & Price Alerts</h2>
+  <p>
+    Never miss a great deal with intelligent price monitoring and deal notifications:
+  </p>
+  <ul>
+    <li><strong>Price Drop Alerts</strong>: Notifications when items on your list go on sale</li>
+    <li><strong>Coupon Notifications</strong>: Alerts about available coupons for your items</li>
+    <li><strong>Bulk Deal Suggestions</strong>: Notifications about bulk buying opportunities</li>
+    <li><strong>Seasonal Sale Alerts</strong>: Reminders about predictable seasonal discounts</li>
+    <li><strong>Store-Specific Deals</strong>: Notifications about sales at your preferred stores</li>
+  </ul>
+
+  <InfoBox type="info" title="Deal Intelligence">
+    Shoppis monitors prices across thousands of stores and analyzes historical data to predict the best times to buy specific items, helping users save an average of $127 per month.
+  </InfoBox>
+
+  <h2 id="inventory-notifications">Inventory Notifications</h2>
+  <p>
+    Stay on top of your household inventory with smart tracking and alerts:
+  </p>
+  <ul>
+    <li><strong>Low Stock Alerts</strong>: Notifications when you're running low on essentials</li>
+    <li><strong>Expiration Reminders</strong>: Alerts about items nearing their expiration dates</li>
+    <li><strong>Usage Pattern Notifications</strong>: Predictions based on your consumption habits</li>
+    <li><strong>Seasonal Item Reminders</strong>: Alerts for seasonal items you might need</li>
+    <li><strong>Bulk Purchase Tracking</strong>: Monitoring of bulk items and usage rates</li>
+  </ul>
+
+  <div class="my-6 border border-neutral-200 dark:border-neutral-800 rounded-lg overflow-hidden">
+    <img 
+      src="https://github.com/ShopListApp/Shopisdisplay/blob/main/images/smart-notification.png?raw=true" 
+      alt="Smart phone notifications for shopping"
+      class="w-full h-auto"
+      loading="lazy"
+    />
+    <div class="p-3 text-sm text-neutral-600 dark:text-neutral-400 bg-neutral-50 dark:bg-neutral-800">
+      Smart notifications keep you informed without overwhelming you with unnecessary alerts.
+    </div>
+  </div>
+
+  <h2 id="customization">Customizing Notifications</h2>
+  <p>
+    Tailor your notification experience to match your preferences and lifestyle:
+  </p>
+  <ul>
+    <li><strong>Notification Frequency</strong>: Choose how often you want to receive alerts</li>
+    <li><strong>Quiet Hours</strong>: Set times when notifications should be silenced</li>
+    <li><strong>Priority Levels</strong>: Customize which notifications are most important</li>
+    <li><strong>Delivery Methods</strong>: Choose between push notifications, email, or SMS</li>
+    <li><strong>Category Filters</strong>: Enable notifications only for specific product categories</li>
+  </ul>
+
+  <div class="my-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20">
+      <h4 class="font-semibold mb-2 text-green-800 dark:text-green-300">✅ Recommended Settings</h4>
+      <ul class="text-sm text-green-700 dark:text-green-300 space-y-1">
+        <li>• Enable location alerts for frequent stores</li>
+        <li>• Set quiet hours during sleep</li>
+        <li>• Prioritize deal alerts for budget items</li>
+        <li>• Enable expiration warnings</li>
+      </ul>
+    </div>
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20">
+      <h4 class="font-semibold mb-2 text-orange-800 dark:text-orange-300">⚙️ Advanced Options</h4>
+      <ul class="text-sm text-orange-700 dark:text-orange-300 space-y-1">
+        <li>• Custom notification sounds</li>
+        <li>• Vibration patterns</li>
+        <li>• LED color customization</li>
+        <li>• Smart watch integration</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 id="privacy-settings">Privacy & Settings</h2>
+  <p>
+    Maintain control over your data and privacy while enjoying smart notifications:
+  </p>
+  <ul>
+    <li><strong>Data Usage</strong>: Control what data is used for generating notifications</li>
+    <li><strong>Location Privacy</strong>: Choose precise or approximate location sharing</li>
+    <li><strong>Analytics Opt-out</strong>: Disable notification performance tracking</li>
+    <li><strong>Third-party Integration</strong>: Control connections with other apps and services</li>
+    <li><strong>Data Retention</strong>: Set how long notification data is stored</li>
+  </ul>
+
+  <InfoBox type="warning" title="Battery Optimization">
+    Smart notifications are designed to be battery-efficient. Location-based features use minimal power, and you can adjust settings to further optimize battery usage in Settings > Notifications > Battery Optimization.
+  </InfoBox>
+
+  <div class="my-6 bg-gradient-to-r from-neutral-50 to-gray-50 dark:from-neutral-800 dark:to-gray-800 p-6 rounded-lg border border-neutral-200 dark:border-neutral-700">
+    <h4 class="text-lg font-semibold mb-4">🔧 Quick Setup Guide</h4>
+    <ol class="space-y-2">
+      <li><strong>1.</strong> Go to Settings > Notifications</li>
+      <li><strong>2.</strong> Enable notification types you want</li>
+      <li><strong>3.</strong> Set your preferred stores and locations</li>
+      <li><strong>4.</strong> Configure quiet hours and frequency</li>
+      <li><strong>5.</strong> Test notifications with a sample alert</li>
+    </ol>
+  </div>
+</WikiLayout>
