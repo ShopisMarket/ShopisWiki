@@ -1,0 +1,259 @@
+---
+import WikiLayout from '../../layouts/WikiLayout.astro';
+import TableOfContents from '../../components/TableOfContents.astro';
+import InfoBox from '../../components/InfoBox.astro';
+
+const pageTitle = "Planning Assistant";
+
+const headings = [
+  { depth: 2, slug: "ai-powered-planning", text: "AI-Powered Planning" },
+  { depth: 2, slug: "meal-planning", text: "Meal Planning" },
+  { depth: 2, slug: "budget-optimization", text: "Budget Optimization" },
+  { depth: 2, slug: "seasonal-suggestions", text: "Seasonal Suggestions" },
+  { depth: 2, slug: "inventory-management", text: "Inventory Management" },
+  { depth: 2, slug: "smart-reminders", text: "Smart Reminders" },
+  { depth: 2, slug: "customization", text: "Customizing Your Assistant" }
+];
+---
+
+<WikiLayout title={pageTitle}>
+  <div class="flex justify-between items-center">
+    <h1 class="text-3xl font-bold mb-8">{pageTitle}</h1>
+    <div class="flex gap-2">
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        View history
+      </a>
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        Discussion
+      </a>
+    </div>
+  </div>
+
+  <TableOfContents headings={headings} />
+
+  <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-6">
+    Shoppis's Planning Assistant uses artificial intelligence to help you plan meals, optimize budgets, and make smarter shopping decisions. Discover how AI can transform your shopping experience.
+  </p>
+
+  <h2 id="ai-powered-planning">AI-Powered Planning</h2>
+  <p>
+    The Planning Assistant learns from your shopping patterns, dietary preferences, and budget constraints to provide personalized recommendations:
+  </p>
+
+  <div class="my-6 bg-gradient-to-r from-purple-50 to-indigo-50 dark:from-purple-900/20 dark:to-indigo-900/20 p-6 rounded-lg border border-purple-200 dark:border-purple-800">
+    <h4 class="text-lg font-semibold mb-4 text-purple-800 dark:text-purple-300">🤖 AI Assistant Capabilities</h4>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <h5 class="font-medium mb-2">Learning & Adaptation</h5>
+        <ul class="text-sm space-y-1">
+          <li> Analyzes your purchase history</li>
+          <li> Learns your brand preferences</li>
+          <li> Adapts to seasonal changes</li>
+          <li> Considers household size changes</li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-medium mb-2">Smart Recommendations</h5>
+        <ul class="text-sm space-y-1">
+          <li> Suggests complementary items</li>
+          <li> Predicts when you'll run out</li>
+          <li> Recommends bulk buying opportunities</li>
+          <li> Identifies potential savings</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <ul>
+    <li><strong>Pattern Recognition</strong>: Identifies your shopping cycles and preferences</li>
+    <li><strong>Predictive Analytics</strong>: Anticipates your needs before you run out</li>
+    <li><strong>Contextual Awareness</strong>: Considers weather, holidays, and special events</li>
+    <li><strong>Continuous Learning</strong>: Improves recommendations over time</li>
+  </ul>
+
+  <InfoBox type="success" title="AI Performance">
+    The Planning Assistant achieves 89% accuracy in predicting user needs and helps users save an average of 18% on their grocery bills through optimized planning.
+  </InfoBox>
+
+  <h2 id="meal-planning">Meal Planning</h2>
+  <p>
+    Transform meal planning from a chore into an effortless experience:
+  </p>
+  <ul>
+    <li><strong>Recipe Suggestions</strong>: Get meal ideas based on your preferences and dietary restrictions</li>
+    <li><strong>Ingredient Lists</strong>: Automatically generate shopping lists from selected recipes</li>
+    <li><strong>Nutritional Balance</strong>: Ensure meals meet your nutritional goals</li>
+    <li><strong>Leftover Management</strong>: Suggest recipes that use leftover ingredients</li>
+    <li><strong>Seasonal Menus</strong>: Recommendations based on seasonal produce availability</li>
+  </ul>
+
+  <div class="my-6 overflow-x-auto">
+    <table class="w-full border-collapse border border-neutral-200 dark:border-neutral-800">
+      <thead class="bg-neutral-50 dark:bg-neutral-800">
+        <tr>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Planning Feature</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Free Plan</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Premium Plan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Weekly meal suggestions</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">3 per week</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Unlimited</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Recipe database access</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">1,000 recipes</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">50,000+ recipes</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Nutritional analysis</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Basic</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Detailed + tracking</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Custom dietary plans</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">❌</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="budget-optimization">Budget Optimization</h2>
+  <p>
+    The Planning Assistant helps you make the most of your shopping budget:
+  </p>
+  <ul>
+    <li><strong>Price Tracking</strong>: Monitor price changes and identify the best times to buy</li>
+    <li><strong>Deal Alerts</strong>: Get notified about sales on items you regularly purchase</li>
+    <li><strong>Bulk Buying Analysis</strong>: Calculate when bulk purchases save money</li>
+    <li><strong>Store Comparison</strong>: Compare prices across different stores</li>
+    <li><strong>Generic Alternatives</strong>: Suggest cost-effective alternatives to brand names</li>
+  </ul>
+
+  <div class="my-6 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
+    <h4 class="text-lg font-semibold mb-4 text-green-800 dark:text-green-300">💰 Budget Optimization Results</h4>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div class="text-center">
+        <div class="text-2xl font-bold text-green-600 dark:text-green-400">$247</div>
+        <div class="text-sm text-green-700 dark:text-green-300">Avg Monthly Savings</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-green-600 dark:text-green-400">23%</div>
+        <div class="text-sm text-green-700 dark:text-green-300">Budget Reduction</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-green-600 dark:text-green-400">156</div>
+        <div class="text-sm text-green-700 dark:text-green-300">Deals Found/Month</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-green-600 dark:text-green-400">94%</div>
+        <div class="text-sm text-green-700 dark:text-green-300">Budget Goal Success</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 id="seasonal-suggestions">Seasonal Suggestions</h2>
+  <p>
+    Take advantage of seasonal opportunities with intelligent recommendations:
+  </p>
+  <ul>
+    <li><strong>Seasonal Produce</strong>: Suggestions for fresh, in-season fruits and vegetables</li>
+    <li><strong>Holiday Planning</strong>: Special lists and suggestions for holidays and events</li>
+    <li><strong>Weather-Based Recommendations</strong>: Comfort foods for cold weather, fresh items for summer</li>
+    <li><strong>Back-to-School</strong>: Lunch planning and school supply reminders</li>
+    <li><strong>Garden Planning</strong>: Suggestions for home gardeners based on planting seasons</li>
+  </ul>
+
+  <InfoBox type="info" title="Seasonal Intelligence">
+    The Planning Assistant considers over 200 seasonal factors including local weather patterns, regional holidays, and agricultural seasons to provide relevant suggestions.
+  </InfoBox>
+
+  <h2 id="inventory-management">Inventory Management</h2>
+  <p>
+    Keep track of what you have and what you need with smart inventory features:
+  </p>
+  <ul>
+    <li><strong>Pantry Tracking</strong>: Monitor your pantry inventory and expiration dates</li>
+    <li><strong>Auto-Reorder</strong>: Automatically add items to your list when running low</li>
+    <li><strong>Waste Reduction</strong>: Suggestions to use items before they expire</li>
+    <li><strong>Storage Optimization</strong>: Tips for proper food storage to extend freshness</li>
+    <li><strong>Inventory Alerts</strong>: Notifications about items nearing expiration</li>
+  </ul>
+
+  <div class="my-6 border border-neutral-200 dark:border-neutral-800 rounded-lg overflow-hidden">
+    <img 
+      src="https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+      alt="Smart pantry organization"
+      class="w-full h-auto"
+      loading="lazy"
+    />
+    <div class="p-3 text-sm text-neutral-600 dark:text-neutral-400 bg-neutral-50 dark:bg-neutral-800">
+      Smart inventory management helps reduce food waste and ensures you never run out of essentials.
+    </div>
+  </div>
+
+  <h2 id="smart-reminders">Smart Reminders</h2>
+  <p>
+    Never forget important shopping tasks with intelligent reminder system:
+  </p>
+  <ul>
+    <li><strong>Location-Based Reminders</strong>: Get notified when you're near stores with items on your list</li>
+    <li><strong>Time-Based Alerts</strong>: Reminders based on your typical shopping schedule</li>
+    <li><strong>Event Reminders</strong>: Shopping alerts before parties, holidays, or special occasions</li>
+    <li><strong>Restock Notifications</strong>: Alerts when frequently used items need replenishing</li>
+    <li><strong>Deal Expiration Warnings</strong>: Notifications before sales and coupons expire</li>
+  </ul>
+
+  <h2 id="customization">Customizing Your Assistant</h2>
+  <p>
+    Tailor the Planning Assistant to your specific needs and preferences:
+  </p>
+  <ul>
+    <li>
+      <strong>Dietary Preferences</strong>: Set vegetarian, vegan, keto, or other dietary restrictions
+    </li>
+    <li>
+      <strong>Household Information</strong>: Number of people, ages, and special needs
+    </li>
+    <li>
+      <strong>Budget Constraints</strong>: Set spending limits and savings goals
+    </li>
+    <li>
+      <strong>Shopping Frequency</strong>: Customize recommendations based on how often you shop
+    </li>
+    <li>
+      <strong>Preferred Stores</strong>: Focus suggestions on your favorite shopping locations
+    </li>
+    <li>
+      <strong>Cooking Skill Level</strong>: Adjust recipe complexity to match your abilities
+    </li>
+  </ul>
+
+  <InfoBox type="warning" title="Privacy Settings">
+    All Planning Assistant data is processed securely and never shared with third parties. You can adjust privacy settings and data usage preferences in your account settings.
+  </InfoBox>
+
+  <div class="my-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20">
+      <h4 class="font-semibold mb-2 text-blue-800 dark:text-blue-300">🎯 Personalization Tips</h4>
+      <ul class="text-sm text-blue-700 dark:text-blue-300 space-y-1">
+        <li> Update preferences regularly</li>
+        <li> Rate suggestions to improve accuracy</li>
+        <li> Use feedback buttons on recommendations</li>
+        <li> Review and adjust dietary settings</li>
+      </ul>
+    </div>
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20">
+      <h4 class="font-semibold mb-2 text-orange-800 dark:text-orange-300">⚡ Quick Setup</h4>
+      <ul class="text-sm text-orange-700 dark:text-orange-300 space-y-1">
+        <li> Complete the initial setup wizard</li>
+        <li> Import data from other apps</li>
+        <li> Connect loyalty cards for better deals</li>
+        <li> Enable location services for reminders</li>
+      </ul>
+    </div>
+  </div>
+</WikiLayout>
