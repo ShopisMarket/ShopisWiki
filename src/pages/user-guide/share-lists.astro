@@ -1,0 +1,271 @@
+---
+import WikiLayout from '../../layouts/WikiLayout.astro';
+import TableOfContents from '../../components/TableOfContents.astro';
+import InfoBox from '../../components/InfoBox.astro';
+
+const pageTitle = "Share Lists";
+
+const headings = [
+  { depth: 2, slug: "sharing-basics", text: "Sharing Basics" },
+  { depth: 2, slug: "permission-levels", text: "Permission Levels" },
+  { depth: 2, slug: "real-time-collaboration", text: "Real-Time Collaboration" },
+  { depth: 2, slug: "family-features", text: "Family Features" },
+  { depth: 2, slug: "notifications", text: "Sharing Notifications" },
+  { depth: 2, slug: "privacy-security", text: "Privacy & Security" },
+  { depth: 2, slug: "troubleshooting", text: "Troubleshooting Shared Lists" }
+];
+---
+
+<WikiLayout title={pageTitle}>
+  <div class="flex justify-between items-center">
+    <h1 class="text-3xl font-bold mb-8">{pageTitle}</h1>
+    <div class="flex gap-2">
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        View history
+      </a>
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        Discussion
+      </a>
+    </div>
+  </div>
+
+  <TableOfContents headings={headings} />
+
+  <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-6">
+    Collaborate seamlessly with family and friends on shared shopping lists. Learn how to set up sharing, manage permissions, and coordinate shopping activities in real-time.
+  </p>
+
+  <h2 id="sharing-basics">Sharing Basics</h2>
+  <p>
+    Sharing lists in Shoppis is designed to be simple and secure. You can share lists with anyone, whether they have a Shoppis account or not:
+  </p>
+  <ol>
+    <li><strong>Open the list</strong> you want to share</li>
+    <li><strong>Tap the share icon</strong> in the top right corner</li>
+    <li><strong>Choose sharing method</strong>: Email, text message, or direct link</li>
+    <li><strong>Set permissions</strong> for the recipient</li>
+    <li><strong>Send the invitation</strong></li>
+  </ol>
+
+  <div class="my-6 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
+    <h4 class="text-lg font-semibold mb-3 text-green-800 dark:text-green-300">🚀 Sharing Statistics</h4>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="text-center">
+        <div class="text-2xl font-bold text-green-600 dark:text-green-400">85%</div>
+        <div class="text-sm text-green-700 dark:text-green-300">of users share lists</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-green-600 dark:text-green-400">3.2</div>
+        <div class="text-sm text-green-700 dark:text-green-300">avg collaborators per list</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-green-600 dark:text-green-400">47%</div>
+        <div class="text-sm text-green-700 dark:text-green-300">faster shopping completion</div>
+      </div>
+    </div>
+  </div>
+
+  <InfoBox type="success" title="No Account Required">
+    Recipients don't need a Shoppis account to view shared lists. They can access lists through a web browser and optionally create an account for full features.
+  </InfoBox>
+
+  <h2 id="permission-levels">Permission Levels</h2>
+  <p>
+    Shoppis offers flexible permission levels to control how others interact with your shared lists:
+  </p>
+
+  <div class="my-6 overflow-x-auto">
+    <table class="w-full border-collapse border border-neutral-200 dark:border-neutral-800">
+      <thead class="bg-neutral-50 dark:bg-neutral-800">
+        <tr>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Permission</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">View List</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Add Items</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Edit Items</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Delete Items</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Share List</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Best For</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 font-medium">Owner</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">✅</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">✅</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">✅</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">✅</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">✅</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">List creator</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 font-medium">Co-Manager</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">✅</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">✅</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">✅</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">✅</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">✅</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Spouse/Partner</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 font-medium">Editor</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">✅</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">✅</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">✅</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">✅</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">❌</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Family members</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 font-medium">Contributor</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">✅</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">✅</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">❌</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">❌</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">❌</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Roommates</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 font-medium">Viewer</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">✅</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">❌</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">❌</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">❌</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">❌</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Reference only</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="real-time-collaboration">Real-Time Collaboration</h2>
+  <p>
+    Experience seamless collaboration with real-time updates across all devices:
+  </p>
+  <ul>
+    <li><strong>Instant Sync</strong>: Changes appear immediately on all connected devices</li>
+    <li><strong>Live Cursors</strong>: See who's currently viewing or editing the list</li>
+    <li><strong>Activity Feed</strong>: Track who added, edited, or completed items</li>
+    <li><strong>Conflict Resolution</strong>: Automatic handling of simultaneous edits</li>
+    <li><strong>Offline Changes</strong>: Sync changes when connection is restored</li>
+  </ul>
+
+  <div class="my-6 border border-neutral-200 dark:border-neutral-800 rounded-lg overflow-hidden">
+    <img 
+      src="https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+      alt="Family collaborating on shopping list"
+      class="w-full h-auto"
+      loading="lazy"
+    />
+    <div class="p-3 text-sm text-neutral-600 dark:text-neutral-400 bg-neutral-50 dark:bg-neutral-800">
+      Real-time collaboration makes family shopping coordination effortless.
+    </div>
+  </div>
+
+  <InfoBox type="info" title="Collaboration Features">
+    Premium users get advanced collaboration features including version history, comment threads, and priority assignments for shared list items.
+  </InfoBox>
+
+  <h2 id="family-features">Family Features</h2>
+  <p>
+    Shoppis includes special features designed for family collaboration:
+  </p>
+  <ul>
+    <li>
+      <strong>Family Groups</strong>: Create family units with shared preferences and budgets
+    </li>
+    <li>
+      <strong>Kid-Friendly Mode</strong>: Simplified interface for children to add items
+    </li>
+    <li>
+      <strong>Allowance Tracking</strong>: Set spending limits for family members
+    </li>
+    <li>
+      <strong>Chore Integration</strong>: Assign shopping tasks to family members
+    </li>
+    <li>
+      <strong>Dietary Restrictions</strong>: Shared family dietary preferences and allergies
+    </li>
+  </ul>
+
+  <div class="my-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20">
+      <h4 class="font-semibold mb-2 text-blue-800 dark:text-blue-300">👨‍👩‍👧‍👦 Family Plan Benefits</h4>
+      <ul class="text-sm text-blue-700 dark:text-blue-300 space-y-1">
+        <li> Up to 6 family members</li>
+        <li> Shared premium features</li>
+        <li> Family budget tracking</li>
+        <li> Parental controls</li>
+      </ul>
+    </div>
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20">
+      <h4 class="font-semibold mb-2 text-green-800 dark:text-green-300">🏠 Household Management</h4>
+      <ul class="text-sm text-green-700 dark:text-green-300 space-y-1">
+        <li> Shared pantry inventory</li>
+        <li> Automatic reorder alerts</li>
+        <li> Meal planning coordination</li>
+        <li> Shopping assignment rotation</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 id="notifications">Sharing Notifications</h2>
+  <p>
+    Stay informed about shared list activities with customizable notifications:
+  </p>
+  <ul>
+    <li><strong>New Items Added</strong>: Get notified when someone adds items to shared lists</li>
+    <li><strong>Shopping Completed</strong>: Know when someone finishes shopping from the list</li>
+    <li><strong>Budget Alerts</strong>: Warnings when shared lists exceed budget limits</li>
+    <li><strong>List Changes</strong>: Updates when list settings or permissions change</li>
+    <li><strong>Invitation Responses</strong>: Know when someone accepts or declines sharing invitations</li>
+  </ul>
+
+  <InfoBox type="warning" title="Notification Settings">
+    You can customize notification frequency and types in Settings > Notifications > Shared Lists to avoid notification overload.
+  </InfoBox>
+
+  <h2 id="privacy-security">Privacy & Security</h2>
+  <p>
+    Shoppis takes the security of shared lists seriously:
+  </p>
+  <ul>
+    <li><strong>Encrypted Sharing</strong>: All shared data is encrypted in transit and at rest</li>
+    <li><strong>Access Control</strong>: Granular permissions prevent unauthorized access</li>
+    <li><strong>Audit Trail</strong>: Complete history of who accessed and modified shared lists</li>
+    <li><strong>Revoke Access</strong>: Instantly remove sharing permissions at any time</li>
+    <li><strong>Anonymous Sharing</strong>: Option to share lists without revealing personal information</li>
+  </ul>
+
+  <h2 id="troubleshooting">Troubleshooting Shared Lists</h2>
+  <p>
+    Common issues and solutions for shared lists:
+  </p>
+
+  <h3>Sharing Invitation Not Received</h3>
+  <ul>
+    <li>Check spam/junk folders</li>
+    <li>Verify the email address is correct</li>
+    <li>Try sharing via text message or direct link</li>
+    <li>Ask the recipient to check their notification settings</li>
+  </ul>
+
+  <h3>Changes Not Syncing</h3>
+  <ul>
+    <li>Check internet connection on all devices</li>
+    <li>Force refresh the app by pulling down on the list</li>
+    <li>Log out and back in to refresh sync</li>
+    <li>Update to the latest app version</li>
+  </ul>
+
+  <h3>Permission Issues</h3>
+  <ul>
+    <li>Verify the user has the correct permission level</li>
+    <li>Check if the sharing link has expired</li>
+    <li>Re-send the invitation with updated permissions</li>
+    <li>Contact support for persistent permission problems</li>
+  </ul>
+
+  <InfoBox type="success" title="Best Practices">
+    For optimal sharing experience: use descriptive list names, set clear permissions from the start, and communicate with collaborators about list organization preferences.
+  </InfoBox>
+</WikiLayout>
