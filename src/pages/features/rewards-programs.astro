@@ -1,0 +1,306 @@
+---
+import WikiLayout from '../../layouts/WikiLayout.astro';
+import TableOfContents from '../../components/TableOfContents.astro';
+import InfoBox from '../../components/InfoBox.astro';
+
+const pageTitle = "Rewards & Student Deals";
+
+const headings = [
+  { depth: 2, slug: "rewards-overview", text: "Rewards Program Overview" },
+  { depth: 2, slug: "student-benefits", text: "Student Benefits" },
+  { depth: 2, slug: "loyalty-integration", text: "Store Loyalty Integration" },
+  { depth: 2, slug: "cashback-system", text: "Cashback System" },
+  { depth: 2, slug: "exclusive-deals", text: "Exclusive Deals" },
+  { depth: 2, slug: "referral-program", text: "Referral Program" },
+  { depth: 2, slug: "redemption", text: "Redeeming Rewards" }
+];
+---
+
+<WikiLayout title={pageTitle}>
+  <div class="flex justify-between items-center">
+    <h1 class="text-3xl font-bold mb-8">{pageTitle}</h1>
+    <div class="flex gap-2">
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        View history
+      </a>
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        Discussion
+      </a>
+    </div>
+  </div>
+
+  <TableOfContents headings={headings} />
+
+  <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-6">
+    Maximize your savings with Shoppis's comprehensive rewards program and exclusive student benefits. Learn how to earn points, access special deals, and make the most of your shopping budget.
+  </p>
+
+  <h2 id="rewards-overview">Rewards Program Overview</h2>
+  <p>
+    Shoppis Rewards is a comprehensive program designed to help you save money on every shopping trip:
+  </p>
+
+  <div class="my-6 bg-gradient-to-r from-purple-50 to-indigo-50 dark:from-purple-900/20 dark:to-indigo-900/20 p-6 rounded-lg border border-purple-200 dark:border-purple-800">
+    <h4 class="text-lg font-semibold mb-4 text-purple-800 dark:text-purple-300">🎁 Rewards Program Benefits</h4>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="text-center">
+        <div class="text-2xl font-bold text-purple-600 dark:text-purple-400">2x</div>
+        <div class="text-sm text-purple-700 dark:text-purple-300">Points on Groceries</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-purple-600 dark:text-purple-400">5%</div>
+        <div class="text-sm text-purple-700 dark:text-purple-300">Average Cashback</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-purple-600 dark:text-purple-400">$180</div>
+        <div class="text-sm text-purple-700 dark:text-purple-300">Avg Annual Savings</div>
+      </div>
+    </div>
+  </div>
+
+  <ul>
+    <li><strong>Points System</strong>: Earn 1 point per dollar spent, 2x points on groceries</li>
+    <li><strong>Tier Benefits</strong>: Bronze, Silver, Gold, and Platinum membership levels</li>
+    <li><strong>Bonus Categories</strong>: Rotating categories with enhanced earning rates</li>
+    <li><strong>Partner Network</strong>: Earn points at thousands of participating stores</li>
+    <li><strong>Digital Receipts</strong>: Automatic point tracking with receipt scanning</li>
+  </ul>
+
+  <div class="my-6 overflow-x-auto">
+    <table class="w-full border-collapse border border-neutral-200 dark:border-neutral-800">
+      <thead class="bg-neutral-50 dark:bg-neutral-800">
+        <tr>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Membership Tier</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Annual Spending</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Point Multiplier</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Special Benefits</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 font-medium">🥉 Bronze</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">$0 - $999</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">1x</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Basic rewards</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 font-medium">🥈 Silver</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">$1,000 - $2,999</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">1.25x</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Early access to deals</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 font-medium">🥇 Gold</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">$3,000 - $4,999</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">1.5x</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Exclusive offers, free shipping</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 font-medium">💎 Platinum</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">$5,000+</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">2x</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Personal shopper, VIP support</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <InfoBox type="success" title="Automatic Enrollment">
+    All Shoppis users are automatically enrolled in the rewards program at no cost. Start earning points immediately with your first purchase!
+  </InfoBox>
+
+  <h2 id="student-benefits">Student Benefits</h2>
+  <p>
+    Students get exclusive access to enhanced savings and special offers:
+  </p>
+  <ul>
+    <li><strong>Student Discount</strong>: 15% off Shoppis Premium subscription</li>
+    <li><strong>Bonus Points</strong>: 3x points on all purchases (instead of standard rates)</li>
+    <li><strong>Textbook Savings</strong>: Special deals on educational materials</li>
+    <li><strong>Meal Plan Integration</strong>: Discounts on meal planning features</li>
+    <li><strong>Campus Store Partnerships</strong>: Exclusive deals at university bookstores</li>
+  </ul>
+
+  <div class="my-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20">
+      <h4 class="font-semibold mb-2 text-blue-800 dark:text-blue-300">🎓 Student Verification</h4>
+      <ul class="text-sm text-blue-700 dark:text-blue-300 space-y-1">
+        <li>• Valid .edu email address</li>
+        <li>• Student ID verification</li>
+        <li>• Enrollment verification service</li>
+        <li>• Annual re-verification required</li>
+      </ul>
+    </div>
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20">
+      <h4 class="font-semibold mb-2 text-green-800 dark:text-green-300">💰 Student Savings</h4>
+      <ul class="text-sm text-green-700 dark:text-green-300 space-y-1">
+        <li>• Average $240/year in savings</li>
+        <li>• Exclusive student-only deals</li>
+        <li>• Textbook price comparison</li>
+        <li>• Campus dining discounts</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 id="loyalty-integration">Store Loyalty Integration</h2>
+  <p>
+    Connect your existing store loyalty cards to maximize savings across all your shopping:
+  </p>
+  <ul>
+    <li><strong>Card Linking</strong>: Connect loyalty cards from major retailers</li>
+    <li><strong>Automatic Application</strong>: Discounts applied automatically at checkout</li>
+    <li><strong>Points Consolidation</strong>: View all loyalty points in one place</li>
+    <li><strong>Expiration Tracking</strong>: Alerts before points or rewards expire</li>
+    <li><strong>Best Deal Comparison</strong>: Compare loyalty benefits across stores</li>
+  </ul>
+
+  <InfoBox type="info" title="Supported Retailers">
+    Shoppis integrates with over 500 major retailers including grocery stores, pharmacies, department stores, and online retailers. New partnerships are added monthly.
+  </InfoBox>
+
+  <h2 id="cashback-system">Cashback System</h2>
+  <p>
+    Earn real money back on your purchases through Shoppis's cashback program:
+  </p>
+  <ul>
+    <li><strong>Percentage Cashback</strong>: Earn 1-10% cashback depending on the store and category</li>
+    <li><strong>Flat Rate Bonuses</strong>: Fixed cashback amounts for specific purchases</li>
+    <li><strong>Seasonal Promotions</strong>: Enhanced cashback rates during special periods</li>
+    <li><strong>Referral Bonuses</strong>: Extra cashback for referring friends and family</li>
+    <li><strong>Milestone Rewards</strong>: Bonus cashback for reaching spending milestones</li>
+  </ul>
+
+  <div class="my-6 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
+    <h4 class="text-lg font-semibold mb-4 text-green-800 dark:text-green-300">💵 Cashback Categories</h4>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div class="text-center">
+        <div class="text-2xl font-bold text-green-600 dark:text-green-400">5%</div>
+        <div class="text-sm text-green-700 dark:text-green-300">Groceries</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-green-600 dark:text-green-400">3%</div>
+        <div class="text-sm text-green-700 dark:text-green-300">Gas Stations</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-green-600 dark:text-green-400">2%</div>
+        <div class="text-sm text-green-700 dark:text-green-300">Restaurants</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-green-600 dark:text-green-400">1%</div>
+        <div class="text-sm text-green-700 dark:text-green-300">Everything Else</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 id="exclusive-deals">Exclusive Deals</h2>
+  <p>
+    Access special offers and deals available only to Shoppis users:
+  </p>
+  <ul>
+    <li><strong>Member-Only Sales</strong>: Exclusive discounts not available to the general public</li>
+    <li><strong>Early Access</strong>: Shop sales before they're available to everyone</li>
+    <li><strong>Bundle Deals</strong>: Special pricing on product combinations</li>
+    <li><strong>Flash Sales</strong>: Limited-time offers with significant discounts</li>
+    <li><strong>Seasonal Specials</strong>: Holiday and seasonal exclusive offers</li>
+  </ul>
+
+  <div class="my-6 border border-neutral-200 dark:border-neutral-800 rounded-lg overflow-hidden">
+    <img 
+      src="https://www.shopic.co/wp-content/uploads/2025/04/slider-images-finel_2600px-scaled.webp" 
+      alt="Shopping deals and discounts"
+      class="w-full h-auto"
+      loading="lazy"
+    />
+    <div class="p-3 text-sm text-neutral-600 dark:text-neutral-400 bg-neutral-50 dark:bg-neutral-800">
+      Exclusive deals help Shoppis users save significantly more than traditional shopping methods.
+    </div>
+  </div>
+
+  <h2 id="referral-program">Referral Program</h2>
+  <p>
+    Earn rewards by sharing Shoppis with friends and family:
+  </p>
+  <ul>
+    <li><strong>Referral Bonus</strong>: $10 credit for each successful referral</li>
+    <li><strong>Friend Benefit</strong>: New users get $5 welcome bonus</li>
+    <li><strong>Unlimited Referrals</strong>: No limit on how many people you can refer</li>
+    <li><strong>Social Sharing</strong>: Easy sharing through social media and messaging</li>
+    <li><strong>Tracking Dashboard</strong>: Monitor your referral status and earnings</li>
+  </ul>
+
+  <InfoBox type="warning" title="Referral Terms">
+    Referral bonuses are credited after the referred user makes their first purchase of $25 or more. Both parties must maintain active accounts for 30 days to receive bonuses.
+  </InfoBox>
+
+  <h2 id="redemption">Redeeming Rewards</h2>
+  <p>
+    Multiple ways to use your earned rewards and cashback:
+  </p>
+  <ul>
+    <li><strong>Account Credit</strong>: Apply rewards as credit to your Shoppis account</li>
+    <li><strong>Gift Cards</strong>: Redeem for gift cards to popular retailers</li>
+    <li><strong>Direct Deposit</strong>: Transfer cashback directly to your bank account</li>
+    <li><strong>PayPal Transfer</strong>: Receive payments through PayPal</li>
+    <li><strong>Charity Donations</strong>: Donate rewards to supported charitable organizations</li>
+  </ul>
+
+  <div class="my-6 overflow-x-auto">
+    <table class="w-full border-collapse border border-neutral-200 dark:border-neutral-800">
+      <thead class="bg-neutral-50 dark:bg-neutral-800">
+        <tr>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Redemption Method</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Minimum Amount</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Processing Time</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Fees</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Account Credit</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">$1</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Instant</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Free</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Gift Cards</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">$5</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">24-48 hours</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Free</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Bank Transfer</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">$25</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">3-5 business days</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Free</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">PayPal</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">$10</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">1-2 business days</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Free</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="my-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20">
+      <h4 class="font-semibold mb-2 text-orange-800 dark:text-orange-300">🚀 Maximizing Rewards</h4>
+      <ul class="text-sm text-orange-700 dark:text-orange-300 space-y-1">
+        <li>• Shop during bonus point periods</li>
+        <li>• Use linked loyalty cards</li>
+        <li>• Refer friends and family</li>
+        <li>• Take advantage of seasonal promotions</li>
+      </ul>
+    </div>
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-indigo-50 to-blue-50 dark:from-indigo-900/20 dark:to-blue-900/20">
+      <h4 class="font-semibold mb-2 text-indigo-800 dark:text-indigo-300">📊 Rewards Tracking</h4>
+      <ul class="text-sm text-indigo-700 dark:text-indigo-300 space-y-1">
+        <li>• Real-time points balance</li>
+        <li>• Detailed earning history</li>
+        <li>• Redemption tracking</li>
+        <li>• Tier progress monitoring</li>
+      </ul>
+    </div>
+  </div>
+</WikiLayout>
