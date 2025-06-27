@@ -1,0 +1,212 @@
+---
+import WikiLayout from '../../layouts/WikiLayout.astro';
+import TableOfContents from '../../components/TableOfContents.astro';
+import InfoBox from '../../components/InfoBox.astro';
+
+const pageTitle = "Add & Manage Lists";
+
+const headings = [
+  { depth: 2, slug: "creating-lists", text: "Creating Your First List" },
+  { depth: 2, slug: "adding-items", text: "Adding Items to Lists" },
+  { depth: 3, slug: "voice-input", text: "Voice Input" },
+  { depth: 3, slug: "barcode-scanning", text: "Barcode Scanning" },
+  { depth: 3, slug: "manual-entry", text: "Manual Entry" },
+  { depth: 2, slug: "organizing-lists", text: "Organizing Your Lists" },
+  { depth: 2, slug: "list-templates", text: "List Templates" },
+  { depth: 2, slug: "bulk-operations", text: "Bulk Operations" },
+  { depth: 2, slug: "list-settings", text: "List Settings & Customization" }
+];
+---
+
+<WikiLayout title={pageTitle}>
+  <div class="flex justify-between items-center">
+    <h1 class="text-3xl font-bold mb-8">{pageTitle}</h1>
+    <div class="flex gap-2">
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        View history
+      </a>
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        Discussion
+      </a>
+    </div>
+  </div>
+
+  <TableOfContents headings={headings} />
+
+  <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-6">
+    Learn how to create, organize, and manage your shopping lists efficiently using Shoppis's powerful features including voice input and barcode scanning.
+  </p>
+
+  <h2 id="creating-lists">Creating Your First List</h2>
+  <p>
+    Creating a new shopping list in Shoppis is quick and intuitive. You have several options:
+  </p>
+  <ol>
+    <li><strong>Quick Create</strong>: Tap the "+" button on the home screen</li>
+    <li><strong>Voice Create</strong>: Say "Create a new list called [name]"</li>
+    <li><strong>Template Create</strong>: Choose from pre-made templates</li>
+    <li><strong>Import Create</strong>: Import from other apps or services</li>
+  </ol>
+
+  <div class="my-6 overflow-x-auto">
+    <table class="w-full border-collapse border border-neutral-200 dark:border-neutral-800">
+      <thead class="bg-neutral-50 dark:bg-neutral-800">
+        <tr>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">List Type</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Best For</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Features</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Grocery List</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Weekly shopping</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Auto-categorization, price tracking</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Meal Planning</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Recipe ingredients</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Recipe integration, serving calculator</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Household Items</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Cleaning supplies, toiletries</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Reorder reminders, bulk suggestions</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Special Events</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Parties, holidays</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Guest count calculator, themed suggestions</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <InfoBox type="success" title="Quick Start Tip">
+    Start with a simple grocery list and add items as you think of them throughout the week. Shoppis will learn your patterns and start suggesting items automatically.
+  </InfoBox>
+
+  <h2 id="adding-items">Adding Items to Lists</h2>
+  <p>
+    Shoppis offers multiple ways to add items to your lists, making it convenient no matter what situation you're in.
+  </p>
+
+  <h3 id="voice-input">Voice Input</h3>
+  <p>
+    Voice input is one of Shoppis's most powerful features, allowing hands-free list management:
+  </p>
+  <ul>
+    <li><strong>Basic Commands</strong>: "Add milk to my grocery list"</li>
+    <li><strong>Quantity Specification</strong>: "Add two pounds of ground beef"</li>
+    <li><strong>Brand Preferences</strong>: "Add Heinz ketchup"</li>
+    <li><strong>Multiple Items</strong>: "Add bread, eggs, and cheese to my list"</li>
+  </ul>
+
+  <div class="my-6 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
+    <h4 class="text-lg font-semibold mb-3 text-blue-800 dark:text-blue-300">Voice Recognition Statistics</h4>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="text-center">
+        <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">98.5%</div>
+        <div class="text-sm text-blue-700 dark:text-blue-300">Accuracy Rate</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">70%</div>
+        <div class="text-sm text-blue-700 dark:text-blue-300">Users Prefer Voice</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">15+</div>
+        <div class="text-sm text-blue-700 dark:text-blue-300">Languages Supported</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 id="barcode-scanning">Barcode Scanning</h3>
+  <p>
+    Barcode scanning ensures 100% accuracy when adding products:
+  </p>
+  <ol>
+    <li>Tap the camera icon in the add item interface</li>
+    <li>Point your camera at the product barcode</li>
+    <li>Wait for the green confirmation</li>
+    <li>Review product details and add to list</li>
+  </ol>
+
+  <InfoBox type="info" title="Scanning Performance">
+    Shoppis can scan over 50 million products worldwide with instant recognition. The database is updated daily with new products.
+  </InfoBox>
+
+  <h3 id="manual-entry">Manual Entry</h3>
+  <p>
+    For items without barcodes or when voice/scanning isn't available:
+  </p>
+  <ul>
+    <li>Type the item name in the add field</li>
+    <li>Use auto-complete suggestions</li>
+    <li>Specify quantity and units</li>
+    <li>Add notes or brand preferences</li>
+  </ul>
+
+  <h2 id="organizing-lists">Organizing Your Lists</h2>
+  <p>
+    Keep your lists organized with these features:
+  </p>
+  <ul>
+    <li><strong>Categories</strong>: Items automatically sort into categories (Produce, Dairy, etc.)</li>
+    <li><strong>Custom Sections</strong>: Create your own categories</li>
+    <li><strong>Priority Items</strong>: Mark essential items with priority flags</li>
+    <li><strong>Store Layout</strong>: Organize by your favorite store's layout</li>
+  </ul>
+
+  <h2 id="list-templates">List Templates</h2>
+  <p>
+    Save time with pre-built templates:
+  </p>
+
+  <div class="my-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4">
+      <h4 class="font-semibold mb-2">Weekly Grocery Template</h4>
+      <ul class="text-sm text-neutral-600 dark:text-neutral-400">
+        <li>• Fresh produce essentials</li>
+        <li>• Dairy and proteins</li>
+        <li>• Pantry staples</li>
+        <li>• Household basics</li>
+      </ul>
+    </div>
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4">
+      <h4 class="font-semibold mb-2">Party Planning Template</h4>
+      <ul class="text-sm text-neutral-600 dark:text-neutral-400">
+        <li>• Appetizers and snacks</li>
+        <li>• Beverages</li>
+        <li>• Party supplies</li>
+        <li>• Decorations</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 id="bulk-operations">Bulk Operations</h2>
+  <p>
+    Manage multiple items efficiently:
+  </p>
+  <ul>
+    <li><strong>Select Multiple</strong>: Long-press to enter selection mode</li>
+    <li><strong>Bulk Delete</strong>: Remove multiple items at once</li>
+    <li><strong>Bulk Move</strong>: Transfer items between lists</li>
+    <li><strong>Bulk Edit</strong>: Change quantities or categories</li>
+  </ul>
+
+  <h2 id="list-settings">List Settings & Customization</h2>
+  <p>
+    Customize each list to fit your needs:
+  </p>
+  <ul>
+    <li><strong>List Name & Icon</strong>: Personalize with custom names and icons</li>
+    <li><strong>Sharing Settings</strong>: Control who can view and edit</li>
+    <li><strong>Notification Preferences</strong>: Set reminders and alerts</li>
+    <li><strong>Budget Limits</strong>: Set spending goals per list</li>
+    <li><strong>Auto-Archive</strong>: Automatically archive completed lists</li>
+  </ul>
+
+  <InfoBox type="warning" title="List Limits">
+    Free accounts can create up to 10 active lists. Premium accounts have unlimited lists with advanced organization features.
+  </InfoBox>
+</WikiLayout>
