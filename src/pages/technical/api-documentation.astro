@@ -1,0 +1,412 @@
+---
+import WikiLayout from '../../layouts/WikiLayout.astro';
+import TableOfContents from '../../components/TableOfContents.astro';
+import InfoBox from '../../components/InfoBox.astro';
+import CodeBlock from '../../components/CodeBlock.astro';
+import Note from '../../components/Note.astro';
+
+const pageTitle = "API Documentation";
+
+const headings = [
+  { depth: 2, slug: "getting-started", text: "Getting Started" },
+  { depth: 2, slug: "authentication", text: "Authentication" },
+  { depth: 2, slug: "endpoints", text: "API Endpoints" },
+  { depth: 3, slug: "lists-api", text: "Lists API" },
+  { depth: 3, slug: "items-api", text: "Items API" },
+  { depth: 3, slug: "analytics-api", text: "Analytics API" },
+  { depth: 2, slug: "webhooks", text: "Webhooks" },
+  { depth: 2, slug: "rate-limits", text: "Rate Limits" },
+  { depth: 2, slug: "sdks", text: "SDKs & Libraries" }
+];
+---
+
+<WikiLayout title={pageTitle}>
+  <div class="flex justify-between items-center">
+    <h1 class="text-3xl font-bold mb-8">{pageTitle}</h1>
+    <div class="flex gap-2">
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        View history
+      </a>
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        Discussion
+      </a>
+    </div>
+  </div>
+
+  <TableOfContents headings={headings} />
+
+  <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-6">
+    The Shoppis API provides programmatic access to shopping lists, items, analytics, and user data. Build integrations, automate workflows, and create custom applications using our RESTful API.
+  </p>
+
+  <div class="my-6 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
+    <h4 class="text-lg font-semibold mb-4 text-blue-800 dark:text-blue-300">🚀 API Overview</h4>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div class="text-center">
+        <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">REST</div>
+        <div class="text-sm text-blue-700 dark:text-blue-300">Architecture</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">JSON</div>
+        <div class="text-sm text-blue-700 dark:text-blue-300">Data Format</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">OAuth 2.0</div>
+        <div class="text-sm text-blue-700 dark:text-blue-300">Authentication</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">99.9%</div>
+        <div class="text-sm text-blue-700 dark:text-blue-300">Uptime SLA</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 id="getting-started">Getting Started</h2>
+  <p>
+    The Shoppis API is organized around REST principles. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes.
+  </p>
+
+  <Note type="important" title="API Version">
+    The current API version is v2. All requests should include the version in the URL path: <code>https://api.shoppis.com/v2/</code>
+  </Note>
+
+  <h3>Base URL</h3>
+  <CodeBlock language="bash" title="API Base URL">
+https://api.shoppis.com/v2/
+  </CodeBlock>
+
+  <h3>Quick Start Example</h3>
+  <CodeBlock language="javascript" title="Basic API Request">
+const response = await fetch('https://api.shoppis.com/v2/lists', {
+  method: 'GET',
+  headers: {
+    'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
+    'Content-Type': 'application/json',
+    'Accept': 'application/json'
+  }
+});
+
+const lists = await response.json();
+console.log(lists);
+  </CodeBlock>
+
+  <h2 id="authentication">Authentication</h2>
+  <p>
+    The Shoppis API uses OAuth 2.0 for authentication. You'll need to register your application and obtain API credentials.
+  </p>
+
+  <h3>Getting API Credentials</h3>
+  <ol>
+    <li>Visit the <a href="https://developers.shoppis.com">Developer Portal</a></li>
+    <li>Create a new application</li>
+    <li>Copy your Client ID and Client Secret</li>
+    <li>Configure your redirect URIs</li>
+  </ol>
+
+  <h3>OAuth 2.0 Flow</h3>
+  <CodeBlock language="javascript" title="Authorization Code Flow">
+// Step 1: Redirect user to authorization URL
+const authUrl = https://api.shoppis.com/oauth/authorize? +
+  client_id=${CLIENT_ID}& +
+  redirect_uri=${REDIRECT_URI}& +
+  response_type=code& +
+  scope=read_lists write_lists read_analytics;
+
+window.location.href = authUrl;
+
+// Step 2: Exchange authorization code for access token
+const tokenResponse = await fetch('https://api.shoppis.com/oauth/token', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/x-www-form-urlencoded'
+  },
+  body: new URLSearchParams({
+    grant_type: 'authorization_code',
+    client_id: CLIENT_ID,
+    client_secret: CLIENT_SECRET,
+    code: AUTHORIZATION_CODE,
+    redirect_uri: REDIRECT_URI
+  })
+});
+
+const tokens = await tokenResponse.json();
+// Store tokens.access_token securely
+  </CodeBlock>
+
+  <Note type="warning" title="Security">
+    Never expose your Client Secret in client-side code. Use the authorization code flow for web applications and the implicit flow for single-page applications.
+  </Note>
+
+  <h3>API Scopes</h3>
+  <div class="my-6 overflow-x-auto">
+    <table class="w-full border-collapse border border-neutral-200 dark:border-neutral-800">
+      <thead class="bg-neutral-50 dark:bg-neutral-800">
+        <tr>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Scope</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Description</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Access Level</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2"><code>read_lists</code></td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Read shopping lists and items</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Read-only</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2"><code>write_lists</code></td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Create, update, and delete lists</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Read/Write</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2"><code>read_analytics</code></td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Access analytics and insights</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Read-only</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2"><code>read_profile</code></td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Access user profile information</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Read-only</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="endpoints">API Endpoints</h2>
+  <p>
+    The Shoppis API provides endpoints for managing lists, items, analytics, and user data.
+  </p>
+
+  <h3 id="lists-api">Lists API</h3>
+  <p>
+    Manage shopping lists and their metadata.
+  </p>
+
+  <h4>Get All Lists</h4>
+  <CodeBlock language="bash" title="GET /lists">
+GET https://api.shoppis.com/v2/lists
+Authorization: Bearer YOUR_ACCESS_TOKEN
+  </CodeBlock>
+
+  <CodeBlock language="json" title="Response">
+{
+  "data": [
+    {
+      "id": "list_1234567890",
+      "name": "Weekly Groceries",
+      "description": "Regular grocery shopping list",
+      "created_at": "2024-01-15T10:30:00Z",
+      "updated_at": "2024-01-20T14:22:00Z",
+      "item_count": 23,
+      "total_estimated_cost": 127.50,
+      "shared": true,
+      "collaborators": [
+        {
+          "user_id": "user_9876543210",
+          "email": "partner@example.com",
+          "permission": "editor"
+        }
+      ]
+    }
+  ],
+  "pagination": {
+    "page": 1,
+    "per_page": 20,
+    "total": 5,
+    "total_pages": 1
+  }
+}
+  </CodeBlock>
+
+  <h4>Create a New List</h4>
+  <CodeBlock language="bash" title="POST /lists">
+POST https://api.shoppis.com/v2/lists
+Authorization: Bearer YOUR_ACCESS_TOKEN
+Content-Type: application/json
+  </CodeBlock>
+
+  <CodeBlock language="json" title="Request Body">
+{
+  "name": "Party Supplies",
+  "description": "Items for birthday party",
+  "type": "event",
+  "budget_limit": 200.00
+}
+  </CodeBlock>
+
+  <h3 id="items-api">Items API</h3>
+  <p>
+    Manage items within shopping lists.
+  </p>
+
+  <h4>Add Item to List</h4>
+  <CodeBlock language="javascript" title="Add Item Example">
+const newItem = await fetch('https://api.shoppis.com/v2/lists/list_1234567890/items', {
+  method: 'POST',
+  headers: {
+    'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    name: 'Organic Bananas',
+    quantity: 2,
+    unit: 'bunch',
+    category: 'produce',
+    notes: 'Make sure they are ripe',
+    estimated_price: 3.99
+  })
+});
+
+const item = await newItem.json();
+  </CodeBlock>
+
+  <h4>Update Item Status</h4>
+  <CodeBlock language="javascript" title="Mark Item as Purchased">
+const response = await fetch('https://api.shoppis.com/v2/items/item_9876543210', {
+  method: 'PATCH',
+  headers: {
+    'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    status: 'purchased',
+    actual_price: 4.29,
+    purchased_at: new Date().toISOString()
+  })
+});
+  </CodeBlock>
+
+  <h3 id="analytics-api">Analytics API</h3>
+  <p>
+    Access spending analytics and insights.
+  </p>
+
+  <CodeBlock language="javascript" title="Get Spending Analytics">
+const analytics = await fetch('https://api.shoppis.com/v2/analytics/spending', {
+  method: 'GET',
+  headers: {
+    'Authorization': 'Bearer YOUR_ACCESS_TOKEN'
+  }
+});
+
+const data = await analytics.json();
+// Returns spending breakdown by category, time period, etc.
+  </CodeBlock>
+
+  <h2 id="webhooks">Webhooks</h2>
+  <p>
+    Receive real-time notifications when events occur in your Shoppis account.
+  </p>
+
+  <h3>Setting Up Webhooks</h3>
+  <CodeBlock language="javascript" title="Create Webhook Endpoint">
+const webhook = await fetch('https://api.shoppis.com/v2/webhooks', {
+  method: 'POST',
+  headers: {
+    'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    url: 'https://your-app.com/webhooks/shoppis',
+    events: ['list.created', 'item.added', 'item.purchased'],
+    secret: 'your_webhook_secret'
+  })
+});
+  </CodeBlock>
+
+  <h3>Webhook Events</h3>
+  <div class="my-6 overflow-x-auto">
+    <table class="w-full border-collapse border border-neutral-200 dark:border-neutral-800">
+      <thead class="bg-neutral-50 dark:bg-neutral-800">
+        <tr>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Event</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Description</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Payload</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2"><code>list.created</code></td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">New list created</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">List object</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2"><code>item.added</code></td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Item added to list</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Item object</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2"><code>item.purchased</code></td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Item marked as purchased</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Item object</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="rate-limits">Rate Limits</h2>
+  <p>
+    API requests are rate limited to ensure fair usage and system stability.
+  </p>
+
+  <div class="my-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20">
+      <h4 class="font-semibold mb-2 text-green-800 dark:text-green-300">🆓 Free Tier</h4>
+      <ul class="text-sm text-green-700 dark:text-green-300 space-y-1">
+        <li>• 1,000 requests/hour</li>
+        <li>• 10,000 requests/day</li>
+        <li>• Burst limit: 100 requests/minute</li>
+      </ul>
+    </div>
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20">
+      <h4 class="font-semibold mb-2 text-blue-800 dark:text-blue-300">💎 Premium Tier</h4>
+      <ul class="text-sm text-blue-700 dark:text-blue-300 space-y-1">
+        <li>• 10,000 requests/hour</li>
+        <li>• 100,000 requests/day</li>
+        <li>• Burst limit: 500 requests/minute</li>
+      </ul>
+    </div>
+  </div>
+
+  <Note type="tip" title="Rate Limit Headers">
+    Check the <code>X-RateLimit-Remaining</code> and <code>X-RateLimit-Reset</code> headers in API responses to monitor your usage.
+  </Note>
+
+  <h2 id="sdks">SDKs & Libraries</h2>
+  <p>
+    Official SDKs and community libraries to accelerate your development.
+  </p>
+
+  <h3>Official SDKs</h3>
+  <CodeBlock language="bash" title="Install JavaScript SDK">
+npm install @shoppis/api-client
+  </CodeBlock>
+
+  <CodeBlock language="javascript" title="JavaScript SDK Usage">
+import { ShoppisClient } from '@shoppis/api-client';
+
+const client = new ShoppisClient({
+  accessToken: 'YOUR_ACCESS_TOKEN'
+});
+
+// Get all lists
+const lists = await client.lists.getAll();
+
+// Create a new list
+const newList = await client.lists.create({
+  name: 'Weekend Shopping',
+  type: 'grocery'
+});
+
+// Add item to list
+const item = await client.items.create(newList.id, {
+  name: 'Milk',
+  quantity: 1,
+  unit: 'gallon'
+});
+  </CodeBlock>
+
+  <InfoBox type="success" title="SDK Benefits">
+    Official SDKs provide type safety, automatic retries, built-in rate limiting, and simplified authentication handling.
+  </InfoBox>
+</WikiLayout>
