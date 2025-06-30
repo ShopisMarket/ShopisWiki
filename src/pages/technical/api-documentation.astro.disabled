@@ -6,7 +6,7 @@ import CodeBlock from '../../components/CodeBlock.astro';
 import Note from '../../components/Note.astro';
 
 const pageTitle = "API Documentation";
-<!--
+
 const headings = [
   { depth: 2, slug: "getting-started", text: "Getting Started" },
   { depth: 2, slug: "authentication", text: "Authentication" },
@@ -420,4 +420,3 @@ const item = await client.items.create(newList.id, {
     Official SDKs provide type safety, automatic retries, built-in rate limiting, and simplified authentication handling.
   </InfoBox>
 </WikiLayout>
--->
