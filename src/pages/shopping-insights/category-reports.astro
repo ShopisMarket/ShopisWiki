@@ -1,0 +1,213 @@
+---
+import WikiLayout from '../../layouts/WikiLayout.astro';
+import TableOfContents from '../../components/TableOfContents.astro';
+import InfoBox from '../../components/InfoBox.astro';
+
+const pageTitle = "Category-Based Reports";
+
+const headings = [
+  { depth: 2, slug: "overview", text: "Reports Overview" },
+  { depth: 2, slug: "spending-categories", text: "Spending Categories" },
+  { depth: 2, slug: "visual-analytics", text: "Visual Analytics" },
+  { depth: 2, slug: "trend-analysis", text: "Trend Analysis" },
+  { depth: 2, slug: "custom-reports", text: "Custom Reports" },
+  { depth: 2, slug: "export-sharing", text: "Export & Sharing" }
+];
+---
+
+<WikiLayout title={pageTitle}>
+  <div class="flex justify-between items-center">
+    <h1 class="text-3xl font-bold mb-8">{pageTitle}</h1>
+    <div class="flex gap-2">
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        View history
+      </a>
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        Discussion
+      </a>
+    </div>
+  </div>
+
+  <TableOfContents headings={headings} />
+
+  <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-6">
+    Gain deep insights into your spending patterns with Shoppis's comprehensive category-based reporting system. Understand where your money goes and make informed decisions about your shopping habits.
+  </p>
+
+  <h2 id="overview">Reports Overview</h2>
+  <p>
+    Shoppis automatically categorizes your purchases and generates detailed reports to help you understand your spending patterns:
+  </p>
+
+  <div class="my-6 bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 p-6 rounded-lg border border-indigo-200 dark:border-indigo-800">
+    <h4 class="text-lg font-semibold mb-4 text-indigo-800 dark:text-indigo-300">📊 Reporting Capabilities</h4>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div class="text-center">
+        <div class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">15+</div>
+        <div class="text-sm text-indigo-700 dark:text-indigo-300">Categories Tracked</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">24 months</div>
+        <div class="text-sm text-indigo-700 dark:text-indigo-300">Historical Data</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">Real-time</div>
+        <div class="text-sm text-indigo-700 dark:text-indigo-300">Updates</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">5 formats</div>
+        <div class="text-sm text-indigo-700 dark:text-indigo-300">Export Options</div>
+      </div>
+    </div>
+  </div>
+
+  <ul>
+    <li><strong>Automatic Categorization</strong>: AI-powered classification of purchases</li>
+    <li><strong>Real-time Updates</strong>: Reports update instantly with new purchases</li>
+    <li><strong>Historical Analysis</strong>: Compare spending across different time periods</li>
+    <li><strong>Customizable Views</strong>: Filter and sort data to focus on specific insights</li>
+    <li><strong>Visual Charts</strong>: Interactive graphs and charts for easy understanding</li>
+  </ul>
+
+  <InfoBox type="success" title="Smart Categorization">
+    Shoppis uses machine learning to automatically categorize 98.7% of purchases correctly, learning from your corrections to improve accuracy over time.
+  </InfoBox>
+
+  <h2 id="spending-categories">Spending Categories</h2>
+  <p>
+    Shoppis tracks spending across comprehensive categories designed to give you complete visibility into your shopping habits:
+  </p>
+
+  <div class="my-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20">
+      <h4 class="font-semibold mb-2 text-green-800 dark:text-green-300">🥬 Fresh Produce</h4>
+      <div class="text-sm text-green-700 dark:text-green-300">
+        <div class="font-medium">Avg: $127/month</div>
+        <div>Fruits, vegetables, herbs</div>
+      </div>
+    </div>
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20">
+      <h4 class="font-semibold mb-2 text-blue-800 dark:text-blue-300">🥛 Dairy & Eggs</h4>
+      <div class="text-sm text-blue-700 dark:text-blue-300">
+        <div class="font-medium">Avg: $89/month</div>
+        <div>Milk, cheese, yogurt, eggs</div>
+      </div>
+    </div>
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-red-50 to-pink-50 dark:from-red-900/20 dark:to-pink-900/20">
+      <h4 class="font-semibold mb-2 text-red-800 dark:text-red-300">🥩 Meat & Seafood</h4>
+      <div class="text-sm text-red-700 dark:text-red-300">
+        <div class="font-medium">Avg: $156/month</div>
+        <div>Beef, chicken, fish, deli</div>
+      </div>
+    </div>
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20">
+      <h4 class="font-semibold mb-2 text-yellow-800 dark:text-yellow-300">🍞 Bakery & Grains</h4>
+      <div class="text-sm text-yellow-700 dark:text-yellow-300">
+        <div class="font-medium">Avg: $67/month</div>
+        <div>Bread, pasta, rice, cereals</div>
+      </div>
+    </div>
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20">
+      <h4 class="font-semibold mb-2 text-purple-800 dark:text-purple-300">🧴 Personal Care</h4>
+      <div class="text-sm text-purple-700 dark:text-purple-300">
+        <div class="font-medium">Avg: $43/month</div>
+        <div>Toiletries, cosmetics, health</div>
+      </div>
+    </div>
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-indigo-50 to-blue-50 dark:from-indigo-900/20 dark:to-blue-900/20">
+      <h4 class="font-semibold mb-2 text-indigo-800 dark:text-indigo-300">🧽 Household</h4>
+      <div class="text-sm text-indigo-700 dark:text-indigo-300">
+        <div class="font-medium">Avg: $38/month</div>
+        <div>Cleaning, paper goods, tools</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 id="visual-analytics">Visual Analytics</h2>
+  <p>
+    Transform your spending data into actionable insights with interactive visualizations:
+  </p>
+
+  <div class="my-6 overflow-x-auto">
+    <table class="w-full border-collapse border border-neutral-200 dark:border-neutral-800">
+      <thead class="bg-neutral-50 dark:bg-neutral-800">
+        <tr>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Chart Type</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Best For</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Time Range</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Interactive</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Pie Chart</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Category distribution</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Monthly/Yearly</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Line Graph</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Spending trends</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">3-24 months</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Bar Chart</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Category comparison</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Weekly/Monthly</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Heatmap</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Seasonal patterns</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">12+ months</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="trend-analysis">Trend Analysis</h2>
+  <p>
+    Identify patterns and trends in your spending behavior with advanced analytics:
+  </p>
+  <ul>
+    <li><strong>Seasonal Patterns</strong>: Understand how your spending changes throughout the year</li>
+    <li><strong>Weekly Cycles</strong>: Identify your typical shopping days and amounts</li>
+    <li><strong>Growth Trends</strong>: Track increases or decreases in category spending</li>
+    <li><strong>Anomaly Detection</strong>: Get alerts for unusual spending patterns</li>
+    <li><strong>Predictive Insights</strong>: Forecast future spending based on historical data</li>
+  </ul>
+
+  <InfoBox type="info" title="Trend Accuracy">
+    Shoppis's trend analysis achieves 87% accuracy in predicting monthly spending patterns, helping users plan budgets more effectively.
+  </InfoBox>
+
+  <h2 id="custom-reports">Custom Reports</h2>
+  <p>
+    Create personalized reports tailored to your specific needs and interests:
+  </p>
+  <ul>
+    <li><strong>Date Range Selection</strong>: Choose any custom time period for analysis</li>
+    <li><strong>Category Filtering</strong>: Focus on specific categories or exclude others</li>
+    <li><strong>Store Comparison</strong>: Compare spending across different retailers</li>
+    <li><strong>Budget vs Actual</strong>: Track performance against your budget goals</li>
+    <li><strong>Family Member Analysis</strong>: See spending patterns by household member</li>
+  </ul>
+
+  <h2 id="export-sharing">Export & Sharing</h2>
+  <p>
+    Share your insights and integrate with other financial tools:
+  </p>
+  <ul>
+    <li><strong>Export Formats</strong>: PDF, Excel, CSV, JSON, and image formats</li>
+    <li><strong>Scheduled Reports</strong>: Automatically generate and email reports</li>
+    <li><strong>Financial App Integration</strong>: Connect with Mint, YNAB, and other tools</li>
+    <li><strong>Family Sharing</strong>: Share reports with household members</li>
+    <li><strong>Tax Preparation</strong>: Export data in tax-friendly formats</li>
+  </ul>
+
+  <InfoBox type="warning" title="Data Privacy">
+    All exported data is encrypted and can be password-protected. Shared reports only include the data you specifically choose to share.
+  </InfoBox>
+</WikiLayout>
