@@ -1,0 +1,204 @@
+---
+import WikiLayout from '../../layouts/WikiLayout.astro';
+import TableOfContents from '../../components/TableOfContents.astro';
+import InfoBox from '../../components/InfoBox.astro';
+
+const pageTitle = "Budget Goals & Savings";
+
+const headings = [
+  { depth: 2, slug: "budget-setup", text: "Setting Up Budgets" },
+  { depth: 2, slug: "smart-budgeting", text: "Smart Budgeting Features" },
+  { depth: 2, slug: "savings-tracking", text: "Savings Tracking" },
+  { depth: 2, slug: "goal-management", text: "Goal Management" },
+  { depth: 2, slug: "alerts-notifications", text: "Alerts & Notifications" },
+  { depth: 2, slug: "family-budgets", text: "Family Budget Coordination" }
+];
+---
+
+<WikiLayout title={pageTitle}>
+  <div class="flex justify-between items-center">
+    <h1 class="text-3xl font-bold mb-8">{pageTitle}</h1>
+    <div class="flex gap-2">
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        View history
+      </a>
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        Discussion
+      </a>
+    </div>
+  </div>
+
+  <TableOfContents headings={headings} />
+
+  <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-6">
+    Take control of your finances with Shoppis's intelligent budgeting system. Set realistic goals, track your progress, and discover new ways to save money on your everyday purchases.
+  </p>
+
+  <h2 id="budget-setup">Setting Up Budgets</h2>
+  <p>
+    Create comprehensive budgets that adapt to your lifestyle and spending patterns:
+  </p>
+
+  <div class="my-6 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
+    <h4 class="text-lg font-semibold mb-4 text-green-800 dark:text-green-300">💰 Budget Success Metrics</h4>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div class="text-center">
+        <div class="text-2xl font-bold text-green-600 dark:text-green-400">89%</div>
+        <div class="text-sm text-green-700 dark:text-green-300">Users Stay on Budget</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-green-600 dark:text-green-400">$347</div>
+        <div class="text-sm text-green-700 dark:text-green-300">Avg Monthly Savings</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-green-600 dark:text-green-400">23%</div>
+        <div class="text-sm text-green-700 dark:text-green-300">Spending Reduction</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-green-600 dark:text-green-400">94%</div>
+        <div class="text-sm text-green-700 dark:text-green-300">Goal Achievement Rate</div>
+      </div>
+    </div>
+  </div>
+
+  <ul>
+    <li><strong>Category-Based Budgets</strong>: Set limits for groceries, household items, personal care, etc.</li>
+    <li><strong>Time-Based Goals</strong>: Weekly, monthly, quarterly, or annual budget periods</li>
+    <li><strong>Flexible Budgets</strong>: Automatically adjust based on income changes</li>
+    <li><strong>Zero-Based Budgeting</strong>: Allocate every dollar with purpose</li>
+    <li><strong>Envelope Method</strong>: Digital envelope system for cash-like budgeting</li>
+  </ul>
+
+  <div class="my-6 overflow-x-auto">
+    <table class="w-full border-collapse border border-neutral-200 dark:border-neutral-800">
+      <thead class="bg-neutral-50 dark:bg-neutral-800">
+        <tr>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Budget Type</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Best For</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Flexibility</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Difficulty</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Simple Limit</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Beginners</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">High</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Easy</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Category-Based</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Detailed tracking</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Medium</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Medium</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Zero-Based</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Complete control</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Low</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Advanced</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Envelope</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Cash-like control</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Low</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Medium</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <InfoBox type="success" title="Smart Budget Recommendations">
+    Shoppis analyzes your spending history to suggest realistic budget amounts for each category, increasing your chances of success by 67%.
+  </InfoBox>
+
+  <h2 id="smart-budgeting">Smart Budgeting Features</h2>
+  <p>
+    Leverage AI-powered features to make budgeting easier and more effective:
+  </p>
+  <ul>
+    <li><strong>Predictive Budgeting</strong>: AI suggests budget amounts based on your history</li>
+    <li><strong>Seasonal Adjustments</strong>: Automatically adjust for holidays and seasonal changes</li>
+    <li><strong>Income-Based Scaling</strong>: Budgets that adapt to income fluctuations</li>
+    <li><strong>Smart Rollover</strong>: Unused budget automatically rolls to next period</li>
+    <li><strong>Emergency Buffer</strong>: Built-in cushion for unexpected expenses</li>
+  </ul>
+
+  <h2 id="savings-tracking">Savings Tracking</h2>
+  <p>
+    Monitor your savings progress and discover new opportunities to save:
+  </p>
+
+  <div class="my-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20">
+      <h4 class="font-semibold mb-2 text-blue-800 dark:text-blue-300">📈 Savings Sources</h4>
+      <ul class="text-sm text-blue-700 dark:text-blue-300 space-y-1">
+        <li>• Coupon usage: $47/month avg</li>
+        <li>• Sale purchases: $89/month avg</li>
+        <li>• Generic alternatives: $34/month avg</li>
+        <li>• Bulk buying: $28/month avg</li>
+      </ul>
+    </div>
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20">
+      <h4 class="font-semibold mb-2 text-purple-800 dark:text-purple-300">🎯 Savings Goals</h4>
+      <ul class="text-sm text-purple-700 dark:text-purple-300 space-y-1">
+        <li>• Emergency fund building</li>
+        <li>• Vacation savings</li>
+        <li>• Holiday shopping fund</li>
+        <li>• Home improvement projects</li>
+      </ul>
+    </div>
+  </div>
+
+  <ul>
+    <li><strong>Deal Tracking</strong>: Monitor savings from coupons, sales, and promotions</li>
+    <li><strong>Price Comparison</strong>: Track savings from choosing better prices</li>
+    <li><strong>Waste Reduction</strong>: Calculate savings from reduced food waste</li>
+    <li><strong>Bulk Purchase Analysis</strong>: Measure savings from bulk buying</li>
+    <li><strong>Generic Brand Savings</strong>: Track savings from store brand choices</li>
+  </ul>
+
+  <h2 id="goal-management">Goal Management</h2>
+  <p>
+    Set and achieve financial goals with structured planning and tracking:
+  </p>
+  <ul>
+    <li><strong>SMART Goals</strong>: Specific, Measurable, Achievable, Relevant, Time-bound objectives</li>
+    <li><strong>Milestone Tracking</strong>: Break large goals into manageable steps</li>
+    <li><strong>Progress Visualization</strong>: Visual progress bars and charts</li>
+    <li><strong>Goal Categories</strong>: Emergency fund, vacation, debt payoff, major purchases</li>
+    <li><strong>Automatic Contributions</strong>: Set up automatic transfers to goal accounts</li>
+  </ul>
+
+  <InfoBox type="info" title="Goal Achievement">
+    Users who set specific savings goals in Shoppis are 3.2x more likely to achieve them compared to general "save money" intentions.
+  </InfoBox>
+
+  <h2 id="alerts-notifications">Alerts & Notifications</h2>
+  <p>
+    Stay on track with intelligent alerts and notifications:
+  </p>
+  <ul>
+    <li><strong>Budget Warnings</strong>: Alerts when approaching spending limits</li>
+    <li><strong>Overspend Notifications</strong>: Immediate alerts when budgets are exceeded</li>
+    <li><strong>Savings Opportunities</strong>: Notifications about deals and discounts</li>
+    <li><strong>Goal Progress Updates</strong>: Regular updates on savings goal progress</li>
+    <li><strong>Monthly Summaries</strong>: Comprehensive budget performance reports</li>
+  </ul>
+
+  <h2 id="family-budgets">Family Budget Coordination</h2>
+  <p>
+    Coordinate budgets across family members for better financial harmony:
+  </p>
+  <ul>
+    <li><strong>Shared Budgets</strong>: Family-wide budget categories and limits</li>
+    <li><strong>Individual Allowances</strong>: Personal spending limits within family budget</li>
+    <li><strong>Spending Transparency</strong>: Optional sharing of purchase details</li>
+    <li><strong>Joint Goals</strong>: Family savings goals and progress tracking</li>
+    <li><strong>Parental Controls</strong>: Spending limits and approval requirements for children</li>
+  </ul>
+
+  <InfoBox type="warning" title="Budget Flexibility">
+    Remember that budgets should be guidelines, not rigid rules. Shoppis allows for adjustments and provides insights to help you make informed decisions about budget changes.
+  </InfoBox>
+</WikiLayout>
