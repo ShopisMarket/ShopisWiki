@@ -1,0 +1,220 @@
+---
+import WikiLayout from '../../layouts/WikiLayout.astro';
+import TableOfContents from '../../components/TableOfContents.astro';
+import InfoBox from '../../components/InfoBox.astro';
+
+const pageTitle = "Analytics";
+
+const headings = [
+  { depth: 2, slug: "analytics-dashboard", text: "Analytics Dashboard" },
+  { depth: 2, slug: "spending-insights", text: "Spending Insights" },
+  { depth: 2, slug: "behavioral-analysis", text: "Behavioral Analysis" },
+  { depth: 2, slug: "predictive-analytics", text: "Predictive Analytics" },
+  { depth: 2, slug: "comparative-analysis", text: "Comparative Analysis" },
+  { depth: 2, slug: "custom-metrics", text: "Custom Metrics & KPIs" }
+];
+---
+
+<WikiLayout title={pageTitle}>
+  <div class="flex justify-between items-center">
+    <h1 class="text-3xl font-bold mb-8">{pageTitle}</h1>
+    <div class="flex gap-2">
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        View history
+      </a>
+      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        Discussion
+      </a>
+    </div>
+  </div>
+
+  <TableOfContents headings={headings} />
+
+  <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-6">
+    Unlock powerful insights about your shopping behavior with Shoppis's advanced analytics engine. Discover patterns, optimize spending, and make data-driven decisions about your purchases.
+  </p>
+
+  <h2 id="analytics-dashboard">Analytics Dashboard</h2>
+  <p>
+    Your personalized analytics dashboard provides a comprehensive overview of your shopping data:
+  </p>
+
+  <div class="my-6 bg-gradient-to-r from-purple-50 to-indigo-50 dark:from-purple-900/20 dark:to-indigo-900/20 p-6 rounded-lg border border-purple-200 dark:border-purple-800">
+    <h4 class="text-lg font-semibold mb-4 text-purple-800 dark:text-purple-300">📊 Analytics Engine Performance</h4>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div class="text-center">
+        <div class="text-2xl font-bold text-purple-600 dark:text-purple-400">50M+</div>
+        <div class="text-sm text-purple-700 dark:text-purple-300">Data Points Analyzed</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-purple-600 dark:text-purple-400">< 2s</div>
+        <div class="text-sm text-purple-700 dark:text-purple-300">Report Generation</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-purple-600 dark:text-purple-400">97.3%</div>
+        <div class="text-sm text-purple-700 dark:text-purple-300">Prediction Accuracy</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-purple-600 dark:text-purple-400">24/7</div>
+        <div class="text-sm text-purple-700 dark:text-purple-300">Real-time Updates</div>
+      </div>
+    </div>
+  </div>
+
+  <ul>
+    <li><strong>Real-time Metrics</strong>: Live updates as you shop and add purchases</li>
+    <li><strong>Interactive Charts</strong>: Drill down into data with clickable visualizations</li>
+    <li><strong>Customizable Widgets</strong>: Arrange dashboard to show your most important metrics</li>
+    <li><strong>Mobile Optimized</strong>: Full analytics access on all devices</li>
+    <li><strong>Export Capabilities</strong>: Share insights with family or financial advisors</li>
+  </ul>
+
+  <InfoBox type="success" title="Data Processing">
+    Shoppis processes over 50 million data points daily to provide you with accurate, actionable insights about your shopping behavior.
+  </InfoBox>
+
+  <h2 id="spending-insights">Spending Insights</h2>
+  <p>
+    Understand your spending patterns with detailed analysis across multiple dimensions:
+  </p>
+
+  <div class="my-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20">
+      <h4 class="font-semibold mb-2 text-green-800 dark:text-green-300">💰 Spending Velocity</h4>
+      <div class="text-sm text-green-700 dark:text-green-300">
+        <div class="font-medium">$127.50/week avg</div>
+        <div>↑ 12% vs last month</div>
+      </div>
+    </div>
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20">
+      <h4 class="font-semibold mb-2 text-blue-800 dark:text-blue-300">🛒 Shopping Frequency</h4>
+      <div class="text-sm text-blue-700 dark:text-blue-300">
+        <div class="font-medium">2.3 trips/week</div>
+        <div>↓ 8% vs last month</div>
+      </div>
+    </div>
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20">
+      <h4 class="font-semibold mb-2 text-orange-800 dark:text-orange-300">📦 Basket Size</h4>
+      <div class="text-sm text-orange-700 dark:text-orange-300">
+        <div class="font-medium">23 items avg</div>
+        <div>↑ 15% vs last month</div>
+      </div>
+    </div>
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20">
+      <h4 class="font-semibold mb-2 text-purple-800 dark:text-purple-300">🏪 Store Loyalty</h4>
+      <div class="text-sm text-purple-700 dark:text-purple-300">
+        <div class="font-medium">67% same store</div>
+        <div>Consistent preference</div>
+      </div>
+    </div>
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-pink-50 to-rose-50 dark:from-pink-900/20 dark:to-rose-900/20">
+      <h4 class="font-semibold mb-2 text-pink-800 dark:text-pink-300">💳 Payment Methods</h4>
+      <div class="text-sm text-pink-700 dark:text-pink-300">
+        <div class="font-medium">78% card, 22% cash</div>
+        <div>Digital preference</div>
+      </div>
+    </div>
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-indigo-50 to-blue-50 dark:from-indigo-900/20 dark:to-blue-900/20">
+      <h4 class="font-semibold mb-2 text-indigo-800 dark:text-indigo-300">⏰ Shopping Times</h4>
+      <div class="text-sm text-indigo-700 dark:text-indigo-300">
+        <div class="font-medium">Peak: Sat 2-4 PM</div>
+        <div>Weekend preference</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 id="behavioral-analysis">Behavioral Analysis</h2>
+  <p>
+    Discover patterns in your shopping behavior that can help optimize your spending:
+  </p>
+  <ul>
+    <li><strong>Impulse Purchase Detection</strong>: Identify unplanned purchases and their triggers</li>
+    <li><strong>Brand Loyalty Analysis</strong>: Track your preference for specific brands over time</li>
+    <li><strong>Seasonal Behavior</strong>: Understand how your shopping changes with seasons</li>
+    <li><strong>Price Sensitivity</strong>: Analyze how price changes affect your purchasing decisions</li>
+    <li><strong>Shopping Efficiency</strong>: Measure how well you stick to your lists</li>
+  </ul>
+
+  <div class="my-6 overflow-x-auto">
+    <table class="w-full border-collapse border border-neutral-200 dark:border-neutral-800">
+      <thead class="bg-neutral-50 dark:bg-neutral-800">
+        <tr>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Behavior Metric</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Your Score</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Average User</th>
+          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Trend</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">List Adherence</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">87%</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">73%</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">↗️ Improving</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Budget Compliance</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">92%</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">68%</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">➡️ Stable</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Deal Utilization</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">45%</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">52%</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">↗️ Improving</td>
+        </tr>
+        <tr>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Waste Reduction</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">78%</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">61%</td>
+          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">↗️ Improving</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="predictive-analytics">Predictive Analytics</h2>
+  <p>
+    Leverage AI-powered predictions to optimize your future shopping:
+  </p>
+  <ul>
+    <li><strong>Demand Forecasting</strong>: Predict when you'll need to restock items</li>
+    <li><strong>Budget Projections</strong>: Forecast monthly spending based on current trends</li>
+    <li><strong>Price Predictions</strong>: Anticipate price changes for your regular items</li>
+    <li><strong>Seasonal Adjustments</strong>: Predict how seasonal changes will affect your shopping</li>
+    <li><strong>Goal Achievement</strong>: Predict likelihood of meeting savings goals</li>
+  </ul>
+
+  <InfoBox type="info" title="Prediction Accuracy">
+    Shoppis's machine learning models achieve 97.3% accuracy in predicting user shopping patterns, helping you plan more effectively.
+  </InfoBox>
+
+  <h2 id="comparative-analysis">Comparative Analysis</h2>
+  <p>
+    Compare your shopping patterns against benchmarks and historical data:
+  </p>
+  <ul>
+    <li><strong>Peer Comparison</strong>: See how your spending compares to similar households</li>
+    <li><strong>Historical Trends</strong>: Compare current patterns to your past behavior</li>
+    <li><strong>Regional Averages</strong>: Understand local shopping patterns and prices</li>
+    <li><strong>Category Benchmarks</strong>: Compare spending across different product categories</li>
+    <li><strong>Efficiency Metrics</strong>: Measure your shopping efficiency against best practices</li>
+  </ul>
+
+  <h2 id="custom-metrics">Custom Metrics & KPIs</h2>
+  <p>
+    Create personalized metrics that matter most to your financial goals:
+  </p>
+  <ul>
+    <li><strong>Custom Calculations</strong>: Define your own formulas for specific insights</li>
+    <li><strong>Goal Tracking</strong>: Monitor progress toward personal financial objectives</li>
+    <li><strong>Alert Thresholds</strong>: Set custom alerts for important metric changes</li>
+    <li><strong>Dashboard Widgets</strong>: Add custom metrics to your main dashboard</li>
+    <li><strong>Reporting Integration</strong>: Include custom metrics in automated reports</li>
+  </ul>
+
+  <InfoBox type="warning" title="Data Interpretation">
+    While analytics provide valuable insights, remember that correlation doesn't imply causation. Use data to inform decisions, but consider external factors that may influence your shopping patterns.
+  </InfoBox>
+</WikiLayout>
