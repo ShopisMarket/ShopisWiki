@@ -106,11 +106,11 @@ console.log(lists);
   <h3>OAuth 2.0 Flow</h3>
   <CodeBlock language="javascript" title="Authorization Code Flow">
 // Step 1: Redirect user to authorization URL
-const authUrl = https://api.shoppis.com/oauth/authorize? +
-  client_id=${CLIENT_ID}& +
-  redirect_uri=${REDIRECT_URI}& +
-  response_type=code& +
-  scope=read_lists write_lists read_analytics;
+const authUrl = `https://api.shoppis.com/oauth/authorize?` +
+  `client_id=${CLIENT_ID}&` +
+  `redirect_uri=${REDIRECT_URI}&` +
+  `response_type=code&` +
+  `scope=read_lists write_lists read_analytics`;
 
 window.location.href = authUrl;
 
