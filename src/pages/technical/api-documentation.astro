@@ -71,9 +71,19 @@ const headings = [
   </Note>
 
   <h3>Base URL</h3>
-  <CodeBlock language="bash" title="API Base URL">
-https://api.shoppis.com/v2/
-  </CodeBlock>
+  <CodeBlock language="javascript" title="Basic API Request">
+{`const response = await fetch('https://api.shoppis.com/v2/lists', {
+  method: 'GET',
+  headers: {
+    'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
+    'Content-Type': 'application/json',
+    'Accept': 'application/json'
+  }
+});
+
+const lists = await response.json();
+console.log(lists);`}
+</CodeBlock>
 
   <h3>Quick Start Example</h3>
   <CodeBlock language="javascript" title="Basic API Request">
