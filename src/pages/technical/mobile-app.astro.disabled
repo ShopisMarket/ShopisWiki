@@ -312,7 +312,7 @@ abstract class ShoppisDatabase : RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     ShoppisDatabase::class.java,
-                    "shoppis_database"
+                    "shopis_database"
                 ).build()
                 INSTANCE = instance
                 instance
