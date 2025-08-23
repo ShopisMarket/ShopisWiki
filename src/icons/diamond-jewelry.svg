@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>.cls-1{fill:none;}.cls-2{fill:#1b5cf3;}.cls-3{fill:#f92115;}.cls-4{fill:#190d15;}</style>
+</defs>
+<g data-name="Layer 2" id="Layer_2">
+<g data-name="Layer 1" id="Layer_1-2">
+<rect class="cls-1" height="20" width="20"/>
+<path class="cls-2" d="M16,5.78,18.58,8.4a1,1,0,0,1,.05,1.36l-7.88,9a1,1,0,0,1-1.5,0l-7.88-9a1,1,0,0,1,0-1.36L4,5.78a1,1,0,0,1,.7-.29H15.26A1,1,0,0,1,16,5.78Z"/>
+<rect class="cls-3" height="5.45" transform="translate(5.28 -1.83) rotate(45)" width="5.45" x="2.13" y="2.74"/>
+<path class="cls-4" d="M4.58,5.49a.63.63,0,0,0-.43.17L2.68,7.14,4.85,9.32,8.68,5.49Z"/>
+</g>
+</g>
+</svg>
