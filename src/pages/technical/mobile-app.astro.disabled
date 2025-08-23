@@ -457,7 +457,7 @@ abstract class ShoppisDatabase : RoomDatabase() {
   </div>
 
   <Note type="important" title="Support Contact">
-    For issues not resolved by troubleshooting, contact our support team through the app's Help section or email support@shoppis.com with your device model and app version.
+    For issues not resolved by troubleshooting, contact our support team through the app's Help section or email support@shopis.com with your device model and app version.
   </Note>
 
   <InfoBox type="success" title="App Store Reviews">
