@@ -36,7 +36,7 @@ const headings = [
   <TableOfContents headings={headings} />
 
   <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-6">
-    The Shoppis API provides programmatic access to shopping lists, items, analytics, and user data. Build integrations, automate workflows, and create custom applications using our RESTful API.
+    The Shopis API provides programmatic access to shopping lists, items, analytics, and user data. Build integrations, automate workflows, and create custom applications using our RESTful API.
   </p>
 
   <div class="my-6 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
@@ -63,16 +63,16 @@ const headings = [
 
   <h2 id="getting-started">Getting Started</h2>
   <p>
-    The Shoppis API is organized around REST principles. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes.
+    The Shopis API is organized around REST principles. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes.
   </p>
 
   <Note type="important" title="API Version">
-    The current API version is v2. All requests should include the version in the URL path: <code>https://api.shoppis.com/v2/</code>
+    The current API version is v2. All requests should include the version in the URL path: <code>https://api.Shopis.com/v2/</code>
   </Note>
 
   <h3>Base URL</h3>
   <CodeBlock language="javascript" title="Basic API Request">
-{`const response = await fetch('https://api.shoppis.com/v2/lists', {
+{`const response = await fetch('https://api.Shopis.com/v2/lists', {
   method: 'GET',
   headers: {
     'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
@@ -87,7 +87,7 @@ console.log(lists);`}
 
   <h3>Quick Start Example</h3>
   <CodeBlock language="javascript" title="Basic API Request">
-const response = await fetch('https://api.shoppis.com/v2/lists', {
+const response = await fetch('https://api.Shopis.com/v2/lists', {
   method: 'GET',
   headers: {
     'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
@@ -102,12 +102,12 @@ console.log(lists);
 
   <h2 id="authentication">Authentication</h2>
   <p>
-    The Shoppis API uses OAuth 2.0 for authentication. You'll need to register your application and obtain API credentials.
+    The Shopis API uses OAuth 2.0 for authentication. You'll need to register your application and obtain API credentials.
   </p>
 
   <h3>Getting API Credentials</h3>
   <ol>
-    <li>Visit the <a href="https://developers.shoppis.com">Developer Portal</a></li>
+    <li>Visit the <a href="https://developers.Shopis.com">Developer Portal</a></li>
     <li>Create a new application</li>
     <li>Copy your Client ID and Client Secret</li>
     <li>Configure your redirect URIs</li>
@@ -116,7 +116,7 @@ console.log(lists);
   <h3>OAuth 2.0 Flow</h3>
   <CodeBlock language="javascript" title="Authorization Code Flow">
 // Step 1: Redirect user to authorization URL
-const authUrl = `https://api.shoppis.com/oauth/authorize?` +
+const authUrl = `https://api.Shopis.com/oauth/authorize?` +
   `client_id=${CLIENT_ID}&` +
   `redirect_uri=${REDIRECT_URI}&` +
   `response_type=code&` +
@@ -125,7 +125,7 @@ const authUrl = `https://api.shoppis.com/oauth/authorize?` +
 window.location.href = authUrl;
 
 // Step 2: Exchange authorization code for access token
-const tokenResponse = await fetch('https://api.shoppis.com/oauth/token', {
+const tokenResponse = await fetch('https://api.Shopis.com/oauth/token', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/x-www-form-urlencoded'
@@ -184,7 +184,7 @@ const tokens = await tokenResponse.json();
 
   <h2 id="endpoints">API Endpoints</h2>
   <p>
-    The Shoppis API provides endpoints for managing lists, items, analytics, and user data.
+    The Shopis API provides endpoints for managing lists, items, analytics, and user data.
   </p>
 
   <h3 id="lists-api">Lists API</h3>
@@ -194,7 +194,7 @@ const tokens = await tokenResponse.json();
 
   <h4>Get All Lists</h4>
   <CodeBlock language="bash" title="GET /lists">
-GET https://api.shoppis.com/v2/lists
+GET https://api.Shopis.com/v2/lists
 Authorization: Bearer YOUR_ACCESS_TOKEN
   </CodeBlock>
 
@@ -230,7 +230,7 @@ Authorization: Bearer YOUR_ACCESS_TOKEN
 
   <h4>Create a New List</h4>
   <CodeBlock language="bash" title="POST /lists">
-POST https://api.shoppis.com/v2/lists
+POST https://api.Shopis.com/v2/lists
 Authorization: Bearer YOUR_ACCESS_TOKEN
 Content-Type: application/json
   </CodeBlock>
@@ -251,7 +251,7 @@ Content-Type: application/json
 
   <h4>Add Item to List</h4>
   <CodeBlock language="javascript" title="Add Item Example">
-const newItem = await fetch('https://api.shoppis.com/v2/lists/list_1234567890/items', {
+const newItem = await fetch('https://api.Shopis.com/v2/lists/list_1234567890/items', {
   method: 'POST',
   headers: {
     'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
@@ -272,7 +272,7 @@ const item = await newItem.json();
 
   <h4>Update Item Status</h4>
   <CodeBlock language="javascript" title="Mark Item as Purchased">
-const response = await fetch('https://api.shoppis.com/v2/items/item_9876543210', {
+const response = await fetch('https://api.Shopis.com/v2/items/item_9876543210', {
   method: 'PATCH',
   headers: {
     'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
@@ -292,7 +292,7 @@ const response = await fetch('https://api.shoppis.com/v2/items/item_9876543210',
   </p>
 
   <CodeBlock language="javascript" title="Get Spending Analytics">
-const analytics = await fetch('https://api.shoppis.com/v2/analytics/spending', {
+const analytics = await fetch('https://api.Shopis.com/v2/analytics/spending', {
   method: 'GET',
   headers: {
     'Authorization': 'Bearer YOUR_ACCESS_TOKEN'
@@ -305,19 +305,19 @@ const data = await analytics.json();
 
   <h2 id="webhooks">Webhooks</h2>
   <p>
-    Receive real-time notifications when events occur in your Shoppis account.
+    Receive real-time notifications when events occur in your Shopis account.
   </p>
 
   <h3>Setting Up Webhooks</h3>
   <CodeBlock language="javascript" title="Create Webhook Endpoint">
-const webhook = await fetch('https://api.shoppis.com/v2/webhooks', {
+const webhook = await fetch('https://api.Shopis.com/v2/webhooks', {
   method: 'POST',
   headers: {
     'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
     'Content-Type': 'application/json'
   },
   body: JSON.stringify({
-    url: 'https://your-app.com/webhooks/shoppis',
+    url: 'https://your-app.com/webhooks/Shopis',
     events: ['list.created', 'item.added', 'item.purchased'],
     secret: 'your_webhook_secret'
   })
@@ -389,13 +389,13 @@ const webhook = await fetch('https://api.shoppis.com/v2/webhooks', {
 
   <h3>Official SDKs</h3>
   <CodeBlock language="bash" title="Install JavaScript SDK">
-npm install @shoppis/api-client
+npm install @Shopis/api-client
   </CodeBlock>
 
   <CodeBlock language="javascript" title="JavaScript SDK Usage">
-import { ShoppisClient } from '@shoppis/api-client';
+import { ShopisClient } from '@Shopis/api-client';
 
-const client = new ShoppisClient({
+const client = new ShopisClient({
   accessToken: 'YOUR_ACCESS_TOKEN'
 });
 
