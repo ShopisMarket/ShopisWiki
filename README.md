@@ -1,5 +1,5 @@
 ## ShopisWiki
-`ShopisMarket` (ou `Shopis App`)*. est Application-web cloud de listes de courses multiplateforme pour **Application mobile** **[ShoppingListApp](https://github.com/ShopisMarket/)**. Synchronisation en temps réel, accès depuis tous appareils. Listes de courses partagé en familles ou entre amis. Fonctionnaliés intelligentes gerer ses courses hébdomadaires...
+`ShopisMarket` (ou `Shopis App`)*. est Application-web cloud de listes de courses multiplateforme pour **Application mobile** **[Shopis, Market, Inc.](https://github.com/ShopisMarket/)**. Synchronisation en temps réel, accès depuis tous appareils. Listes de courses partagé en familles ou entre amis. Fonctionnaliés intelligentes gerer ses courses hébdomadaires...
 
 ## Project Structure
 
