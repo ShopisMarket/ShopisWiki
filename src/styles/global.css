@@ -116,3 +116,56 @@ html.transitioning * {
 .container {
   @apply mx-auto max-w-7xl;
 }
+
+/* Mobile responsive improvements */
+@media (max-width: 640px) {
+  .prose h1 {
+    @apply text-xl font-bold mt-6 mb-3;
+  }
+  
+  .prose h2 {
+    @apply text-lg font-semibold mt-6 mb-3;
+  }
+  
+  .prose h3 {
+    @apply text-base font-semibold mt-4 mb-2;
+  }
+  
+  .prose p {
+    @apply my-3 text-sm leading-6;
+  }
+  
+  .prose ul, .prose ol {
+    @apply my-3 text-sm;
+  }
+  
+  .prose li {
+    @apply my-0.5;
+  }
+}
+
+/* Improved table responsiveness */
+@media (max-width: 768px) {
+  .prose table {
+    @apply text-xs;
+  }
+  
+  .prose th, .prose td {
+    @apply px-2 py-1;
+  }
+}
+
+/* Better spacing for mobile cards */
+@media (max-width: 640px) {
+  .grid {
+    @apply gap-3;
+  }
+  
+  .space-y-4 > * + * {
+    @apply mt-3;
+  }
+  
+  .space-y-6 > * + * {
+    @apply mt-4;
+  }
+}

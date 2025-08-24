@@ -20,7 +20,7 @@ const headings = [
 
 <WikiLayout title={pageTitle}>
   <div class="flex justify-between items-center">
-    <h1 class="text-3xl font-bold mb-8">{pageTitle}</h1>
+    <h1 class="text-2xl sm:text-3xl font-bold mb-8">{pageTitle}</h1>
     <div class="flex gap-2">
       <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
         View history
@@ -33,7 +33,7 @@ const headings = [
 
   <TableOfContents headings={headings} />
 
-  <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-6">
+  <p class="text-base sm:text-lg text-neutral-700 dark:text-neutral-300 mb-6">
     Learn how to create, organize, and manage your shopping lists efficiently using Shopis's powerful features including voice input and barcode scanning.
   </p>
 
@@ -103,19 +103,19 @@ const headings = [
   </ul>
 
   <div class="my-6 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
-    <h4 class="text-lg font-semibold mb-3 text-blue-800 dark:text-blue-300">Voice Recognition Statistics</h4>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <h4 class="text-base sm:text-lg font-semibold mb-3 text-blue-800 dark:text-blue-300">Statistiques Reconnaissance Vocale</h4>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
       <div class="text-center">
-        <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">98.5%</div>
-        <div class="text-sm text-blue-700 dark:text-blue-300">Accuracy Rate</div>
+        <div class="text-xl sm:text-2xl font-bold text-blue-600 dark:text-blue-400">98.5%</div>
+        <div class="text-xs sm:text-sm text-blue-700 dark:text-blue-300">Taux Précision</div>
       </div>
       <div class="text-center">
-        <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">70%</div>
-        <div class="text-sm text-blue-700 dark:text-blue-300">Users Prefer Voice</div>
+        <div class="text-xl sm:text-2xl font-bold text-blue-600 dark:text-blue-400">70%</div>
+        <div class="text-xs sm:text-sm text-blue-700 dark:text-blue-300">Préfèrent Voix</div>
       </div>
       <div class="text-center">
-        <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">15+</div>
-        <div class="text-sm text-blue-700 dark:text-blue-300">Languages Supported</div>
+        <div class="text-xl sm:text-2xl font-bold text-blue-600 dark:text-blue-400">15+</div>
+        <div class="text-xs sm:text-sm text-blue-700 dark:text-blue-300">Langues</div>
       </div>
     </div>
   </div>
