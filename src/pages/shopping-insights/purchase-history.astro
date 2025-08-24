@@ -17,7 +17,7 @@ const headings = [
 
 <WikiLayout title={pageTitle}>
   <div class="flex justify-between items-center">
-    <h1 class="text-3xl font-bold mb-8">{pageTitle}</h1>
+    <h1 class="text-2xl sm:text-3xl font-bold mb-8">{pageTitle}</h1>
     <div class="flex gap-2">
       <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
         View history
@@ -30,7 +30,7 @@ const headings = [
 
   <TableOfContents headings={headings} />
 
-  <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-6">
+  <p class="text-base sm:text-lg text-neutral-700 dark:text-neutral-300 mb-6">
     Access your complete shopping history with powerful search, filtering, and analysis tools. Track your purchases, manage receipts, and make informed decisions based on your shopping patterns.
   </p>
 
@@ -40,23 +40,23 @@ const headings = [
   </p>
 
   <div class="my-6 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
-    <h4 class="text-lg font-semibold mb-4 text-blue-800 dark:text-blue-300">📊 History Statistics</h4>
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+    <h4 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-blue-800 dark:text-blue-300">📊 Statistiques Historique</h4>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
       <div class="text-center">
-        <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">2,847</div>
-        <div class="text-sm text-blue-700 dark:text-blue-300">Total Purchases</div>
+        <div class="text-xl sm:text-2xl font-bold text-blue-600 dark:text-blue-400">2,847</div>
+        <div class="text-xs sm:text-sm text-blue-700 dark:text-blue-300">Achats Totaux</div>
       </div>
       <div class="text-center">
-        <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">18 months</div>
-        <div class="text-sm text-blue-700 dark:text-blue-300">History Depth</div>
+        <div class="text-xl sm:text-2xl font-bold text-blue-600 dark:text-blue-400">18 mois</div>
+        <div class="text-xs sm:text-sm text-blue-700 dark:text-blue-300">Profondeur Historique</div>
       </div>
       <div class="text-center">
-        <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">127</div>
-        <div class="text-sm text-blue-700 dark:text-blue-300">Unique Stores</div>
+        <div class="text-xl sm:text-2xl font-bold text-blue-600 dark:text-blue-400">127</div>
+        <div class="text-xs sm:text-sm text-blue-700 dark:text-blue-300">Magasins Uniques</div>
       </div>
       <div class="text-center">
-        <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">1,234</div>
-        <div class="text-sm text-blue-700 dark:text-blue-300">Unique Products</div>
+        <div class="text-xl sm:text-2xl font-bold text-blue-600 dark:text-blue-400">1,234</div>
+        <div class="text-xs sm:text-sm text-blue-700 dark:text-blue-300">Produits Uniques</div>
       </div>
     </div>
   </div>
@@ -80,8 +80,8 @@ const headings = [
 
   <div class="my-6 grid grid-cols-1 md:grid-cols-2 gap-4">
     <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20">
-      <h4 class="font-semibold mb-2 text-green-800 dark:text-green-300">🔍 Search Options</h4>
-      <ul class="text-sm text-green-700 dark:text-green-300 space-y-1">
+      <h4 class="font-semibold mb-2 text-green-800 dark:text-green-300 text-sm sm:text-base">🔍 Options de Recherche</h4>
+      <ul class="text-xs sm:text-sm text-green-700 dark:text-green-300 space-y-1">
         <li> Product name or brand</li>
         <li> Store name or location</li>
         <li> Price range</li>
@@ -90,8 +90,8 @@ const headings = [
       </ul>
     </div>
     <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20">
-      <h4 class="font-semibold mb-2 text-purple-800 dark:text-purple-300">🎛️ Filter Options</h4>
-      <ul class="text-sm text-purple-700 dark:text-purple-300 space-y-1">
+      <h4 class="font-semibold mb-2 text-purple-800 dark:text-purple-300 text-sm sm:text-base">🎛️ Options de Filtre</h4>
+      <ul class="text-xs sm:text-sm text-purple-700 dark:text-purple-300 space-y-1">
         <li> Payment method used</li>
         <li> Discount or coupon applied</li>
         <li> Family member who purchased</li>

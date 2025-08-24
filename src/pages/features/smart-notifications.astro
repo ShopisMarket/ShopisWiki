@@ -18,7 +18,7 @@ const headings = [
 
 <WikiLayout title={pageTitle}>
   <div class="flex justify-between items-center">
-    <h1 class="text-3xl font-bold mb-8">{pageTitle}</h1>
+    <h1 class="text-2xl sm:text-3xl font-bold mb-8">{pageTitle}</h1>
     <div class="flex gap-2">
       <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
         View history
@@ -31,7 +31,7 @@ const headings = [
 
   <TableOfContents headings={headings} />
 
-  <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-6">
+  <p class="text-base sm:text-lg text-neutral-700 dark:text-neutral-300 mb-6">
     Shopis's smart notification system ensures you never miss important shopping opportunities, deals, or reminders. Learn how to configure intelligent alerts that adapt to your lifestyle and shopping patterns.
   </p>
 
@@ -40,9 +40,9 @@ const headings = [
     Shopis offers various types of intelligent notifications designed to enhance your shopping experience:
   </p>
 
-  <div class="my-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  <div class="my-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
     <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20">
-      <h4 class="font-semibold mb-2 text-blue-800 dark:text-blue-300">
+      <h4 class="font-semibold mb-2 text-blue-800 dark:text-blue-300 text-sm sm:text-base">
   <svg width="20" height="20" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="inline-block mr-1">
     <path fill="currentColor" d="M1 8c0-3.9 3.1-7 7-7s7 3.1 7 7-3.1 7-7 7-7-3.1-7-7zM0 8c0 4.4 3.6 8 8 8s8-3.6 8-8-3.6-8-8-8-8 3.6-8 8v0z"></path>
     <path fill="currentColor" d="M2 9l10-5-5 10v-5z"></path>
@@ -50,10 +50,10 @@ const headings = [
   Location-Based
 </h4>
 
-      <p class="text-sm text-blue-700 dark:text-blue-300">Alerts when you're near stores with items on your list</p>
+      <p class="text-xs sm:text-sm text-blue-700 dark:text-blue-300">Alertes quand vous êtes près de magasins avec vos articles</p>
     </div>
     <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20">
-      <h4 class="font-semibold mb-2 text-green-800 dark:text-green-300">
+      <h4 class="font-semibold mb-2 text-green-800 dark:text-green-300 text-sm sm:text-base">
   <svg width="20" height="20" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="inline-block mr-1">
     <path fill="currentColor" d="M118.612,89.298c9.482,0,17.176-7.686,17.176-17.168v-54.96C135.788,7.687,128.094,0,118.612,0
       c-9.482,0-17.177,7.687-17.177,17.169v54.96C101.435,81.611,109.13,89.298,118.612,89.298z"/>
@@ -81,10 +81,10 @@ const headings = [
   Time-Based
 </h4>
 
-      <p class="text-sm text-green-700 dark:text-green-300">Reminders based on your shopping schedule and habits</p>
+      <p class="text-xs sm:text-sm text-green-700 dark:text-green-300">Rappels basés sur votre planning et habitudes</p>
     </div>
     <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20">
-      <h4 class="font-semibold mb-2 text-orange-800 dark:text-orange-300">
+      <h4 class="font-semibold mb-2 text-orange-800 dark:text-orange-300 text-sm sm:text-base">
   <svg 
     width="20" height="20" 
     viewBox="0 0 24 24" 
@@ -99,7 +99,7 @@ const headings = [
   Deal Alerts
 </h4>
 
-      <p class="text-sm text-orange-700 dark:text-orange-300">Notifications about sales and discounts on your items</p>
+      <p class="text-xs sm:text-sm text-orange-700 dark:text-orange-300">Notifications sur les ventes et remises</p>
     </div>
     <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20">
       <h4 class="font-semibold mb-2 text-purple-800 dark:text-purple-300">
@@ -172,7 +172,7 @@ const headings = [
   </ul>
 
   <div class="my-6 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
-    <h4 class="text-lg font-semibold mb-4 text-blue-800 dark:text-blue-300">
+    <h4 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-blue-800 dark:text-blue-300">
   <svg 
     xmlns="http://www.w3.org/2000/svg" 
     viewBox="0 0 16 16" 
@@ -185,10 +185,10 @@ const headings = [
   Location Features
 </h4>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
       <div>
-        <h5 class="font-medium mb-2">Smart Geofencing</h5>
-        <ul class="text-sm space-y-1">
+        <h5 class="font-medium mb-2 text-sm sm:text-base">Géolocalisation Intelligente</h5>
+        <ul class="text-xs sm:text-sm space-y-1">
           <li> Customizable alert radius (0.1-5 miles)</li>
           <li> Multiple store location support</li>
           <li> Traffic-aware timing</li>
@@ -196,8 +196,8 @@ const headings = [
         </ul>
       </div>
       <div>
-        <h5 class="font-medium mb-2">Privacy Controls</h5>
-        <ul class="text-sm space-y-1">
+        <h5 class="font-medium mb-2 text-sm sm:text-base">Contrôles de Confidentialité</h5>
+        <ul class="text-xs sm:text-sm space-y-1">
           <li> Location data stays on device</li>
           <li> Opt-out available anytime</li>
           <li> Precise location not required</li>
@@ -462,14 +462,14 @@ const headings = [
 
   <div class="my-6 grid grid-cols-1 md:grid-cols-2 gap-4">
     <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20">
-      <h4 class="font-semibold mb-2 text-green-800 dark:text-green-300">
+      <h4 class="font-semibold mb-2 text-green-800 dark:text-green-300 text-sm sm:text-base">
   <svg width="20" height="20" viewBox="0 0 14 14" fill="green" xmlns="http://www.w3.org/2000/svg" class="inline-block mr-1">
     <path d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/>
   </svg>
   Recommended Settings
 </h4>
 
-      <ul class="text-sm text-green-700 dark:text-green-300 space-y-1">
+      <ul class="text-xs sm:text-sm text-green-700 dark:text-green-300 space-y-1">
         <li> Enable location alerts for frequent stores</li>
         <li> Set quiet hours during sleep</li>
         <li> Prioritize deal alerts for budget items</li>
@@ -477,14 +477,14 @@ const headings = [
       </ul>
     </div>
     <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20">
-      <h4 class="font-semibold mb-2 text-orange-800 dark:text-orange-300">
+      <h4 class="font-semibold mb-2 text-orange-800 dark:text-orange-300 text-sm sm:text-base">
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block mr-1">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M14.2788 2.15224C13.9085 2 13.439 2 12.5 2C11.561 2 11.0915 2 10.7212 2.15224C10.2274 2.35523 9.83509 2.74458 9.63056 3.23463C9.53719 3.45834 9.50065 3.7185 9.48635 4.09799C9.46534 4.65568 9.17716 5.17189 8.69017 5.45093C8.20318 5.72996 7.60864 5.71954 7.11149 5.45876C6.77318 5.2813 6.52789 5.18262 6.28599 5.15102C5.75609 5.08178 5.22018 5.22429 4.79616 5.5472C4.47814 5.78938 4.24339 6.1929 3.7739 6.99993C3.30441 7.80697 3.06967 8.21048 3.01735 8.60491C2.94758 9.1308 3.09118 9.66266 3.41655 10.0835C3.56506 10.2756 3.77377 10.437 4.0977 10.639C4.57391 10.936 4.88032 11.4419 4.88029 12C4.88026 12.5581 4.57386 13.0639 4.0977 13.3608C3.77372 13.5629 3.56497 13.7244 3.41645 13.9165C3.09108 14.3373 2.94749 14.8691 3.01725 15.395C3.06957 15.7894 3.30432 16.193 3.7738 17C4.24329 17.807 4.47804 18.2106 4.79606 18.4527C5.22008 18.7756 5.75599 18.9181 6.28589 18.8489C6.52778 18.8173 6.77305 18.7186 7.11133 18.5412C7.60852 18.2804 8.2031 18.27 8.69012 18.549C9.17714 18.8281 9.46533 19.3443 9.48635 19.9021C9.50065 20.2815 9.53719 20.5417 9.63056 20.7654C9.83509 21.2554 10.2274 21.6448 10.7212 21.8478C11.0915 22 11.561 22 12.5 22C13.439 22 13.9085 22 14.2788 21.8478C14.7726 21.6448 15.1649 21.2554 15.3694 20.7654C15.4628 20.5417 15.4994 20.2815 15.5137 19.902C15.5347 19.3443 15.8228 18.8281 16.3098 18.549C16.7968 18.2699 17.3914 18.2804 17.8886 18.5412C18.2269 18.7186 18.4721 18.8172 18.714 18.8488C19.2439 18.9181 19.7798 18.7756 20.2038 18.4527C20.5219 18.2105 20.7566 17.807 21.2261 16.9999C21.6956 16.1929 21.9303 15.7894 21.9827 15.395C22.0524 14.8691 21.9088 14.3372 21.5835 13.9164C21.4349 13.7243 21.2262 13.5628 20.9022 13.3608C20.4261 13.0639 20.1197 12.558 20.1197 11.9999C20.1197 11.4418 20.4261 10.9361 20.9022 10.6392C21.2263 10.4371 21.435 10.2757 21.5836 10.0835C21.9089 9.66273 22.0525 9.13087 21.9828 8.60497C21.9304 8.21055 21.6957 7.80703 21.2262 7C20.7567 6.19297 20.522 5.78945 20.2039 5.54727C19.7799 5.22436 19.244 5.08185 18.7141 5.15109C18.4722 5.18269 18.2269 5.28136 17.8887 5.4588C17.3915 5.71959 16.7969 5.73002 16.3099 5.45096C15.8229 5.17191 15.5347 4.65566 15.5136 4.09794C15.4993 3.71848 15.4628 3.45833 15.3694 3.23463C15.1649 2.74458 14.7726 2.35523 14.2788 2.15224ZM12.5 15C14.1695 15 15.5228 13.6569 15.5228 12C15.5228 10.3431 14.1695 9 12.5 9C10.8305 9 9.47716 10.3431 9.47716 12C9.47716 13.6569 10.8305 15 12.5 15Z" fill="#1C274C"/>
   </svg>
   Advanced Options
 </h4>
 
-      <ul class="text-sm text-orange-700 dark:text-orange-300 space-y-1">
+      <ul class="text-xs sm:text-sm text-orange-700 dark:text-orange-300 space-y-1">
         <li> Custom notification sounds</li>
         <li> Vibration patterns</li>
         <li> LED color customization</li>

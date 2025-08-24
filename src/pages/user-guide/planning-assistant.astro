@@ -18,7 +18,7 @@ const headings = [
 
 <WikiLayout title={pageTitle}>
   <div class="flex justify-between items-center">
-    <h1 class="text-3xl font-bold mb-8">{pageTitle}</h1>
+    <h1 class="text-2xl sm:text-3xl font-bold mb-8">{pageTitle}</h1>
     <div class="flex gap-2">
       <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
         View history
@@ -31,7 +31,7 @@ const headings = [
 
   <TableOfContents headings={headings} />
 
-  <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-6">
+  <p class="text-base sm:text-lg text-neutral-700 dark:text-neutral-300 mb-6">
     Shopis's Planning Assistant uses artificial intelligence to help you plan meals, optimize budgets, and make smarter shopping decisions. Discover how AI can transform your shopping experience.
   </p>
 
@@ -41,11 +41,11 @@ const headings = [
   </p>
 
   <div class="my-6 bg-gradient-to-r from-purple-50 to-indigo-50 dark:from-purple-900/20 dark:to-indigo-900/20 p-6 rounded-lg border border-purple-200 dark:border-purple-800">
-    <h4 class="text-lg font-semibold mb-4 text-purple-800 dark:text-purple-300">🤖 AI Assistant Capabilities</h4>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <h4 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-purple-800 dark:text-purple-300">🤖 Capacités Assistant IA</h4>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
       <div>
-        <h5 class="font-medium mb-2">Learning & Adaptation</h5>
-        <ul class="text-sm space-y-1">
+        <h5 class="font-medium mb-2 text-sm sm:text-base">Apprentissage & Adaptation</h5>
+        <ul class="text-xs sm:text-sm space-y-1">
           <li> Analyzes your purchase history</li>
           <li> Learns your brand preferences</li>
           <li> Adapts to seasonal changes</li>
@@ -53,8 +53,8 @@ const headings = [
         </ul>
       </div>
       <div>
-        <h5 class="font-medium mb-2">Smart Recommendations</h5>
-        <ul class="text-sm space-y-1">
+        <h5 class="font-medium mb-2 text-sm sm:text-base">Recommandations Intelligentes</h5>
+        <ul class="text-xs sm:text-sm space-y-1">
           <li> Suggests complementary items</li>
           <li> Predicts when you'll run out</li>
           <li> Recommends bulk buying opportunities</li>
@@ -145,7 +145,7 @@ const headings = [
   </ul>
 
   <div class="my-6 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
-    <h4 class="text-lg font-semibold mb-4 text-green-800 dark:text-green-300 flex items-center gap-2">
+    <h4 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-green-800 dark:text-green-300 flex items-center gap-2">
   <!-- SVG Budget Optimization -->
   <svg width="24" height="24" viewBox="0 0 511.943 511.943" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
     <g>
@@ -184,22 +184,22 @@ const headings = [
   Budget Optimization Results
 </h4>
 
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
       <div class="text-center">
-        <div class="text-2xl font-bold text-green-600 dark:text-green-400">$247</div>
-        <div class="text-sm text-green-700 dark:text-green-300">Avg Monthly Savings</div>
+        <div class="text-xl sm:text-2xl font-bold text-green-600 dark:text-green-400">247€</div>
+        <div class="text-xs sm:text-sm text-green-700 dark:text-green-300">Économies Mensuelles</div>
       </div>
       <div class="text-center">
-        <div class="text-2xl font-bold text-green-600 dark:text-green-400">23%</div>
-        <div class="text-sm text-green-700 dark:text-green-300">Budget Reduction</div>
+        <div class="text-xl sm:text-2xl font-bold text-green-600 dark:text-green-400">23%</div>
+        <div class="text-xs sm:text-sm text-green-700 dark:text-green-300">Réduction Budget</div>
       </div>
       <div class="text-center">
-        <div class="text-2xl font-bold text-green-600 dark:text-green-400">156</div>
-        <div class="text-sm text-green-700 dark:text-green-300">Deals Found/Month</div>
+        <div class="text-xl sm:text-2xl font-bold text-green-600 dark:text-green-400">156</div>
+        <div class="text-xs sm:text-sm text-green-700 dark:text-green-300">Offres/Mois</div>
       </div>
       <div class="text-center">
-        <div class="text-2xl font-bold text-green-600 dark:text-green-400">94%</div>
-        <div class="text-sm text-green-700 dark:text-green-300">Budget Goal Success</div>
+        <div class="text-xl sm:text-2xl font-bold text-green-600 dark:text-green-400">94%</div>
+        <div class="text-xs sm:text-sm text-green-700 dark:text-green-300">Succès Objectifs</div>
       </div>
     </div>
   </div>
@@ -280,28 +280,28 @@ const headings = [
       <strong>Cooking Skill Level</strong>: Adjust recipe complexity to match your abilities
     </li>
   </ul>
-
+  <div class="my-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
   <InfoBox type="warning" title="Privacy Settings">
-    All Planning Assistant data is processed securely and never shared with third parties. You can adjust privacy settings and data usage preferences in your account settings.
-  </InfoBox>
-
-  <div class="my-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <h4 class="font-semibold mb-2 text-green-800 dark:text-green-300 text-sm sm:text-base">💰 Vitesse Dépense</h4>
+      <div class="text-xs sm:text-sm text-green-700 dark:text-green-300">
+        <div class="font-medium">127.50€/semaine</div>
+        <div>↑ 12% vs mois dernier</div>
     <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20">
       <h4 class="font-semibold mb-2 text-blue-800 dark:text-blue-300">🎯 Personalization Tips</h4>
       <ul class="text-sm text-blue-700 dark:text-blue-300 space-y-1">
-        <li> Update preferences regularly</li>
-        <li> Rate suggestions to improve accuracy</li>
-        <li> Use feedback buttons on recommendations</li>
-        <li> Review and adjust dietary settings</li>
+      <h4 class="font-semibold mb-2 text-blue-800 dark:text-blue-300 text-sm sm:text-base">🛒 Fréquence Achats</h4>
+      <div class="text-xs sm:text-sm text-blue-700 dark:text-blue-300">
+        <div class="font-medium">2.3 sorties/semaine</div>
+        <div>↓ 8% vs mois dernier</div>
       </ul>
     </div>
     <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20">
       <h4 class="font-semibold mb-2 text-orange-800 dark:text-orange-300">⚡ Quick Setup</h4>
       <ul class="text-sm text-orange-700 dark:text-orange-300 space-y-1">
-        <li> Complete the initial setup wizard</li>
-        <li> Import data from other apps</li>
-        <li> Connect loyalty cards for better deals</li>
-        <li> Enable location services for reminders</li>
+      <h4 class="font-semibold mb-2 text-orange-800 dark:text-orange-300 text-sm sm:text-base">📦 Taille Panier</h4>
+      <div class="text-xs sm:text-sm text-orange-700 dark:text-orange-300">
+        <div class="font-medium">23 articles moy</div>
+        <div>↑ 15% vs mois dernier</div>
       </ul>
     </div>
   </div>

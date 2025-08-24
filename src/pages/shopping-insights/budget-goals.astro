@@ -17,7 +17,7 @@ const headings = [
 
 <WikiLayout title={pageTitle}>
   <div class="flex justify-between items-center">
-    <h1 class="text-3xl font-bold mb-8">{pageTitle}</h1>
+    <h1 class="text-2xl sm:text-3xl font-bold mb-8">{pageTitle}</h1>
     <div class="flex gap-2">
       <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
         View history
@@ -30,7 +30,7 @@ const headings = [
 
   <TableOfContents headings={headings} />
 
-  <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-6">
+  <p class="text-base sm:text-lg text-neutral-700 dark:text-neutral-300 mb-6">
     Take control of your finances with Shopis's intelligent budgeting system. Set realistic goals, track your progress, and discover new ways to save money on your everyday purchases.
   </p>
 
@@ -40,23 +40,23 @@ const headings = [
   </p>
 
   <div class="my-6 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
-    <h4 class="text-lg font-semibold mb-4 text-green-800 dark:text-green-300">💰 Budget Success Metrics</h4>
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+    <h4 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-green-800 dark:text-green-300">💰 Métriques de Succès Budgétaire</h4>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
       <div class="text-center">
-        <div class="text-2xl font-bold text-green-600 dark:text-green-400">89%</div>
-        <div class="text-sm text-green-700 dark:text-green-300">Users Stay on Budget</div>
+        <div class="text-xl sm:text-2xl font-bold text-green-600 dark:text-green-400">89%</div>
+        <div class="text-xs sm:text-sm text-green-700 dark:text-green-300">Respectent le Budget</div>
       </div>
       <div class="text-center">
-        <div class="text-2xl font-bold text-green-600 dark:text-green-400">$347</div>
-        <div class="text-sm text-green-700 dark:text-green-300">Avg Monthly Savings</div>
+        <div class="text-xl sm:text-2xl font-bold text-green-600 dark:text-green-400">347€</div>
+        <div class="text-xs sm:text-sm text-green-700 dark:text-green-300">Économies Mensuelles</div>
       </div>
       <div class="text-center">
-        <div class="text-2xl font-bold text-green-600 dark:text-green-400">23%</div>
-        <div class="text-sm text-green-700 dark:text-green-300">Spending Reduction</div>
+        <div class="text-xl sm:text-2xl font-bold text-green-600 dark:text-green-400">23%</div>
+        <div class="text-xs sm:text-sm text-green-700 dark:text-green-300">Réduction Dépenses</div>
       </div>
       <div class="text-center">
-        <div class="text-2xl font-bold text-green-600 dark:text-green-400">94%</div>
-        <div class="text-sm text-green-700 dark:text-green-300">Goal Achievement Rate</div>
+        <div class="text-xl sm:text-2xl font-bold text-green-600 dark:text-green-400">94%</div>
+        <div class="text-xs sm:text-sm text-green-700 dark:text-green-300">Taux d'Atteinte Objectifs</div>
       </div>
     </div>
   </div>

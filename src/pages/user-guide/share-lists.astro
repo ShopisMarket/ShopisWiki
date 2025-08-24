@@ -69,286 +69,91 @@ const headings = [
         <div class="text-2xl font-bold text-green-600 dark:text-green-400">85%</div>
         <div class="text-sm text-green-700 dark:text-green-300">of users share lists</div>
       </div>
-      <div class="text-center">
-        <div class="text-2xl font-bold text-green-600 dark:text-green-400">3.2</div>
-        <div class="text-sm text-green-700 dark:text-green-300">avg collaborators per list</div>
+  <!-- Mobile-optimized permission cards -->
+  <div class="my-6 space-y-4">
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-green-50 dark:bg-green-900/20">
+      <h4 class="font-semibold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">
+        👑 Propriétaire
+      </h4>
+      <div class="grid grid-cols-2 gap-3 text-sm">
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4" viewBox="0 0 14 14" fill="green" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/>
+          </svg>
+          <span>Voir</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4" viewBox="0 0 14 14" fill="green" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/>
+          </svg>
+          <span>Ajouter</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4" viewBox="0 0 14 14" fill="green" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/>
+          </svg>
+          <span>Supprimer</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4" viewBox="0 0 14 14" fill="green" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/>
+          </svg>
+          <span>Partager</span>
+        </div>
       </div>
-      <div class="text-center">
-        <div class="text-2xl font-bold text-green-600 dark:text-green-400">47%</div>
-        <div class="text-sm text-green-700 dark:text-green-300">faster shopping completion</div>
-      </div>
-    </div>
-  </div>
-
-  <InfoBox type="success" title="No Account Required">
-    Recipients don't need a Shopis account to view shared lists. They can access lists through a web browser and optionally create an account for full features.
-  </InfoBox>
-
-  <h2 id="permission-levels">Permission Levels</h2>
-  <p>
-    Shopis offers flexible permission levels to control how others interact with your shared lists:
-  </p>
-
-  <div class="my-6 overflow-x-auto">
-    <div class="hidden lg:block">
-      <table class="w-full border-collapse border border-neutral-200 dark:border-neutral-800">
-        <thead class="bg-neutral-50 dark:bg-neutral-800">
-          <tr>
-            <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Permission</th>
-            <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">View List</th>
-            <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Add Items</th>
-            <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Edit Items</th>
-            <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Delete Items</th>
-            <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Share List</th>
-            <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Best For</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 font-medium">Owner</td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-              <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-            </td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-              <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-            </td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-              <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-            </td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-              <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-            </td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">List creator</td>
-          </tr>
-          <tr>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 font-medium">Co-Manager</td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-              <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-            </td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-              <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-            </td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-              <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-            </td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-              <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-            </td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-              <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-            </td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Spouse/Partner</td>
-          </tr>
-          <tr>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 font-medium">Contributor</td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-              <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-            </td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-              <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-            </td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-              <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-            </td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-              <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="red" d="M13 10.65657q0 .40404-.28283.68686l-1.37374 1.37374Q11.06061 13 10.65657 13t-.68687-.28283L7 9.74747l-2.9697 2.9697Q3.74747 13 3.34343 13q-.40404 0-.68686-.28283l-1.37374-1.37374Q1 11.06061 1 10.65657t.28283-.68687L4.25253 7l-2.9697-2.9697Q1 3.74747 1 3.34343q0-.40404.28283-.68686l1.37374-1.37374Q2.93939 1 3.34343 1t.68687.28283L7 4.25253l2.9697-2.9697Q10.25253 1 10.65657 1q.40404 0 .68686.28283l1.37374 1.37374Q13 2.93939 13 3.34343t-.28283.68687L9.74747 7l2.9697 2.9697Q13 10.25253 13 10.65657z"/></svg>
-            </td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-              <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="red" d="M13 10.65657q0 .40404-.28283.68686l-1.37374 1.37374Q11.06061 13 10.65657 13t-.68687-.28283L7 9.74747l-2.9697 2.9697Q3.74747 13 3.34343 13q-.40404 0-.68686-.28283l-1.37374-1.37374Q1 11.06061 1 10.65657t.28283-.68687L4.25253 7l-2.9697-2.9697Q1 3.74747 1 3.34343q0-.40404.28283-.68686l1.37374-1.37374Q2.93939 1 3.34343 1t.68687.28283L7 4.25253l2.9697-2.9697Q10.25253 1 10.65657 1q.40404 0 .68686.28283l1.37374 1.37374Q13 2.93939 13 3.34343t-.28283.68687L9.74747 7l2.9697 2.9697Q13 10.25253 13 10.65657z"/></svg>
-            </td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Family members</td>
-          </tr>
-          <tr>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 font-medium">Contributor</td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-              <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-            </td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-              <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-            </td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-              <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-            </td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-              <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="red" d="M13 10.65657q0 .40404-.28283.68686l-1.37374 1.37374Q11.06061 13 10.65657 13t-.68687-.28283L7 9.74747l-2.9697 2.9697Q3.74747 13 3.34343 13q-.40404 0-.68686-.28283l-1.37374-1.37374Q1 11.06061 1 10.65657t.28283-.68687L4.25253 7l-2.9697-2.9697Q1 3.74747 1 3.34343q0-.40404.28283-.68686l1.37374-1.37374Q2.93939 1 3.34343 1t.68687.28283L7 4.25253l2.9697-2.9697Q10.25253 1 10.65657 1q.40404 0 .68686.28283l1.37374 1.37374Q13 2.93939 13 3.34343t-.28283.68687L9.74747 7l2.9697 2.9697Q13 10.25253 13 10.65657z"/></svg>
-            </td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Roommates</td>
-          </tr>
-          <tr>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 font-medium">Viewer</td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-              <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-            </td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-              <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="red" d="M13 10.65657q0 .40404-.28283.68686l-1.37374 1.37374Q11.06061 13 10.65657 13t-.68687-.28283L7 9.74747l-2.9697 2.9697Q3.74747 13 3.34343 13q-.40404 0-.68686-.28283l-1.37374-1.37374Q1 11.06061 1 10.65657t.28283-.68687L4.25253 7l-2.9697-2.9697Q1 3.74747 1 3.34343q0-.40404.28283-.68686l1.37374-1.37374Q2.93939 1 3.34343 1t.68687.28283L7 4.25253l2.9697-2.9697Q10.25253 1 10.65657 1q.40404 0 .68686.28283l1.37374 1.37374Q13 2.93939 13 3.34343t-.28283.68687L9.74747 7l2.9697 2.9697Q13 10.25253 13 10.65657z"/></svg>
-            </td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-              <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="red" d="M13 10.65657q0 .40404-.28283.68686l-1.37374 1.37374Q11.06061 13 10.65657 13t-.68687-.28283L7 9.74747l-2.9697 2.9697Q3.74747 13 3.34343 13q-.40404 0-.68686-.28283l-1.37374-1.37374Q1 11.06061 1 10.65657t.28283-.68687L4.25253 7l-2.9697-2.9697Q1 3.74747 1 3.34343q0-.40404.28283-.68686l1.37374-1.37374Q2.93939 1 3.34343 1t.68687.28283L7 4.25253l2.9697-2.9697Q10.25253 1 10.65657 1q.40404 0 .68686.28283l1.37374 1.37374Q13 2.93939 13 3.34343t-.28283.68687L9.74747 7l2.9697 2.9697Q13 10.25253 13 10.65657z"/></svg>
-            </td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-              <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="red" d="M13 10.65657q0 .40404-.28283.68686l-1.37374 1.37374Q11.06061 13 10.65657 13t-.68687-.28283L7 9.74747l-2.9697 2.9697Q3.74747 13 3.34343 13q-.40404 0-.68686-.28283l-1.37374-1.37374Q1 11.06061 1 10.65657t.28283-.68687L4.25253 7l-2.9697-2.9697Q1 3.74747 1 3.34343q0-.40404.28283-.68686l1.37374-1.37374Q2.93939 1 3.34343 1t.68687.28283L7 4.25253l2.9697-2.9697Q10.25253 1 10.65657 1q.40404 0 .68686.28283l1.37374 1.37374Q13 2.93939 13 3.34343t-.28283.68687L9.74747 7l2.9697 2.9697Q13 10.25253 13 10.65657z"/></svg>
-            </td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-              <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="red" d="M13 10.65657q0 .40404-.28283.68686l-1.37374 1.37374Q11.06061 13 10.65657 13t-.68687-.28283L7 9.74747l-2.9697 2.9697Q3.74747 13 3.34343 13q-.40404 0-.68686-.28283l-1.37374-1.37374Q1 11.06061 1 10.65657t.28283-.68687L4.25253 7l-2.9697-2.9697Q1 3.74747 1 3.34343q0-.40404.28283-.68686l1.37374-1.37374Q2.93939 1 3.34343 1t.68687.28283L7 4.25253l2.9697-2.9697Q10.25253 1 10.65657 1q.40404 0 .68686.28283l1.37374 1.37374Q13 2.93939 13 3.34343t-.28283.68687L9.74747 7l2.9697 2.9697Q13 10.25253 13 10.65657z"/></svg>
-            </td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Reference only</td>
-          </tr>
-        </tbody>
-      </table>
+      <p class="text-sm text-green-700 dark:text-green-300 mt-2">
+        Contrôle total de la liste. Idéal pour le créateur de la liste.
+      </p>
     </div>
     
-    <!-- Mobile view -->
-    <div class="lg:hidden space-y-4">
-      <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-green-50 dark:bg-green-900/20">
-        <h4 class="font-semibold text-green-800 dark:text-green-300 mb-2 flex items-center gap-2">
-          👑 Owner
-        </h4>
-        <p class="text-sm text-green-700 dark:text-green-300">
-          Contrôle total : voir, ajouter, modifier, supprimer et partager les listes. Idéal pour le créateur de la liste.
-        </p>
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-blue-50 dark:bg-blue-900/20">
+      <h4 class="font-semibold text-blue-800 dark:text-blue-300 mb-3 flex items-center gap-2">
+        🤝 Co-gestionnaire
+      </h4>
+      <div class="grid grid-cols-2 gap-3 text-sm">
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4" viewBox="0 0 14 14" fill="green" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/>
+          </svg>
+          <span>Voir</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4" viewBox="0 0 14 14" fill="green" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/>
+          </svg>
+          <span>Ajouter</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4" viewBox="0 0 14 14" fill="green" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/>
+          </svg>
+          <span>Supprimer</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4" viewBox="0 0 14 14" fill="green" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/>
+          </svg>
+          <span>Partager</span>
+        </div>
       </div>
-      <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-blue-50 dark:bg-blue-900/20">
-        <h4 class="font-semibold text-blue-800 dark:text-blue-300 mb-2 flex items-center gap-2">
-          🤝 Co-Manager
-        </h4>
-        <p class="text-sm text-blue-700 dark:text-blue-300">
-          Peut voir, ajouter, modifier et supprimer des éléments, plus partager la liste. Parfait pour les conjoints.
-        </p>
-      </div>
-      <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-purple-50 dark:bg-purple-900/20">
-        <h4 class="font-semibold text-purple-800 dark:text-purple-300 mb-2 flex items-center gap-2">
-          ✏️ Contributor
-        </h4>
-        <p class="text-sm text-purple-700 dark:text-purple-300">
-          Peut voir, ajouter et modifier les éléments (pas de suppression ni partage). Idéal pour les colocataires.
-        </p>
-      </div>
-      <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-orange-50 dark:bg-orange-900/20">
-        <h4 class="font-semibold text-orange-800 dark:text-orange-300 mb-2 flex items-center gap-2">
-          👀 Viewer
-        </h4>
-        <p class="text-sm text-orange-700 dark:text-orange-300">
-          Accès en lecture seule uniquement. Parfait pour partager des listes de référence.
-        </p>
-      </div>
+      <p class="text-sm text-blue-700 dark:text-blue-300 mt-2">
+        Contrôle complet avec partage. Parfait pour les conjoints.
+      </p>
     </div>
-  </div>
-      <thead class="bg-neutral-50 dark:bg-neutral-800">
-        <tr>
-          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Permission</th>
-          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">View List</th>
-          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Add Items</th>
-          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Edit Items</th>
-          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Delete Items</th>
-          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Share List</th>
-          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Best For</th>
-        </tr>
-      </thead>
-      <tbody>
-  <tr>
-    <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 font-medium">Owner</td>
-    <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-      <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-    </td>
-    <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-      <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-    </td>
-    <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-      <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-    </td>
-    <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-      <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-    </td>
-    <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-      <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-    </td>
-    <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">List creator</td>
-  </tr>
-
-  <tr>
-    <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 font-medium">Co-Manager</td>
-    <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-      <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-    </td>
-    <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-      <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-    </td>
-    <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-      <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-    </td>
-    <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-      <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-    </td>
-    <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-      <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-    </td>
-    <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Spouse/Partner</td>
-  </tr>
-
-  <tr>
-  <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 font-medium">Editor</td>
-  <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-    <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-  </td>
-  <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-    <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-  </td>
-  <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-    <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-  </td>
-  <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-    <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-  </td>
-  <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-    <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="red" d="M13 10.65657q0 .40404-.28283.68686l-1.37374 1.37374Q11.06061 13 10.65657 13t-.68687-.28283L7 9.74747l-2.9697 2.9697Q3.74747 13 3.34343 13q-.40404 0-.68686-.28283l-1.37374-1.37374Q1 11.06061 1 10.65657t.28283-.68687L4.25253 7l-2.9697-2.9697Q1 3.74747 1 3.34343q0-.40404.28283-.68686l1.37374-1.37374Q2.93939 1 3.34343 1t.68687.28283L7 4.25253l2.9697-2.9697Q10.25253 1 10.65657 1q.40404 0 .68686.28283l1.37374 1.37374Q13 2.93939 13 3.34343t-.28283.68687L9.74747 7l2.9697 2.9697Q13 10.25253 13 10.65657z"/></svg>
-  </td>
-  <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Family members</td>
-</tr>
-
-<tr>
-  <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 font-medium">Contributor</td>
-  <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-    <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-  </td>
-  <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-    <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-  </td>
-  <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-    <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-  </td>
-  <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-    <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="red" d="M13 10.65657q0 .40404-.28283.68686l-1.37374 1.37374Q11.06061 13 10.65657 13t-.68687-.28283L7 9.74747l-2.9697 2.9697Q3.74747 13 3.34343 13q-.40404 0-.68686-.28283l-1.37374-1.37374Q1 11.06061 1 10.65657t.28283-.68687L4.25253 7l-2.9697-2.9697Q1 3.74747 1 3.34343q0-.40404.28283-.68686l1.37374-1.37374Q2.93939 1 3.34343 1t.68687.28283L7 4.25253l2.9697-2.9697Q10.25253 1 10.65657 1q.40404 0 .68686.28283l1.37374 1.37374Q13 2.93939 13 3.34343t-.28283.68687L9.74747 7l2.9697 2.9697Q13 10.25253 13 10.65657z"/></svg>
-  </td>
-  <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-    <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="red" d="M13 10.65657q0 .40404-.28283.68686l-1.37374 1.37374Q11.06061 13 10.65657 13t-.68687-.28283L7 9.74747l-2.9697 2.9697Q3.74747 13 3.34343 13q-.40404 0-.68686-.28283l-1.37374-1.37374Q1 11.06061 1 10.65657t.28283-.68687L4.25253 7l-2.9697-2.9697Q1 3.74747 1 3.34343q0-.40404.28283-.68686l1.37374-1.37374Q2.93939 1 3.34343 1t.68687.28283L7 4.25253l2.9697-2.9697Q10.25253 1 10.65657 1q.40404 0 .68686.28283l1.37374 1.37374Q13 2.93939 13 3.34343t-.28283.68687L9.74747 7l2.9697 2.9697Q13 10.25253 13 10.65657z"/></svg>
-  </td>
-  <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Roommates</td>
-</tr>
-
-<tr>
-  <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 font-medium">Viewer</td>
-  <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-    <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="green" d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/></svg>
-  </td>
-  <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-    <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="red" d="M13 10.65657q0 .40404-.28283.68686l-1.37374 1.37374Q11.06061 13 10.65657 13t-.68687-.28283L7 9.74747l-2.9697 2.9697Q3.74747 13 3.34343 13q-.40404 0-.68686-.28283l-1.37374-1.37374Q1 11.06061 1 10.65657t.28283-.68687L4.25253 7l-2.9697-2.9697Q1 3.74747 1 3.34343q0-.40404.28283-.68686l1.37374-1.37374Q2.93939 1 3.34343 1t.68687.28283L7 4.25253l2.9697-2.9697Q10.25253 1 10.65657 1q.40404 0 .68686.28283l1.37374 1.37374Q13 2.93939 13 3.34343t-.28283.68687L9.74747 7l2.9697 2.9697Q13 10.25253 13 10.65657z"/></svg>
-  </td>
-  <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-    <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="red" d="M13 10.65657q0 .40404-.28283.68686l-1.37374 1.37374Q11.06061 13 10.65657 13t-.68687-.28283L7 9.74747l-2.9697 2.9697Q3.74747 13 3.34343 13q-.40404 0-.68686-.28283l-1.37374-1.37374Q1 11.06061 1 10.65657t.28283-.68687L4.25253 7l-2.9697-2.9697Q1 3.74747 1 3.34343q0-.40404.28283-.68686l1.37374-1.37374Q2.93939 1 3.34343 1t.68687.28283L7 4.25253l2.9697-2.9697Q10.25253 1 10.65657 1q.40404 0 .68686.28283l1.37374 1.37374Q13 2.93939 13 3.34343t-.28283.68687L9.74747 7l2.9697 2.9697Q13 10.25253 13 10.65657z"/></svg>
-  </td>
-  <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-    <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="red" d="M13 10.65657q0 .40404-.28283.68686l-1.37374 1.37374Q11.06061 13 10.65657 13t-.68687-.28283L7 9.74747l-2.9697 2.9697Q3.74747 13 3.34343 13q-.40404 0-.68686-.28283l-1.37374-1.37374Q1 11.06061 1 10.65657t.28283-.68687L4.25253 7l-2.9697-2.9697Q1 3.74747 1 3.34343q0-.40404.28283-.68686l1.37374-1.37374Q2.93939 1 3.34343 1t.68687.28283L7 4.25253l2.9697-2.9697Q10.25253 1 10.65657 1q.40404 0 .68686.28283l1.37374 1.37374Q13 2.93939 13 3.34343t-.28283.68687L9.74747 7l2.9697 2.9697Q13 10.25253 13 10.65657z"/></svg>
-  </td>
-  <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-center">
-    <svg class="w-4 h-4 inline-block" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="red" d="M13 10.65657q0 .40404-.28283.68686l-1.37374 1.37374Q11.06061 13 10.65657 13t-.68687-.28283L7 9.74747l-2.9697 2.9697Q3.74747 13 3.34343 13q-.40404 0-.68686-.28283l-1.37374-1.37374Q1 11.06061 1 10.65657t.28283-.68687L4.25253 7l-2.9697-2.9697Q1 3.74747 1 3.34343q0-.40404.28283-.68686l1.37374-1.37374Q2.93939 1 3.34343 1t.68687.28283L7 4.25253l2.9697-2.9697Q10.25253 1 10.65657 1q.40404 0 .68686.28283l1.37374 1.37374Q13 2.93939 13 3.34343t-.28283.68687L9.74747 7l2.9697 2.9697Q13 10.25253 13 10.65657z"/></svg>
-  </td>
-  <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Reference only</td>
-</tr>
-
-</tbody>
-
-    </table>
-  </div>
+    
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-purple-50 dark:bg-purple-900/20">
+      <h4 class="font-semibold text-purple-800 dark:text-purple-300 mb-3 flex items-center gap-2">
+        ✏️ Contributeur
+      </h4>
+      <div class="grid grid-cols-2 gap-3 text-sm">
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4" viewBox="0 0 14 14" fill="green" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 4.1974q0 .3097-.21677.5265L7.17806 10.329l-1.0529 1.0529q-.21677.2168-.52645.2168-.30968 0-.52645-.2168L4.01935 10.329 1.21677 7.5264Q1 7.3097 1 7t.21677-.5265l1.05291-1.0529q.21677-.2167.52645-.2167.30968 0 .52645.2167l2.27613 2.2839 5.07871-5.0864q.21677-.2168.52645-.2168.30968 0 .52645.2168l1.05291 1.0529Q13 3.8877 13 4.1974z"/>
+          </svg>
+          <span>Voir</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4" viewBox="0 0 14 14" fill="green" xmlns="http://www.w3.org/2000/svg">
 
   <h2 id="real-time-collaboration">Real-Time Collaboration</h2>
   <p>

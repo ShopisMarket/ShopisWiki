@@ -17,7 +17,7 @@ const headings = [
 
 <WikiLayout title={pageTitle}>
   <div class="flex justify-between items-center">
-    <h1 class="text-3xl font-bold mb-8">{pageTitle}</h1>
+    <h1 class="text-2xl sm:text-3xl font-bold mb-8">{pageTitle}</h1>
     <div class="flex gap-2">
       <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
         View history
@@ -30,7 +30,7 @@ const headings = [
 
   <TableOfContents headings={headings} />
 
-  <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-6">
+  <p class="text-base sm:text-lg text-neutral-700 dark:text-neutral-300 mb-6">
     Shopis's advanced voice recognition technology allows you to manage your shopping lists hands-free using natural speech. This powerful feature makes adding items, creating lists, and managing your shopping effortless.
   </p>
 
@@ -179,7 +179,7 @@ const headings = [
   </InfoBox>
 
   <div class="my-6 overflow-x-auto">
-    <div class="hidden md:block">
+    <div class="hidden lg:block">
       <table class="w-full border-collapse border border-neutral-200 dark:border-neutral-800">
         <thead class="bg-neutral-50 dark:bg-neutral-800">
           <tr>
@@ -225,30 +225,22 @@ const headings = [
     </div>
     
     <!-- Mobile view -->
-    <div class="md:hidden space-y-3">
-      <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-3 bg-green-50 dark:bg-green-900/20">
-        <h4 class="font-medium text-green-800 dark:text-green-300 mb-1">📋 Voir les listes</h4>
-        <div class="flex justify-between text-sm">
-          <span class="text-green-700 dark:text-green-300">En ligne: ✅</span>
-          <span class="text-green-700 dark:text-green-300">Hors ligne: ✅</span>
-        </div>
-        <p class="text-xs text-green-600 dark:text-green-400 mt-1">Accès complet aux listes mises en cache</p>
-      </div>
+    <div class="lg:hidden space-y-3">
       <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-3 bg-blue-50 dark:bg-blue-900/20">
-        <h4 class="font-medium text-blue-800 dark:text-blue-300 mb-1">✏️ Ajouter/Modifier</h4>
-        <div class="flex justify-between text-sm">
-          <span class="text-blue-700 dark:text-blue-300">En ligne: ✅</span>
-          <span class="text-blue-700 dark:text-blue-300">Hors ligne: ✅</span>
+        <h4 class="font-medium text-blue-800 dark:text-blue-300 mb-1 text-sm">🎤 Commandes Vocales</h4>
+        <div class="space-y-1">
+          <div class="text-xs text-blue-700 dark:text-blue-300">"Ajouter du lait à ma liste"</div>
+          <div class="text-xs text-blue-700 dark:text-blue-300">"Créer une nouvelle liste"</div>
+          <div class="text-xs text-blue-700 dark:text-blue-300">"Marquer le pain comme acheté"</div>
         </div>
-        <p class="text-xs text-blue-600 dark:text-blue-400 mt-1">Modifications sauvegardées localement</p>
       </div>
-      <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-3 bg-yellow-50 dark:bg-yellow-900/20">
-        <h4 class="font-medium text-yellow-800 dark:text-yellow-300 mb-1">🎤 Reconnaissance vocale</h4>
-        <div class="flex justify-between text-sm">
-          <span class="text-yellow-700 dark:text-yellow-300">En ligne: ✅</span>
-          <span class="text-yellow-700 dark:text-yellow-300">Hors ligne: ⚠️</span>
-        </div>
-        <p class="text-xs text-yellow-600 dark:text-yellow-400 mt-1">Commandes de base uniquement hors ligne</p>
+      <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-3 bg-green-50 dark:bg-green-900/20">
+        <h4 class="font-medium text-green-800 dark:text-green-300 mb-1 text-sm">🌍 Support Multilingue</h4>
+        <div class="space-y-1">
+          <div class="text-xs text-green-700 dark:text-green-300">Français, Anglais, Espagnol</div>
+          <div class="text-xs text-green-700 dark:text-green-300">Reconnaissance d'accents régionaux</div>
+          <div class="text-xs text-green-700 dark:text-green-300">Mélange de langues supporté</div>
+        <div class="text-xl sm:text-2xl font-bold text-blue-600 dark:text-blue-400">98.5%</div>
       </div>
     </div>
   </div>

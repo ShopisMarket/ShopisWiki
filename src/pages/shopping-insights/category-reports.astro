@@ -17,7 +17,7 @@ const headings = [
 
 <WikiLayout title={pageTitle}>
   <div class="flex justify-between items-center">
-    <h1 class="text-3xl font-bold mb-8">{pageTitle}</h1>
+    <h1 class="text-2xl sm:text-3xl font-bold mb-8">{pageTitle}</h1>
     <div class="flex gap-2">
       <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
         View history
@@ -30,7 +30,7 @@ const headings = [
 
   <TableOfContents headings={headings} />
 
-  <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-6">
+  <p class="text-base sm:text-lg text-neutral-700 dark:text-neutral-300 mb-6">
     Gain deep insights into your spending patterns with Shopis's comprehensive category-based reporting system. Understand where your money goes and make informed decisions about your shopping habits.
   </p>
 
@@ -40,23 +40,23 @@ const headings = [
   </p>
 
   <div class="my-6 bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 p-6 rounded-lg border border-indigo-200 dark:border-indigo-800">
-    <h4 class="text-lg font-semibold mb-4 text-indigo-800 dark:text-indigo-300">📊 Reporting Capabilities</h4>
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+    <h4 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-indigo-800 dark:text-indigo-300">📊 Capacités de Reporting</h4>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
       <div class="text-center">
-        <div class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">15+</div>
-        <div class="text-sm text-indigo-700 dark:text-indigo-300">Categories Tracked</div>
+        <div class="text-xl sm:text-2xl font-bold text-indigo-600 dark:text-indigo-400">15+</div>
+        <div class="text-xs sm:text-sm text-indigo-700 dark:text-indigo-300">Catégories Suivies</div>
       </div>
       <div class="text-center">
-        <div class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">24 months</div>
-        <div class="text-sm text-indigo-700 dark:text-indigo-300">Historical Data</div>
+        <div class="text-xl sm:text-2xl font-bold text-indigo-600 dark:text-indigo-400">24 mois</div>
+        <div class="text-xs sm:text-sm text-indigo-700 dark:text-indigo-300">Données Historiques</div>
       </div>
       <div class="text-center">
-        <div class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">Real-time</div>
-        <div class="text-sm text-indigo-700 dark:text-indigo-300">Updates</div>
+        <div class="text-xl sm:text-2xl font-bold text-indigo-600 dark:text-indigo-400">Temps réel</div>
+        <div class="text-xs sm:text-sm text-indigo-700 dark:text-indigo-300">Mises à jour</div>
       </div>
       <div class="text-center">
-        <div class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">5 formats</div>
-        <div class="text-sm text-indigo-700 dark:text-indigo-300">Export Options</div>
+        <div class="text-xl sm:text-2xl font-bold text-indigo-600 dark:text-indigo-400">5 formats</div>
+        <div class="text-xs sm:text-sm text-indigo-700 dark:text-indigo-300">Options Export</div>
       </div>
     </div>
   </div>
@@ -78,26 +78,26 @@ const headings = [
     Shopis tracks spending across comprehensive categories designed to give you complete visibility into your shopping habits:
   </p>
 
-  <div class="my-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  <div class="my-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
     <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20">
-      <h4 class="font-semibold mb-2 text-green-800 dark:text-green-300">🥬 Fresh Produce</h4>
-      <div class="text-sm text-green-700 dark:text-green-300">
-        <div class="font-medium">Avg: $127/month</div>
-        <div>Fruits, vegetables, herbs</div>
+      <h4 class="font-semibold mb-2 text-green-800 dark:text-green-300 text-sm sm:text-base">🥬 Fruits & Légumes</h4>
+      <div class="text-xs sm:text-sm text-green-700 dark:text-green-300">
+        <div class="font-medium">Moy: 127€/mois</div>
+        <div>Fruits, légumes, herbes</div>
       </div>
     </div>
     <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20">
-      <h4 class="font-semibold mb-2 text-blue-800 dark:text-blue-300">🥛 Dairy & Eggs</h4>
-      <div class="text-sm text-blue-700 dark:text-blue-300">
-        <div class="font-medium">Avg: $89/month</div>
-        <div>Milk, cheese, yogurt, eggs</div>
+      <h4 class="font-semibold mb-2 text-blue-800 dark:text-blue-300 text-sm sm:text-base">🥛 Produits Laitiers</h4>
+      <div class="text-xs sm:text-sm text-blue-700 dark:text-blue-300">
+        <div class="font-medium">Moy: 89€/mois</div>
+        <div>Lait, fromage, yaourt, œufs</div>
       </div>
     </div>
     <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-red-50 to-pink-50 dark:from-red-900/20 dark:to-pink-900/20">
-      <h4 class="font-semibold mb-2 text-red-800 dark:text-red-300">🥩 Meat & Seafood</h4>
-      <div class="text-sm text-red-700 dark:text-red-300">
-        <div class="font-medium">Avg: $156/month</div>
-        <div>Beef, chicken, fish, deli</div>
+      <h4 class="font-semibold mb-2 text-red-800 dark:text-red-300 text-sm sm:text-base">🥩 Viandes & Poissons</h4>
+      <div class="text-xs sm:text-sm text-red-700 dark:text-red-300">
+        <div class="font-medium">Moy: 156€/mois</div>
+        <div>Bœuf, poulet, poisson, charcuterie</div>
       </div>
     </div>
     <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20">

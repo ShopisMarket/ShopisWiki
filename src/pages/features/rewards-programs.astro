@@ -18,7 +18,7 @@ const headings = [
 
 <WikiLayout title={pageTitle}>
   <div class="flex justify-between items-center">
-    <h1 class="text-3xl font-bold mb-8">{pageTitle}</h1>
+    <h1 class="text-2xl sm:text-3xl font-bold mb-8">{pageTitle}</h1>
     <div class="flex gap-2">
       <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
         View history
@@ -31,7 +31,7 @@ const headings = [
 
   <TableOfContents headings={headings} />
 
-  <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-6">
+  <p class="text-base sm:text-lg text-neutral-700 dark:text-neutral-300 mb-6">
     Maximize your savings with Shoppis's comprehensive rewards program and exclusive student benefits. Learn how to earn points, access special deals, and make the most of your shopping budget.
   </p>
 
@@ -41,7 +41,7 @@ const headings = [
   </p>
 
   <div class="my-6 bg-gradient-to-r from-purple-50 to-indigo-50 dark:from-purple-900/20 dark:to-indigo-900/20 p-6 rounded-lg border border-purple-200 dark:border-purple-800">
-    <h4 class="text-lg font-semibold mb-4 text-purple-800 dark:text-purple-300">
+    <h4 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-purple-800 dark:text-purple-300">
   <svg 
     width="22" height="22" 
     viewBox="0 0 48 48" 
@@ -59,18 +59,18 @@ const headings = [
   Rewards Program Benefits
 </h4>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
       <div class="text-center">
-        <div class="text-2xl font-bold text-purple-600 dark:text-purple-400">2x</div>
-        <div class="text-sm text-purple-700 dark:text-purple-300">Points on Groceries</div>
+        <div class="text-xl sm:text-2xl font-bold text-purple-600 dark:text-purple-400">2x</div>
+        <div class="text-xs sm:text-sm text-purple-700 dark:text-purple-300">Points Épicerie</div>
       </div>
       <div class="text-center">
-        <div class="text-2xl font-bold text-purple-600 dark:text-purple-400">5%</div>
-        <div class="text-sm text-purple-700 dark:text-purple-300">Average Cashback</div>
+        <div class="text-xl sm:text-2xl font-bold text-purple-600 dark:text-purple-400">5%</div>
+        <div class="text-xs sm:text-sm text-purple-700 dark:text-purple-300">Cashback Moyen</div>
       </div>
       <div class="text-center">
-        <div class="text-2xl font-bold text-purple-600 dark:text-purple-400">$180</div>
-        <div class="text-sm text-purple-700 dark:text-purple-300">Avg Annual Savings</div>
+        <div class="text-xl sm:text-2xl font-bold text-purple-600 dark:text-purple-400">180€</div>
+        <div class="text-xs sm:text-sm text-purple-700 dark:text-purple-300">Économies Annuelles</div>
       </div>
     </div>
   </div>
@@ -226,23 +226,23 @@ const headings = [
   </ul>
 
   <div class="my-6 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
-    <h4 class="text-lg font-semibold mb-4 text-green-800 dark:text-green-300">💵 Cashback Categories</h4>
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+    <h4 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-green-800 dark:text-green-300">💵 Catégories Cashback</h4>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
       <div class="text-center">
-        <div class="text-2xl font-bold text-green-600 dark:text-green-400">5%</div>
-        <div class="text-sm text-green-700 dark:text-green-300">Groceries</div>
+        <div class="text-xl sm:text-2xl font-bold text-green-600 dark:text-green-400">5%</div>
+        <div class="text-xs sm:text-sm text-green-700 dark:text-green-300">Épicerie</div>
       </div>
       <div class="text-center">
-        <div class="text-2xl font-bold text-green-600 dark:text-green-400">3%</div>
-        <div class="text-sm text-green-700 dark:text-green-300">Gas Stations</div>
+        <div class="text-xl sm:text-2xl font-bold text-green-600 dark:text-green-400">3%</div>
+        <div class="text-xs sm:text-sm text-green-700 dark:text-green-300">Stations Service</div>
       </div>
       <div class="text-center">
-        <div class="text-2xl font-bold text-green-600 dark:text-green-400">2%</div>
-        <div class="text-sm text-green-700 dark:text-green-300">Restaurants</div>
+        <div class="text-xl sm:text-2xl font-bold text-green-600 dark:text-green-400">2%</div>
+        <div class="text-xs sm:text-sm text-green-700 dark:text-green-300">Restaurants</div>
       </div>
       <div class="text-center">
-        <div class="text-2xl font-bold text-green-600 dark:text-green-400">1%</div>
-        <div class="text-sm text-green-700 dark:text-green-300">Everything Else</div>
+        <div class="text-xl sm:text-2xl font-bold text-green-600 dark:text-green-400">1%</div>
+        <div class="text-xs sm:text-sm text-green-700 dark:text-green-300">Tout le Reste</div>
       </div>
     </div>
   </div>

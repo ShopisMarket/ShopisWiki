@@ -18,7 +18,7 @@ const headings = [
 
 <WikiLayout title={pageTitle}>
   <div class="flex justify-between items-center">
-    <h1 class="text-3xl font-bold mb-8">{pageTitle}</h1>
+    <h1 class="text-2xl sm:text-3xl font-bold mb-8">{pageTitle}</h1>
     <div class="flex gap-2">
       <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
         View history
@@ -31,7 +31,7 @@ const headings = [
 
   <TableOfContents headings={headings} />
 
-  <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-6">
+  <p class="text-base sm:text-lg text-neutral-700 dark:text-neutral-300 mb-6">
     Access your shopping lists and data seamlessly across all your devices. Learn how Shopis keeps your information synchronized, secure, and always up-to-date wherever you are.
   </p>
 
@@ -41,19 +41,19 @@ const headings = [
   </p>
 
   <div class="my-6 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
-    <h4 class="text-lg font-semibold mb-4 text-blue-800 dark:text-blue-300">🔄 Sync Capabilities</h4>
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+    <h4 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-blue-800 dark:text-blue-300">🔄 Capacités de Sync</h4>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
       <div class="text-center">
-        <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">99.9%</div>
-        <div class="text-sm text-blue-700 dark:text-blue-300">Uptime</div>
+        <div class="text-xl sm:text-2xl font-bold text-blue-600 dark:text-blue-400">99.9%</div>
+        <div class="text-xs sm:text-sm text-blue-700 dark:text-blue-300">Disponibilité</div>
       </div>
       <div class="text-center">
-        <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">256-bit</div>
-        <div class="text-sm text-blue-700 dark:text-blue-300">Encryption</div>
+        <div class="text-xl sm:text-2xl font-bold text-blue-600 dark:text-blue-400">256-bit</div>
+        <div class="text-xs sm:text-sm text-blue-700 dark:text-blue-300">Chiffrement</div>
       </div>
       <div class="text-center">
-        <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">24/7</div>
-        <div class="text-sm text-blue-700 dark:text-blue-300">Availability</div>
+        <div class="text-xl sm:text-2xl font-bold text-blue-600 dark:text-blue-400">24/7</div>
+        <div class="text-xs sm:text-sm text-blue-700 dark:text-blue-300">Disponibilité</div>
       </div>
     </div>
   </div>
@@ -75,10 +75,10 @@ const headings = [
     Shopis works across all your devices with native apps and web access:
   </p>
 
-  <div class="my-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  <div class="my-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
     <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20">
-      <h4 class="font-semibold mb-2 text-green-800 dark:text-green-300">📱 Mobile Devices</h4>
-      <ul class="text-sm text-green-700 dark:text-green-300 space-y-1">
+      <h4 class="font-semibold mb-2 text-green-800 dark:text-green-300 text-sm sm:text-base">📱 Appareils Mobiles</h4>
+      <ul class="text-xs sm:text-sm text-green-700 dark:text-green-300 space-y-1">
         <li> iPhone (iOS 14+)</li>
         <li> iPad (iPadOS 14+)</li>
         <li> Android phones (Android 8+)</li>
@@ -86,8 +86,8 @@ const headings = [
       </ul>
     </div>
     <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20">
-      <h4 class="font-semibold mb-2 text-blue-800 dark:text-blue-300">💻 Computers</h4>
-      <ul class="text-sm text-blue-700 dark:text-blue-300 space-y-1">
+      <h4 class="font-semibold mb-2 text-blue-800 dark:text-blue-300 text-sm sm:text-base">💻 Ordinateurs</h4>
+      <ul class="text-xs sm:text-sm text-blue-700 dark:text-blue-300 space-y-1">
         <li> Windows 10/11</li>
         <li> macOS 10.15+</li>
         <li> Linux (Ubuntu, Fedora)</li>

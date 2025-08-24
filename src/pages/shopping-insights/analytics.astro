@@ -17,7 +17,7 @@ const headings = [
 
 <WikiLayout title={pageTitle}>
   <div class="flex justify-between items-center">
-    <h1 class="text-3xl font-bold mb-8">{pageTitle}</h1>
+    <h1 class="text-2xl sm:text-3xl font-bold mb-8">{pageTitle}</h1>
     <div class="flex gap-2">
       <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
         View history
@@ -30,7 +30,7 @@ const headings = [
 
   <TableOfContents headings={headings} />
 
-  <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-6">
+  <p class="text-base sm:text-lg text-neutral-700 dark:text-neutral-300 mb-6">
     Unlock powerful insights about your shopping behavior with Shopis's advanced analytics engine. Discover patterns, optimize spending, and make data-driven decisions about your purchases.
   </p>
 
@@ -40,23 +40,23 @@ const headings = [
   </p>
 
   <div class="my-6 bg-gradient-to-r from-purple-50 to-indigo-50 dark:from-purple-900/20 dark:to-indigo-900/20 p-6 rounded-lg border border-purple-200 dark:border-purple-800">
-    <h4 class="text-lg font-semibold mb-4 text-purple-800 dark:text-purple-300">📊 Analytics Engine Performance</h4>
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+    <h4 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-purple-800 dark:text-purple-300">📊 Performance Moteur Analytics</h4>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
       <div class="text-center">
-        <div class="text-2xl font-bold text-purple-600 dark:text-purple-400">50M+</div>
-        <div class="text-sm text-purple-700 dark:text-purple-300">Data Points Analyzed</div>
+        <div class="text-xl sm:text-2xl font-bold text-purple-600 dark:text-purple-400">50M+</div>
+        <div class="text-xs sm:text-sm text-purple-700 dark:text-purple-300">Points Analysés</div>
       </div>
       <div class="text-center">
-        <div class="text-2xl font-bold text-purple-600 dark:text-purple-400">< 2s</div>
-        <div class="text-sm text-purple-700 dark:text-purple-300">Report Generation</div>
+        <div class="text-xl sm:text-2xl font-bold text-purple-600 dark:text-purple-400">< 2s</div>
+        <div class="text-xs sm:text-sm text-purple-700 dark:text-purple-300">Génération Rapport</div>
       </div>
       <div class="text-center">
-        <div class="text-2xl font-bold text-purple-600 dark:text-purple-400">97.3%</div>
-        <div class="text-sm text-purple-700 dark:text-purple-300">Prediction Accuracy</div>
+        <div class="text-xl sm:text-2xl font-bold text-purple-600 dark:text-purple-400">97.3%</div>
+        <div class="text-xs sm:text-sm text-purple-700 dark:text-purple-300">Précision Prédiction</div>
       </div>
       <div class="text-center">
-        <div class="text-2xl font-bold text-purple-600 dark:text-purple-400">24/7</div>
-        <div class="text-sm text-purple-700 dark:text-purple-300">Real-time Updates</div>
+        <div class="text-xl sm:text-2xl font-bold text-purple-600 dark:text-purple-400">24/7</div>
+        <div class="text-xs sm:text-sm text-purple-700 dark:text-purple-300">Mises à jour Temps Réel</div>
       </div>
     </div>
   </div>
@@ -78,26 +78,26 @@ const headings = [
     Understand your spending patterns with detailed analysis across multiple dimensions:
   </p>
 
-  <div class="my-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  <div class="my-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
     <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20">
-      <h4 class="font-semibold mb-2 text-green-800 dark:text-green-300">💰 Spending Velocity</h4>
-      <div class="text-sm text-green-700 dark:text-green-300">
-        <div class="font-medium">$127.50/week avg</div>
-        <div>↑ 12% vs last month</div>
+      <h4 class="font-semibold mb-2 text-green-800 dark:text-green-300 text-sm sm:text-base">💰 Vitesse de Dépense</h4>
+      <div class="text-xs sm:text-sm text-green-700 dark:text-green-300">
+        <div class="font-medium">127.50€/semaine moy</div>
+        <div>↑ 12% vs mois dernier</div>
       </div>
     </div>
     <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20">
-      <h4 class="font-semibold mb-2 text-blue-800 dark:text-blue-300">🛒 Shopping Frequency</h4>
-      <div class="text-sm text-blue-700 dark:text-blue-300">
-        <div class="font-medium">2.3 trips/week</div>
-        <div>↓ 8% vs last month</div>
+      <h4 class="font-semibold mb-2 text-blue-800 dark:text-blue-300 text-sm sm:text-base">🛒 Fréquence Achats</h4>
+      <div class="text-xs sm:text-sm text-blue-700 dark:text-blue-300">
+        <div class="font-medium">2.3 sorties/semaine</div>
+        <div>↓ 8% vs mois dernier</div>
       </div>
     </div>
     <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20">
-      <h4 class="font-semibold mb-2 text-orange-800 dark:text-orange-300">📦 Basket Size</h4>
-      <div class="text-sm text-orange-700 dark:text-orange-300">
-        <div class="font-medium">23 items avg</div>
-        <div>↑ 15% vs last month</div>
+      <h4 class="font-semibold mb-2 text-orange-800 dark:text-orange-300 text-sm sm:text-base">📦 Taille Panier</h4>
+      <div class="text-xs sm:text-sm text-orange-700 dark:text-orange-300">
+        <div class="font-medium">23 articles moy</div>
+        <div>↑ 15% vs mois dernier</div>
       </div>
     </div>
     <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20">
