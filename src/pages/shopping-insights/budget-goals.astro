@@ -70,7 +70,81 @@ const headings = [
   </ul>
 
   <div class="my-6 overflow-x-auto">
-    <table class="w-full border-collapse border border-neutral-200 dark:border-neutral-800">
+    <div class="hidden lg:block">
+      <table class="w-full border-collapse border border-neutral-200 dark:border-neutral-800">
+        <thead class="bg-neutral-50 dark:bg-neutral-800">
+          <tr>
+            <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Budget Type</th>
+            <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Best For</th>
+            <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Flexibility</th>
+            <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Difficulty</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Simple Limit</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Beginners</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">High</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Easy</td>
+          </tr>
+          <tr>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Category-Based</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Detailed tracking</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Medium</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Medium</td>
+          </tr>
+          <tr>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Zero-Based</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Complete control</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Low</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Advanced</td>
+          </tr>
+          <tr>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Envelope</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Cash-like control</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Low</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Medium</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- Mobile view -->
+    <div class="lg:hidden space-y-4">
+      <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-green-50 dark:bg-green-900/20">
+        <h4 class="font-semibold text-green-800 dark:text-green-300 mb-2">💡 Limite simple</h4>
+        <div class="space-y-1 text-sm text-green-700 dark:text-green-300">
+          <div><strong>Idéal pour:</strong> Débutants</div>
+          <div><strong>Flexibilité:</strong> Élevée</div>
+          <div><strong>Difficulté:</strong> Facile</div>
+        </div>
+      </div>
+      <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-blue-50 dark:bg-blue-900/20">
+        <h4 class="font-semibold text-blue-800 dark:text-blue-300 mb-2">📊 Par catégorie</h4>
+        <div class="space-y-1 text-sm text-blue-700 dark:text-blue-300">
+          <div><strong>Idéal pour:</strong> Suivi détaillé</div>
+          <div><strong>Flexibilité:</strong> Moyenne</div>
+          <div><strong>Difficulté:</strong> Moyenne</div>
+        </div>
+      </div>
+      <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-purple-50 dark:bg-purple-900/20">
+        <h4 class="font-semibold text-purple-800 dark:text-purple-300 mb-2">🎯 Budget zéro</h4>
+        <div class="space-y-1 text-sm text-purple-700 dark:text-purple-300">
+          <div><strong>Idéal pour:</strong> Contrôle complet</div>
+          <div><strong>Flexibilité:</strong> Faible</div>
+          <div><strong>Difficulté:</strong> Avancée</div>
+        </div>
+      </div>
+      <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-orange-50 dark:bg-orange-900/20">
+        <h4 class="font-semibold text-orange-800 dark:text-orange-300 mb-2">💰 Enveloppe</h4>
+        <div class="space-y-1 text-sm text-orange-700 dark:text-orange-300">
+          <div><strong>Idéal pour:</strong> Contrôle type espèces</div>
+          <div><strong>Flexibilité:</strong> Faible</div>
+          <div><strong>Difficulté:</strong> Moyenne</div>
+        </div>
+      </div>
+    </div>
+  </div>
       <thead class="bg-neutral-50 dark:bg-neutral-800">
         <tr>
           <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Budget Type</th>

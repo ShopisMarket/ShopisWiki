@@ -115,7 +115,73 @@ const headings = [
   </p>
 
   <div class="my-6 overflow-x-auto">
-    <table class="w-full border-collapse border border-neutral-200 dark:border-neutral-800">
+    <div class="hidden lg:block">
+      <table class="w-full border-collapse border border-neutral-200 dark:border-neutral-800">
+        <thead class="bg-neutral-50 dark:bg-neutral-800">
+          <tr>
+            <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Information Type</th>
+            <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Details Captured</th>
+            <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Source</th>
+            <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Accuracy</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Product Details</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Name, brand, size, UPC</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Barcode scan/Manual</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">99.2%</td>
+          </tr>
+          <tr>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Pricing</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Unit price, total, discounts</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Receipt scan/Manual</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">98.7%</td>
+          </tr>
+          <tr>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Store Information</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Name, location, department</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">GPS/Manual entry</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">97.8%</td>
+          </tr>
+          <tr>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Transaction</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Date, time, payment method</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Automatic/Receipt</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">100%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- Mobile view -->
+    <div class="lg:hidden space-y-4">
+      <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-blue-50 dark:bg-blue-900/20">
+        <h4 class="font-semibold text-blue-800 dark:text-blue-300 mb-2">📦 Détails produit</h4>
+        <div class="space-y-1 text-sm text-blue-700 dark:text-blue-300">
+          <div><strong>Données:</strong> Nom, marque, taille, code UPC</div>
+          <div><strong>Source:</strong> Scan code-barres/Manuel</div>
+          <div><strong>Précision:</strong> 99.2%</div>
+        </div>
+      </div>
+      <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-green-50 dark:bg-green-900/20">
+        <h4 class="font-semibold text-green-800 dark:text-green-300 mb-2">💰 Informations prix</h4>
+        <div class="space-y-1 text-sm text-green-700 dark:text-green-300">
+          <div><strong>Données:</strong> Prix unitaire, total, remises</div>
+          <div><strong>Source:</strong> Scan ticket/Manuel</div>
+          <div><strong>Précision:</strong> 98.7%</div>
+        </div>
+      </div>
+      <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-purple-50 dark:bg-purple-900/20">
+        <h4 class="font-semibold text-purple-800 dark:text-purple-300 mb-2">🏪 Informations magasin</h4>
+        <div class="space-y-1 text-sm text-purple-700 dark:text-purple-300">
+          <div><strong>Données:</strong> Nom, localisation, rayon</div>
+          <div><strong>Source:</strong> GPS/Saisie manuelle</div>
+          <div><strong>Précision:</strong> 97.8%</div>
+        </div>
+      </div>
+    </div>
+  </div>
       <thead class="bg-neutral-50 dark:bg-neutral-800">
         <tr>
           <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Information Type</th>

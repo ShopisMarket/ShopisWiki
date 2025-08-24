@@ -129,7 +129,73 @@ const headings = [
   </p>
 
   <div class="my-6 overflow-x-auto">
-    <table class="w-full border-collapse border border-neutral-200 dark:border-neutral-800">
+    <div class="hidden lg:block">
+      <table class="w-full border-collapse border border-neutral-200 dark:border-neutral-800">
+        <thead class="bg-neutral-50 dark:bg-neutral-800">
+          <tr>
+            <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Chart Type</th>
+            <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Best For</th>
+            <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Time Range</th>
+            <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Interactive</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Pie Chart</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Category distribution</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Monthly/Yearly</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
+          </tr>
+          <tr>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Line Graph</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Spending trends</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">3-24 months</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
+          </tr>
+          <tr>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Bar Chart</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Category comparison</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Weekly/Monthly</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
+          </tr>
+          <tr>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Heatmap</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Seasonal patterns</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">12+ months</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- Mobile view -->
+    <div class="lg:hidden space-y-3">
+      <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-3 bg-blue-50 dark:bg-blue-900/20">
+        <h4 class="font-medium text-blue-800 dark:text-blue-300 mb-1">📊 Graphique en secteurs</h4>
+        <div class="text-sm text-blue-700 dark:text-blue-300">
+          <div><strong>Idéal pour:</strong> Distribution par catégorie</div>
+          <div><strong>Période:</strong> Mensuel/Annuel</div>
+          <div><strong>Interactif:</strong> ✅</div>
+        </div>
+      </div>
+      <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-3 bg-green-50 dark:bg-green-900/20">
+        <h4 class="font-medium text-green-800 dark:text-green-300 mb-1">📈 Graphique linéaire</h4>
+        <div class="text-sm text-green-700 dark:text-green-300">
+          <div><strong>Idéal pour:</strong> Tendances de dépenses</div>
+          <div><strong>Période:</strong> 3-24 mois</div>
+          <div><strong>Interactif:</strong> ✅</div>
+        </div>
+      </div>
+      <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-3 bg-purple-50 dark:bg-purple-900/20">
+        <h4 class="font-medium text-purple-800 dark:text-purple-300 mb-1">📊 Graphique en barres</h4>
+        <div class="text-sm text-purple-700 dark:text-purple-300">
+          <div><strong>Idéal pour:</strong> Comparaison de catégories</div>
+          <div><strong>Période:</strong> Hebdomadaire/Mensuel</div>
+          <div><strong>Interactif:</strong> ✅</div>
+        </div>
+      </div>
+    </div>
+  </div>
       <thead class="bg-neutral-50 dark:bg-neutral-800">
         <tr>
           <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Chart Type</th>

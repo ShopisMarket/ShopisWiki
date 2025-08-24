@@ -136,7 +136,79 @@ const headings = [
   </ul>
 
   <div class="my-6 overflow-x-auto">
-    <table class="w-full border-collapse border border-neutral-200 dark:border-neutral-800">
+    <div class="hidden lg:block">
+      <table class="w-full border-collapse border border-neutral-200 dark:border-neutral-800">
+        <thead class="bg-neutral-50 dark:bg-neutral-800">
+          <tr>
+            <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Behavior Metric</th>
+            <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Your Score</th>
+            <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Average User</th>
+            <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Trend</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">List Adherence</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">87%</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">73%</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">↗️ Improving</td>
+          </tr>
+          <tr>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Budget Compliance</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">92%</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">68%</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">➡️ Stable</td>
+          </tr>
+          <tr>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Deal Utilization</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">45%</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">52%</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">↗️ Improving</td>
+          </tr>
+          <tr>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Waste Reduction</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">78%</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">61%</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">↗️ Improving</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- Mobile view -->
+    <div class="lg:hidden space-y-4">
+      <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-green-50 dark:bg-green-900/20">
+        <h4 class="font-semibold text-green-800 dark:text-green-300 mb-2">📋 Respect des listes</h4>
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-2xl font-bold text-green-600 dark:text-green-400">87%</span>
+          <span class="text-sm text-green-700 dark:text-green-300">↗️ En amélioration</span>
+        </div>
+        <div class="text-sm text-green-700 dark:text-green-300">
+          <div>Moyenne utilisateurs: 73%</div>
+        </div>
+      </div>
+      <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-blue-50 dark:bg-blue-900/20">
+        <h4 class="font-semibold text-blue-800 dark:text-blue-300 mb-2">💰 Respect du budget</h4>
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-2xl font-bold text-blue-600 dark:text-blue-400">92%</span>
+          <span class="text-sm text-blue-700 dark:text-blue-300">➡️ Stable</span>
+        </div>
+        <div class="text-sm text-blue-700 dark:text-blue-300">
+          <div>Moyenne utilisateurs: 68%</div>
+        </div>
+      </div>
+      <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-orange-50 dark:bg-orange-900/20">
+        <h4 class="font-semibold text-orange-800 dark:text-orange-300 mb-2">🏷️ Utilisation des offres</h4>
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-2xl font-bold text-orange-600 dark:text-orange-400">45%</span>
+          <span class="text-sm text-orange-700 dark:text-orange-300">↗️ En amélioration</span>
+        </div>
+        <div class="text-sm text-orange-700 dark:text-orange-300">
+          <div>Moyenne utilisateurs: 52%</div>
+        </div>
+      </div>
+    </div>
+  </div>
       <thead class="bg-neutral-50 dark:bg-neutral-800">
         <tr>
           <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Behavior Metric</th>

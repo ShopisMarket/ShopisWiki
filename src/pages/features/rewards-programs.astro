@@ -84,42 +84,80 @@ const headings = [
   </ul>
 
   <div class="my-6 overflow-x-auto">
-    <table class="w-full border-collapse border border-neutral-200 dark:border-neutral-800">
-      <thead class="bg-neutral-50 dark:bg-neutral-800">
-        <tr>
-          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Membership Tier</th>
-          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Annual Spending</th>
-          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Point Multiplier</th>
-          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Special Benefits</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 font-medium">🥉 Bronze</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">$0 - $999</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">1x</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Basic rewards</td>
-        </tr>
-        <tr>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 font-medium">🥈 Silver</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">$1,000 - $2,999</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">1.25x</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Early access to deals</td>
-        </tr>
-        <tr>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 font-medium">🥇 Gold</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">$3,000 - $4,999</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">1.5x</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Exclusive offers, free shipping</td>
-        </tr>
-        <tr>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 font-medium">💎 Platinum</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">$5,000+</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">2x</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Personal shopper, VIP support</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="hidden lg:block">
+      <table class="w-full border-collapse border border-neutral-200 dark:border-neutral-800">
+        <thead class="bg-neutral-50 dark:bg-neutral-800">
+          <tr>
+            <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Membership Tier</th>
+            <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Annual Spending</th>
+            <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Point Multiplier</th>
+            <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Special Benefits</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 font-medium">🥉 Bronze</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">$0 - $999</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">1x</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Basic rewards</td>
+          </tr>
+          <tr>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 font-medium">🥈 Silver</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">$1,000 - $2,999</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">1.25x</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Early access to deals</td>
+          </tr>
+          <tr>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 font-medium">🥇 Gold</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">$3,000 - $4,999</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">1.5x</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Exclusive offers, free shipping</td>
+          </tr>
+          <tr>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 font-medium">💎 Platinum</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">$5,000+</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">2x</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Personal shopper, VIP support</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- Mobile view -->
+    <div class="lg:hidden space-y-4">
+      <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-amber-50 dark:bg-amber-900/20">
+        <h4 class="font-semibold text-amber-800 dark:text-amber-300 mb-2">🥉 Bronze</h4>
+        <div class="space-y-1 text-sm text-amber-700 dark:text-amber-300">
+          <div><strong>Dépenses:</strong> $0 - $999/an</div>
+          <div><strong>Points:</strong> 1x multiplicateur</div>
+          <div><strong>Avantages:</strong> Récompenses de base</div>
+        </div>
+      </div>
+      <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gray-50 dark:bg-gray-900/20">
+        <h4 class="font-semibold text-gray-800 dark:text-gray-300 mb-2">🥈 Silver</h4>
+        <div class="space-y-1 text-sm text-gray-700 dark:text-gray-300">
+          <div><strong>Dépenses:</strong> $1,000 - $2,999/an</div>
+          <div><strong>Points:</strong> 1.25x multiplicateur</div>
+          <div><strong>Avantages:</strong> Accès anticipé aux offres</div>
+        </div>
+      </div>
+      <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-yellow-50 dark:bg-yellow-900/20">
+        <h4 class="font-semibold text-yellow-800 dark:text-yellow-300 mb-2">🥇 Gold</h4>
+        <div class="space-y-1 text-sm text-yellow-700 dark:text-yellow-300">
+          <div><strong>Dépenses:</strong> $3,000 - $4,999/an</div>
+          <div><strong>Points:</strong> 1.5x multiplicateur</div>
+          <div><strong>Avantages:</strong> Offres exclusives, livraison gratuite</div>
+        </div>
+      </div>
+      <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-purple-50 dark:bg-purple-900/20">
+        <h4 class="font-semibold text-purple-800 dark:text-purple-300 mb-2">💎 Platinum</h4>
+        <div class="space-y-1 text-sm text-purple-700 dark:text-purple-300">
+          <div><strong>Dépenses:</strong> $5,000+/an</div>
+          <div><strong>Points:</strong> 2x multiplicateur</div>
+          <div><strong>Avantages:</strong> Assistant personnel, support VIP</div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <InfoBox type="success" title="Automatic Enrollment">
@@ -262,42 +300,72 @@ const headings = [
   </ul>
 
   <div class="my-6 overflow-x-auto">
-    <table class="w-full border-collapse border border-neutral-200 dark:border-neutral-800">
-      <thead class="bg-neutral-50 dark:bg-neutral-800">
-        <tr>
-          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Redemption Method</th>
-          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Minimum Amount</th>
-          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Processing Time</th>
-          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Fees</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Account Credit</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">$1</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Instant</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Free</td>
-        </tr>
-        <tr>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Gift Cards</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">$5</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">24-48 hours</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Free</td>
-        </tr>
-        <tr>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Bank Transfer</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">$25</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">3-5 business days</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Free</td>
-        </tr>
-        <tr>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">PayPal</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">$10</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">1-2 business days</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Free</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="hidden lg:block">
+      <table class="w-full border-collapse border border-neutral-200 dark:border-neutral-800">
+        <thead class="bg-neutral-50 dark:bg-neutral-800">
+          <tr>
+            <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Redemption Method</th>
+            <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Minimum Amount</th>
+            <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Processing Time</th>
+            <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Fees</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Account Credit</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">$1</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Instant</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Free</td>
+          </tr>
+          <tr>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Gift Cards</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">$5</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">24-48 hours</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Free</td>
+          </tr>
+          <tr>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Bank Transfer</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">$25</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">3-5 business days</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Free</td>
+          </tr>
+          <tr>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">PayPal</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">$10</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">1-2 business days</td>
+            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Free</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- Mobile view -->
+    <div class="lg:hidden space-y-3">
+      <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-3 bg-green-50 dark:bg-green-900/20">
+        <h4 class="font-medium text-green-800 dark:text-green-300 mb-2">💳 Crédit de compte</h4>
+        <div class="grid grid-cols-2 gap-2 text-sm text-green-700 dark:text-green-300">
+          <div><strong>Minimum:</strong> $1</div>
+          <div><strong>Délai:</strong> Instantané</div>
+        </div>
+        <div class="text-xs text-green-600 dark:text-green-400 mt-1">Gratuit</div>
+      </div>
+      <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-3 bg-blue-50 dark:bg-blue-900/20">
+        <h4 class="font-medium text-blue-800 dark:text-blue-300 mb-2">🎁 Cartes cadeaux</h4>
+        <div class="grid grid-cols-2 gap-2 text-sm text-blue-700 dark:text-blue-300">
+          <div><strong>Minimum:</strong> $5</div>
+          <div><strong>Délai:</strong> 24-48h</div>
+        </div>
+        <div class="text-xs text-blue-600 dark:text-blue-400 mt-1">Gratuit</div>
+      </div>
+      <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-3 bg-purple-50 dark:bg-purple-900/20">
+        <h4 class="font-medium text-purple-800 dark:text-purple-300 mb-2">🏦 Virement bancaire</h4>
+        <div class="grid grid-cols-2 gap-2 text-sm text-purple-700 dark:text-purple-300">
+          <div><strong>Minimum:</strong> $25</div>
+          <div><strong>Délai:</strong> 3-5 jours</div>
+        </div>
+        <div class="text-xs text-purple-600 dark:text-purple-400 mt-1">Gratuit</div>
+      </div>
+    </div>
   </div>
 
   <div class="my-6 grid grid-cols-1 md:grid-cols-2 gap-4">
