@@ -240,7 +240,7 @@ const headings = [
     </div>
     <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 text-center bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20">
       <h4 class="font-semibold mb-2 text-blue-800 dark:text-blue-300">Memory Usage</h4>
-      <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">< 150MB</div>
+      <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">&lt; 150MB</div>
       <div class="text-sm text-blue-700 dark:text-blue-300">Peak usage</div>
     </div>
     <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 text-center bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20">
