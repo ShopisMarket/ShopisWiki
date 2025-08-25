@@ -203,22 +203,6 @@ const headings = [
             <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Basic commands only</td>
           </tr>
           <tr>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Barcode Scanning</td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">⚠️</td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Limited to cached products</td>
-          </tr>
-          <tr>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Share Lists</td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">❌</td>
-            <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Requires internet connection</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    
-    <!-- Mobile view -->
     <div class="lg:hidden space-y-3">
       <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-3 bg-green-50 dark:bg-green-900/20">
         <h4 class="font-medium text-green-800 dark:text-green-300 mb-1">📋 Voir les listes</h4>
@@ -244,49 +228,23 @@ const headings = [
         </div>
         <p class="text-xs text-yellow-600 dark:text-yellow-400 mt-1">Commandes de base uniquement</p>
       </div>
+      <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-3 bg-orange-50 dark:bg-orange-900/20">
+        <h4 class="font-medium text-orange-800 dark:text-orange-300 mb-1">📱 Scanner codes-barres</h4>
+        <div class="grid grid-cols-2 gap-2 text-sm">
+          <div class="text-orange-700 dark:text-orange-300">En ligne: ✅</div>
+          <div class="text-orange-700 dark:text-orange-300">Hors ligne: ⚠️</div>
+        </div>
+        <p class="text-xs text-orange-600 dark:text-orange-400 mt-1">Limité aux produits en cache</p>
+      </div>
+      <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-3 bg-red-50 dark:bg-red-900/20">
+        <h4 class="font-medium text-red-800 dark:text-red-300 mb-1">🔗 Partager les listes</h4>
+        <div class="grid grid-cols-2 gap-2 text-sm">
+          <div class="text-red-700 dark:text-red-300">En ligne: ✅</div>
+          <div class="text-red-700 dark:text-red-300">Hors ligne: ❌</div>
+        </div>
+        <p class="text-xs text-red-600 dark:text-red-400 mt-1">Nécessite une connexion internet</p>
+      </div>
     </div>
-  </div>
-      <thead class="bg-neutral-50 dark:bg-neutral-800">
-        <tr>
-          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Feature</th>
-          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Online</th>
-          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Offline</th>
-          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Notes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">View Lists</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Full access to cached lists</td>
-        </tr>
-        <tr>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Add/Edit Items</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Changes saved locally</td>
-        </tr>
-        <tr>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Voice Recognition</td>
-          <td class="border border-neutral-200  dark:border-neutral-700 px-4 py-2">✅</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">⚠️</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Basic commands only</td>
-        </tr>
-        <tr>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Barcode Scanning</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">⚠️</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Limited to cached products</td>
-        </tr>
-        <tr>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Share Lists</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">✅</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">❌</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Requires internet connection</td>
-        </tr>
-      </tbody>
-    </table>
   </div>
 
   <h2 id="conflict-resolution">Conflict Resolution</h2>
