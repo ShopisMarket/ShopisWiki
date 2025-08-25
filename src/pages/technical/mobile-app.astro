@@ -35,7 +35,7 @@ const headings = [
   <TableOfContents headings={headings} />
 
   <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-6">
-    The Shopis mobile app provides a native, optimized experience for iOS and Android devices. Learn about installation, features, performance, and technical details of our mobile applications.
+    The Shoppis mobile app provides a native, optimized experience for iOS and Android devices. Learn about installation, features, performance, and technical details of our mobile applications.
   </p>
 
   <div class="my-6 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
@@ -62,7 +62,7 @@ const headings = [
 
   <h2 id="app-overview">Mobile App Overview</h2>
   <p>
-    Shopis mobile apps are built using native technologies to provide the best possible user experience on each platform.
+    Shoppis mobile apps are built using native technologies to provide the best possible user experience on each platform.
   </p>
 
   <div class="my-6 grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -102,7 +102,7 @@ const headings = [
 
   <h2 id="installation">Installation & Setup</h2>
   <p>
-    Download and install Shopis from official app stores for the best security and performance.
+    Download and install Shoppis from official app stores for the best security and performance.
   </p>
 
   <h3>Download Links</h3>
@@ -227,7 +227,7 @@ const headings = [
 
   <h2 id="performance">Performance Optimization</h2>
   <p>
-    Shopis mobile apps are optimized for speed, battery life, and smooth user experience.
+    Shoppis mobile apps are optimized for speed, battery life, and smooth user experience.
   </p>
 
   <h3>Performance Metrics</h3>
@@ -265,23 +265,28 @@ const headings = [
 
   <h2 id="offline-capabilities">Offline Capabilities</h2>
   <p>
-    Continue using Shopis even without an internet connection with robust offline functionality.
+    Continue using Shoppis even without an internet connection with robust offline functionality.
   </p>
 
   <h3>Offline Features</h3>
   <CodeBlock language="swift" title="iOS Offline Implementation">
-{`import Foundation
-import Combine
-
+{`// Core Data stack for offline storage
 class OfflineManager {
-    private var cache: [String: Any] = [:]
-
-    func saveData(key: String, value: Any) {
-        cache[key] = value
-    }
-
-    func loadData(key: String) -> Any? {
-        return cache[key]
+    lazy var persistentContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "ShoppisModel")
+        container.loadPersistentStores { _, error in
+            if let error = error {
+                fatalError("Core Data error: \(error)")
+            }
+        }
+        return container
+    }()
+    
+    func saveContext() {
+        let context = persistentContainer.viewContext
+        if context.hasChanges {
+            try? context.save()
+        }
     }
 }`}
   </CodeBlock>
@@ -293,20 +298,20 @@ class OfflineManager {
     version = 1,
     exportSchema = false
 )
-abstract class ShopisDatabase : RoomDatabase() {
+abstract class ShoppisDatabase : RoomDatabase() {
     abstract fun listDao(): ShoppingListDao
     abstract fun itemDao(): ShoppingItemDao
     
     companion object {
         @Volatile
-        private var INSTANCE: ShopisDatabase? = null
+        private var INSTANCE: ShoppisDatabase? = null
         
-        fun getDatabase(context: Context): ShopisDatabase {
+        fun getDatabase(context: Context): ShoppisDatabase {
             return INSTANCE ?: synchronized(this) {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
-                    ShopisDatabase::class.java,
-                    "Shopis_database"
+                    ShoppisDatabase::class.java,
+                    "shopis_database"
                 ).build()
                 INSTANCE = instance
                 instance
@@ -451,10 +456,10 @@ abstract class ShopisDatabase : RoomDatabase() {
   </div>
 
   <Note type="important" title="Support Contact">
-    For issues not resolved by troubleshooting, contact our support team through the app's Help section or email support@Shopis.com with your device model and app version.
+    For issues not resolved by troubleshooting, contact our support team through the app's Help section or email support@shopis.com with your device model and app version.
   </Note>
 
   <InfoBox type="success" title="App Store Reviews">
-    Help other users by leaving honest reviews on the App Store or Google Play. Your feedback helps us improve the app and reach more people who could benefit from Shopis.
+    Help other users by leaving honest reviews on the App Store or Google Play. Your feedback helps us improve the app and reach more people who could benefit from Shoppis.
   </InfoBox>
 </WikiLayout>
