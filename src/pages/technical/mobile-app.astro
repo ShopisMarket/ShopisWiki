@@ -269,27 +269,22 @@ const headings = [
   </p>
 
   <h3>Offline Features</h3>
-  <CodeBlock language="swift" title="iOS Offline Implementation">
-{`// Core Data stack for offline storage
+<CodeBlock language="swift" title="iOS Offline Implementation">
+{`import Foundation
+import Combine
+
 class OfflineManager {
-    lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "ShoppisModel")
-        container.loadPersistentStores { _, error in
-            if let error = error {
-                fatalError("Core Data error: \(error)")
-            }
-        }
-        return container
-    }()
-    
-    func saveContext() {
-        let context = persistentContainer.viewContext
-        if context.hasChanges {
-            try? context.save()
-        }
+    private var cache: [String: Any] = [:]
+
+    func saveData(key: String, value: Any) {
+        cache[key] = value
+    }
+
+    func loadData(key: String) -> Any? {
+        return cache[key]
     }
 }`}
-  </CodeBlock>
+</CodeBlock>
 
   <CodeBlock language="kotlin" title="Android Offline Implementation">
 {`// Room database for offline storage
