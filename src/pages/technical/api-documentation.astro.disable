@@ -1,4 +1,4 @@
-
+---
 import WikiLayout from '../../layouts/WikiLayout.astro';
 import TableOfContents from '../../components/TableOfContents.astro';
 import InfoBox from '../../components/InfoBox.astro';
@@ -18,7 +18,7 @@ const headings = [
   { depth: 2, slug: "rate-limits", text: "Rate Limits" },
   { depth: 2, slug: "sdks", text: "SDKs & Libraries" }
 ];
-
+---
 
 <WikiLayout title={pageTitle}>
   <div class="flex justify-between items-center">
