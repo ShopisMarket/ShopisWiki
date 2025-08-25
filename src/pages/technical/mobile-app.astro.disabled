@@ -54,7 +54,7 @@ const headings = [
         <div class="text-sm text-blue-700 dark:text-blue-300">App Size</div>
       </div>
       <div class="text-center">
-        <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">< 2s</div>
+        <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">&lt; 2s</div>
         <div class="text-sm text-blue-700 dark:text-blue-300">Launch Time</div>
       </div>
     </div>
