@@ -47,19 +47,18 @@ const headings = [
 }
 </style>
 
-<div class="flex justify-between items-center mb-8">
-  <h1 class="text-2xl sm:text-3xl font-bold">{pageTitle}</h1>
-  <div class="flex gap-2">
-    <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
-      View history
-    </a>
-    <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
-      Discussion
-    </a>
+<WikiLayout title={pageTitle}>
+  <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
+    <h1 class="text-2xl sm:text-3xl font-bold">{pageTitle}</h1>
+    <div class="flex gap-2">
+      <a href="#" class="min-h-[44px] text-sm px-3 py-2 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        View history
+      </a>
+      <a href="#" class="min-h-[44px] text-sm px-3 py-2 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+        Discussion
+      </a>
+    </div>
   </div>
-</div>
-
-
 
   <TableOfContents headings={headings} />
 
@@ -120,38 +119,27 @@ const headings = [
   </div>
 
   <!-- ✅ Boutons store full-width sur mobile -->
-<h3>Download Links</h3>
-<div class="my-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-  <!-- iOS -->
-  <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 text-center">
-    <h4 class="font-semibold mb-2">iOS App Store</h4>
-    <a href="#" class="inline-block">
-      <img 
-        src="https://toolbox.marketingtools.apple.com/api/badges/download-on-the-app-store/black/fr-fr?size=250x83" 
-        alt="Download on the App Store"
-        class="mx-auto w-40 sm:w-52"
-      />
-    </a>
-    <div class="text-sm text-neutral-600 dark:text-neutral-400 mt-2">
-      Requires iOS 14.0 or later
+  <h3>Download Links</h3>
+  <div class="my-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 text-center">
+      <h4 class="font-semibold mb-2">iOS App Store</h4>
+      <a href="#" class="w-full sm:w-auto inline-block bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors text-center min-h-[44px]">
+        Download for iOS
+      </a>
+      <div class="text-sm text-neutral-600 dark:text-neutral-400 mt-2">
+        Requires iOS 14.0 or later
+      </div>
+    </div>
+    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 text-center">
+      <h4 class="font-semibold mb-2">Google Play Store</h4>
+      <a href="#" class="w-full sm:w-auto inline-block bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors text-center min-h-[44px]">
+        Download for Android
+      </a>
+      <div class="text-sm text-neutral-600 dark:text-neutral-400 mt-2">
+        Requires Android 8.0 or later
+      </div>
     </div>
   </div>
-
-  <!-- Android -->
-  <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 text-center">
-    <h4 class="font-semibold mb-2">Google Play Store</h4>
-    <a href="#" class="inline-block">
-      <img 
-        src="https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png" 
-        alt="Get it on Google Play"
-        class="mx-auto w-40 sm:w-52"
-      />
-    </a>
-    <div class="text-sm text-neutral-600 dark:text-neutral-400 mt-2">
-      Requires Android 8.0 or later
-    </div>
-  </div>
-</div>
 
   <!-- ✅ Les tables sont déjà auto-transformées via le CSS ci-dessus -->
   <!-- ... reste du contenu inchangé, mais les tableaux utilisent data-label pour mobile -->
