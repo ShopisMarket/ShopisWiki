@@ -19,7 +19,6 @@ const headings = [
 ];
 ---
 
-
 <WikiLayout title={pageTitle}>
   <div class="flex justify-between items-center">
     <h1 class="text-3xl font-bold mb-8">{pageTitle}</h1>
@@ -200,7 +199,6 @@ const headings = [
         <tr>
           <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Widgets</td>
           <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Resizable home screen widgets</td>
-          
           <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">8.0+</td>
         </tr>
         <tr>
@@ -272,7 +270,7 @@ const headings = [
 
   <h3>Offline Features</h3>
   <CodeBlock language="swift" title="iOS Offline Implementation">
-// Core Data stack for offline storage
+{`// Core Data stack for offline storage
 class OfflineManager {
     lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "ShoppisModel")
@@ -290,11 +288,11 @@ class OfflineManager {
             try? context.save()
         }
     }
-}
+}`}
   </CodeBlock>
 
   <CodeBlock language="kotlin" title="Android Offline Implementation">
-// Room database for offline storage
+{`// Room database for offline storage
 @Database(
     entities = [ShoppingList::class, ShoppingItem::class],
     version = 1,
@@ -320,7 +318,7 @@ abstract class ShoppisDatabase : RoomDatabase() {
             }
         }
     }
-}
+}`}
   </CodeBlock>
 
   <h3>Sync Strategy</h3>
