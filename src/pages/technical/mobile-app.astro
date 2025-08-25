@@ -268,8 +268,8 @@ const headings = [
     Continue using Shoppis even without an internet connection with robust offline functionality.
   </p>
 
-<h3>Offline Features</h3>
-<CodeBlock language="swift" title="iOS Offline Implementation">
+  <h3>Offline Features</h3>
+  <CodeBlock language="swift" title="iOS Offline Implementation">
 {`import Foundation
 import Combine
 
@@ -284,7 +284,7 @@ class OfflineManager {
         return cache[key]
     }
 }`}
-</CodeBlock>
+  </CodeBlock>
 
   <CodeBlock language="kotlin" title="Android Offline Implementation">
 {`// Room database for offline storage
@@ -306,7 +306,7 @@ abstract class ShoppisDatabase : RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     ShoppisDatabase::class.java,
-                    "shopis_database"
+                    "shoppis_database"
                 ).build()
                 INSTANCE = instance
                 instance
@@ -451,7 +451,7 @@ abstract class ShoppisDatabase : RoomDatabase() {
   </div>
 
   <Note type="important" title="Support Contact">
-    For issues not resolved by troubleshooting, contact our support team through the app's Help section or email support@shopis.com with your device model and app version.
+    For issues not resolved by troubleshooting, contact our support team through the app's Help section or email support@shoppis.com with your device model and app version.
   </Note>
 
   <InfoBox type="success" title="App Store Reviews">
