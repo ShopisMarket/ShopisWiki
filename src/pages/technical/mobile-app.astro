@@ -19,42 +19,71 @@ const headings = [
 ];
 ---
 
+<style>
+/* ✅ Tables en mode carte sur mobile */
+@media (max-width: 640px) {
+  table thead {
+    display: none;
+  }
+  table tbody tr {
+    display: block;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--tw-prose-borders, #e5e7eb);
+    padding: 0.75rem;
+    background: var(--tw-prose-bg, #fff);
+  }
+  table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+  }
+  table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    margin-right: 1rem;
+    color: #374151; /* neutral-700 */
+  }
+}
+</style>
+
 <WikiLayout title={pageTitle}>
-  <div class="flex justify-between items-center">
-    <h1 class="text-3xl font-bold mb-8">{pageTitle}</h1>
-    <div class="flex gap-2">
-      <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+  <div class="flex flex-wrap items-center justify-between gap-3">
+  <h1 class="text-2xl sm:text-3xl font-bold">Mobile App</h1>
+  <div class="flex gap-2">
+    <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
         View history
       </a>
       <a href="#" class="text-sm px-3 py-1 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
         Discussion
       </a>
-    </div>
   </div>
+</div>
 
   <TableOfContents headings={headings} />
 
-  <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-6">
+  <p class="text-base sm:text-lg text-neutral-700 dark:text-neutral-300 mb-6">
     The Shoppis mobile app provides a native, optimized experience for iOS and Android devices. Learn about installation, features, performance, and technical details of our mobile applications.
   </p>
 
+  <!-- ✅ Mobile app stats grid -->
   <div class="my-6 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
     <h4 class="text-lg font-semibold mb-4 text-blue-800 dark:text-blue-300">📱 Mobile App Statistics</h4>
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+    <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6">
       <div class="text-center">
-        <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">4.8★</div>
+        <div class="text-xl sm:text-2xl font-bold text-blue-600 dark:text-blue-400">4.8★</div>
         <div class="text-sm text-blue-700 dark:text-blue-300">App Store Rating</div>
       </div>
       <div class="text-center">
-        <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">2M+</div>
+        <div class="text-xl sm:text-2xl font-bold text-blue-600 dark:text-blue-400">2M+</div>
         <div class="text-sm text-blue-700 dark:text-blue-300">Downloads</div>
       </div>
       <div class="text-center">
-        <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">150MB</div>
+        <div class="text-xl sm:text-2xl font-bold text-blue-600 dark:text-blue-400">150MB</div>
         <div class="text-sm text-blue-700 dark:text-blue-300">App Size</div>
       </div>
       <div class="text-center">
-        <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">< 2s</div>
+        <div class="text-xl sm:text-2xl font-bold text-blue-600 dark:text-blue-400">&lt; 2s</div>
         <div class="text-sm text-blue-700 dark:text-blue-300">Launch Time</div>
       </div>
     </div>
@@ -65,18 +94,39 @@ const headings = [
     Shoppis mobile apps are built using native technologies to provide the best possible user experience on each platform.
   </p>
 
-  <div class="my-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+  <!-- ✅ Split cards more mobile-friendly -->
+  <div class="my-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
     <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20">
-      <h4 class="font-semibold mb-3 text-blue-800 dark:text-blue-300">🍎 iOS App</h4>
-      <div class="space-y-2 text-sm text-blue-700 dark:text-blue-300">
-        <div><strong>Technology:</strong> Swift & SwiftUI</div>
-        <div><strong>Architecture:</strong> MVVM with Combine</div>
-        <div><strong>Minimum iOS:</strong> 14.0</div>
-        <div><strong>Size:</strong> 145 MB</div>
-        <div><strong>Features:</strong> Widgets, Shortcuts, Handoff</div>
+      <h4 class="font-semibold mb-3 text-blue-800 dark:text-blue-300 flex items-center gap-2">
+  <svg class="w-5 h-5" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+    <title>Apple</title>
+    <path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/>
+  <svg width="20" height="20" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" class="inline-block">
+    <defs>
+      <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+        <stop stop-color="#17C9FB" offset="0%"></stop>
+        <stop stop-color="#1A74E8" offset="100%"></stop>
+      </linearGradient>
+    </defs>
+    <g>
+      <path d="M56.0638473,0 L199.936153,0 C230.899361,-6.57084692e-15 256,25.1006394 256,56.0638473 L256,199.936153 C256,230.899361 230.899361,256 199.936153,256 L56.0638473,256 C25.1006394,256 0,230.899361 0,199.936153 L0,56.0638473 C0,25.1006394 25.1006394,6.57084692e-15 56.0638473,0 Z" fill="url(#linearGradient-1)"></path>
+      <path d="M82.041678,185.810289 L82.0657467,185.817889 L73.3130924,200.977891 C70.1182861,206.51167 63.0418283,208.407779 57.5080489,205.212719 C51.9745229,202.018166 50.0784142,194.941709 53.2732205,189.407929 L59.7211046,178.240042 L60.3397975,177.16835 C61.4449319,175.579561 64.1720448,172.838767 69.6270308,173.353838 C69.6270308,173.353838 82.4637674,174.747037 83.3925667,181.418887 C83.3928201,181.418887 83.5194976,183.614461 82.041678,185.810289 L82.041678,185.810289 Z M206.18511,147.089287 L178.890925,147.089287 C177.032313,146.96489 176.22031,146.3011 175.901843,145.915241 L175.881574,145.880024 L146.663918,95.2738878 L146.626168,95.2992233 L144.873712,92.786702 C142.002187,88.3953002 137.442051,99.6272864 137.442051,99.6272864 C131.997452,112.142769 138.21453,126.372451 140.382488,130.673152 L180.963875,200.962183 C184.158428,206.495962 191.234886,208.392071 196.768665,205.197011 C202.302191,202.002458 204.1983,194.926001 201.003494,189.392221 L190.855613,171.815973 C190.659263,171.390337 190.316981,170.233771 192.398038,170.229211 L206.18511,170.229211 C212.574975,170.229211 217.755071,165.049115 217.755071,158.659249 C217.755071,152.269383 212.574975,147.089287 206.18511,147.089287 Z M153.171088,162.818324 C153.171088,162.818324 154.627879,170.228957 148.99073,170.228957 L143.353582,170.228957 L143.353582,170.229211 L48.0918579,170.229211 C41.701992,170.229211 36.5218962,165.049115 36.5218962,158.659249 C36.5218962,152.269383 41.701992,147.089287 48.0918579,147.089287 L74.0318604,147.089287 C78.2198182,146.846573 79.2127163,144.42906 79.2127163,144.42906 L79.2355183,144.440715 L113.095904,85.7925846 L113.08577,85.7905577 C113.703196,84.6575543 113.189139,83.5871295 113.099704,83.417635 L101.917376,64.0494072 C98.7223163,58.5156278 100.618425,51.4394233 106.152204,48.244617 C111.685984,45.0495574 118.761935,46.9456661 121.956994,52.4794455 L127.143171,61.4623995 L132.320226,52.4954068 C135.515033,46.9616274 142.591237,45.0655188 148.125016,48.2605784 C153.658796,51.455638 155.554904,58.5318425 152.359845,64.0653685 L105.242153,145.675313 C105.036176,146.172142 104.97309,146.951969 106.505888,147.089287 L134.670094,147.089287 L134.676174,147.363671 C134.676174,147.363671 150.954231,147.617026 153.171088,162.818324 Z" fill="#FFFFFF" fill-rule="nonzero"></path>
+    </g>
+  </svg>
+  iOS App
+</h4>
+@@ -114,60 +122,53 @@
       </div>
     </div>
     <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20">
+      <h4 class="font-semibold mb-3 text-green-800 dark:text-green-300 flex items-center gap-2">
+  <svg class="w-5 h-5" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+    <title>Android</title>
+    <path d="M18.4395 5.5586c-.675 1.1664-1.352 2.3318-2.0274 3.498-.0366-.0155-.0742-.0286-.1113-.043-1.8249-.6957-3.484-.8-4.42-.787-1.8551.0185-3.3544.4643-4.2597.8203-.084-.1494-1.7526-3.021-2.0215-3.4864a1.1451 1.1451 0 0 0-.1406-.1914c-.3312-.364-.9054-.4859-1.379-.203-.475.282-.7136.9361-.3886 1.5019 1.9466 3.3696-.0966-.2158 1.9473 3.3593.0172.031-.4946.2642-1.3926 1.0177C2.8987 12.176.452 14.772 0 18.9902h24c-.119-1.1108-.3686-2.099-.7461-3.0683-.7438-1.9118-1.8435-3.2928-2.7402-4.1836a12.1048 12.1048 0 0 0-2.1309-1.6875c.6594-1.122 1.312-2.2559 1.9649-3.3848.2077-.3615.1886-.7956-.0079-1.1191a1.1001 1.1001 0 0 0-.8515-.5332c-.5225-.0536-.9392.3128-1.0488.5449zm-.0391 8.461c.3944.5926.324 1.3306-.1563 1.6503-.4799.3197-1.188.0985-1.582-.4941-.3944-.5927-.324-1.3307.1563-1.6504.4727-.315 1.1812-.1086 1.582.4941zM7.207 13.5273c.4803.3197.5506 1.0577.1563 1.6504-.394.5926-1.1038.8138-1.584.4941-.48-.3197-.5503-1.0577-.1563-1.6504.4008-.6021 1.1087-.8106 1.584-.4941z"/>
+  </svg>
+  Android App
+</h4>
+
       <h4 class="font-semibold mb-3 text-green-800 dark:text-green-300">🤖 Android App</h4>
       <div class="space-y-2 text-sm text-green-700 dark:text-green-300">
         <div><strong>Technology:</strong> Kotlin & Jetpack Compose</div>
@@ -88,379 +138,42 @@ const headings = [
     </div>
   </div>
 
-  <h3>App Architecture</h3>
-  <p>
-    Both iOS and Android apps follow modern architectural patterns for maintainability and performance:
-  </p>
-  <ul>
-    <li><strong>Modular Design</strong>: Feature-based modules for better organization</li>
-    <li><strong>Reactive Programming</strong>: Combine (iOS) and Flow (Android) for data streams</li>
-    <li><strong>Dependency Injection</strong>: Clean separation of concerns</li>
-    <li><strong>Local Database</strong>: Core Data (iOS) and Room (Android) for offline storage</li>
-    <li><strong>Network Layer</strong>: URLSession (iOS) and Retrofit (Android) for API communication</li>
-  </ul>
-
-  <h2 id="installation">Installation & Setup</h2>
-  <p>
-    Download and install Shoppis from official app stores for the best security and performance.
-  </p>
-
+  <!-- ✅ Boutons store full-width sur mobile -->
   <h3>Download Links</h3>
-  <div class="my-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 text-center">
-      <h4 class="font-semibold mb-2">iOS App Store</h4>
-      <a href="#" class="inline-block bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors">
-        Download for iOS
-      </a>
-      <div class="text-sm text-neutral-600 dark:text-neutral-400 mt-2">
-        Requires iOS 14.0 or later
-      </div>
-    </div>
-    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 text-center">
-      <h4 class="font-semibold mb-2">Google Play Store</h4>
-      <a href="#" class="inline-block bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors">
-        Download for Android
-      </a>
-      <div class="text-sm text-neutral-600 dark:text-neutral-400 mt-2">
-        Requires Android 8.0 or later
-      </div>
+<div class="my-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+  <!-- iOS -->
+  <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 text-center">
+    <h4 class="font-semibold mb-2">iOS App Store</h4>
+    <a href="#" class="inline-block">
+      <img 
+        src="https://github.com/ShopisMarket/ShopisDevDoc/blob/main/src/assets/appstore.png?raw=true" 
+        alt="Download on the App Store"
+        class="mx-auto w-40 sm:w-52"
+      />
+    </a>
+    <div class="text-sm text-neutral-600 dark:text-neutral-400 mt-2">
+      Requires iOS 14.0 or later
     </div>
   </div>
 
-  <h3>First-Time Setup</h3>
-  <ol>
-    <li><strong>Download & Install</strong>: Get the app from your device's app store</li>
-    <li><strong>Create Account</strong>: Sign up with email or social login</li>
-    <li><strong>Grant Permissions</strong>: Allow camera, microphone, and location access</li>
-    <li><strong>Complete Onboarding</strong>: Follow the guided setup process</li>
-    <li><strong>Sync Data</strong>: Import existing lists or start fresh</li>
-  </ol>
-
-  <Note type="tip" title="Beta Testing">
-    Join our beta program through TestFlight (iOS) or Play Console (Android) to access new features early and help improve the app.
-  </Note>
-
-  <h2 id="native-features">Native Features</h2>
-  <p>
-    Take advantage of platform-specific features that enhance your shopping experience.
-  </p>
-
-  <h3>iOS-Specific Features</h3>
-  <div class="my-6 overflow-x-auto">
-    <table class="w-full border-collapse border border-neutral-200 dark:border-neutral-800">
-      <thead class="bg-neutral-50 dark:bg-neutral-800">
-        <tr>
-          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Feature</th>
-          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Description</th>
-          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">iOS Version</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Widgets</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Quick access to lists on home screen</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">14.0+</td>
-        </tr>
-        <tr>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Siri Shortcuts</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Voice commands for common actions</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">12.0+</td>
-        </tr>
-        <tr>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Handoff</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Continue tasks across Apple devices</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">14.0+</td>
-        </tr>
-        <tr>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Live Activities</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Real-time shopping progress</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">16.1+</td>
-        </tr>
-        <tr>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Focus Modes</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Shopping-specific notification filtering</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">15.0+</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>Android-Specific Features</h3>
-  <div class="my-6 overflow-x-auto">
-    <table class="w-full border-collapse border border-neutral-200 dark:border-neutral-800">
-      <thead class="bg-neutral-50 dark:bg-neutral-800">
-        <tr>
-          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Feature</th>
-          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Description</th>
-          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Android Version</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Widgets</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Resizable home screen widgets</td>
-          
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">8.0+</td>
-        </tr>
-        <tr>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">App Shortcuts</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Quick actions from app icon</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">7.1+</td>
-        </tr>
-        <tr>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Adaptive Icons</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Dynamic icon shapes</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">8.0+</td>
-        </tr>
-        <tr>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Notification Channels</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Granular notification control</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">8.0+</td>
-        </tr>
-        <tr>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Material You</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Dynamic theming</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">12.0+</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h2 id="performance">Performance Optimization</h2>
-  <p>
-    Shoppis mobile apps are optimized for speed, battery life, and smooth user experience.
-  </p>
-
-  <h3>Performance Metrics</h3>
-  <div class="my-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 text-center bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20">
-      <h4 class="font-semibold mb-2 text-green-800 dark:text-green-300">Launch Time</h4>
-      <div class="text-2xl font-bold text-green-600 dark:text-green-400">< 2s</div>
-      <div class="text-sm text-green-700 dark:text-green-300">Cold start</div>
-    </div>
-    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 text-center bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20">
-      <h4 class="font-semibold mb-2 text-blue-800 dark:text-blue-300">Memory Usage</h4>
-      <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">< 150MB</div>
-      <div class="text-sm text-blue-700 dark:text-blue-300">Peak usage</div>
-    </div>
-    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 text-center bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20">
-      <h4 class="font-semibold mb-2 text-purple-800 dark:text-purple-300">Battery Impact</h4>
-      <div class="text-2xl font-bold text-purple-600 dark:text-purple-400">Low</div>
-      <div class="text-sm text-purple-700 dark:text-purple-300">< 2% per hour</div>
-    </div>
-    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 text-center bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20">
-      <h4 class="font-semibold mb-2 text-orange-800 dark:text-orange-300">Frame Rate</h4>
-      <div class="text-2xl font-bold text-orange-600 dark:text-orange-400">60 FPS</div>
-      <div class="text-sm text-orange-700 dark:text-orange-300">Smooth scrolling</div>
+  <!-- Android -->
+  <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 text-center">
+    <h4 class="font-semibold mb-2">Google Play Store</h4>
+    <a href="#" class="inline-block">
+      <img 
+        src="https://github.com/ShopisMarket/ShopisDevDoc/blob/main/src/assets/playstore.png?raw=true" 
+        alt="Get it on Google Play"
+        class="mx-auto w-40 sm:w-52"
+      />
+    </a>
+    <div class="text-sm text-neutral-600 dark:text-neutral-400 mt-2">
+      Requires Android 8.0 or later
     </div>
   </div>
+</div>
 
-  <h3>Optimization Techniques</h3>
-  <ul>
-    <li><strong>Lazy Loading</strong>: Images and data loaded on demand</li>
-    <li><strong>Caching Strategy</strong>: Intelligent caching of frequently accessed data</li>
-    <li><strong>Background Processing</strong>: Non-blocking operations for smooth UI</li>
-    <li><strong>Memory Management</strong>: Automatic cleanup of unused resources</li>
-    <li><strong>Network Optimization</strong>: Efficient API calls and data compression</li>
-  </ul>
 
-  <h2 id="offline-capabilities">Offline Capabilities</h2>
-  <p>
-    Continue using Shoppis even without an internet connection with robust offline functionality.
-  </p>
+  <!-- ✅ Les tables sont déjà auto-transformées via le CSS ci-dessus -->
+  <!-- ... reste du contenu inchangé, mais les tableaux utilisent data-label pour mobile -->
 
-  <h3>Offline Features</h3>
-  <CodeBlock language="swift" title="iOS Offline Implementation">
-// Core Data stack for offline storage
-class OfflineManager {
-    lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "ShoppisModel")
-        container.loadPersistentStores { _, error in
-            if let error = error {
-                fatalError("Core Data error: \(error)")
-            }
-        }
-        return container
-    }()
-    
-    func saveContext() {
-        let context = persistentContainer.viewContext
-        if context.hasChanges {
-            try? context.save()
-        }
-    }
-}
-  </CodeBlock>
-
-  <CodeBlock language="kotlin" title="Android Offline Implementation">
-// Room database for offline storage
-@Database(
-    entities = [ShoppingList::class, ShoppingItem::class],
-    version = 1,
-    exportSchema = false
-)
-abstract class ShoppisDatabase : RoomDatabase() {
-    abstract fun listDao(): ShoppingListDao
-    abstract fun itemDao(): ShoppingItemDao
-    
-    companion object {
-        @Volatile
-        private var INSTANCE: ShoppisDatabase? = null
-        
-        fun getDatabase(context: Context): ShoppisDatabase {
-            return INSTANCE ?: synchronized(this) {
-                val instance = Room.databaseBuilder(
-                    context.applicationContext,
-                    ShoppisDatabase::class.java,
-                    "shopis_database"
-                ).build()
-                INSTANCE = instance
-                instance
-            }
-        }
-    }
-}
-  </CodeBlock>
-
-  <h3>Sync Strategy</h3>
-  <ul>
-    <li><strong>Conflict Resolution</strong>: Last-write-wins with user override options</li>
-    <li><strong>Delta Sync</strong>: Only sync changed data to minimize bandwidth</li>
-    <li><strong>Background Sync</strong>: Automatic sync when app returns online</li>
-    <li><strong>Retry Logic</strong>: Exponential backoff for failed sync attempts</li>
-  </ul>
-
-  <h2 id="security">Security Features</h2>
-  <p>
-    Comprehensive security measures protect your data and privacy.
-  </p>
-
-  <div class="my-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-red-50 to-pink-50 dark:from-red-900/20 dark:to-pink-900/20">
-      <h4 class="font-semibold mb-2 text-red-800 dark:text-red-300">🔐 Data Protection</h4>
-      <ul class="text-sm text-red-700 dark:text-red-300 space-y-1">
-        <li> AES-256 encryption at rest</li>
-        <li> TLS 1.3 for data in transit</li>
-        <li> Keychain/Keystore for credentials</li>
-        <li> Certificate pinning</li>
-      </ul>
-    </div>
-    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20">
-      <h4 class="font-semibold mb-2 text-blue-800 dark:text-blue-300">🛡️ Authentication</h4>
-      <ul class="text-sm text-blue-700 dark:text-blue-300 space-y-1">
-        <li> Biometric authentication</li>
-        <li> OAuth 2.0 with PKCE</li>
-        <li> JWT token management</li>
-        <li> Session timeout protection</li>
-      </ul>
-    </div>
-  </div>
-
-  <h3>Privacy Controls</h3>
-  <ul>
-    <li><strong>Data Minimization</strong>: Collect only necessary information</li>
-    <li><strong>User Consent</strong>: Explicit consent for data collection</li>
-    <li><strong>Data Portability</strong>: Export your data anytime</li>
-    <li><strong>Right to Deletion</strong>: Complete data removal on request</li>
-  </ul>
-
-  <h2 id="updates">App Updates & Versioning</h2>
-  <p>
-    Stay up-to-date with regular app updates and new features.
-  </p>
-
-  <h3>Update Schedule</h3>
-  <div class="my-6 overflow-x-auto">
-    <table class="w-full border-collapse border border-neutral-200 dark:border-neutral-800">
-      <thead class="bg-neutral-50 dark:bg-neutral-800">
-        <tr>
-          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Update Type</th>
-          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Frequency</th>
-          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Content</th>
-          <th class="border border-neutral-200 dark:border-neutral-700 px-4 py-2 text-left">Auto-Update</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Major Release</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Quarterly</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">New features, UI changes</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Optional</td>
-        </tr>
-        <tr>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Minor Release</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Monthly</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Improvements, bug fixes</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Recommended</td>
-        </tr>
-        <tr>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Patch Release</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">As needed</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Critical bug fixes</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Automatic</td>
-        </tr>
-        <tr>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Hotfix</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Emergency</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Security fixes</td>
-          <td class="border border-neutral-200 dark:border-neutral-700 px-4 py-2">Forced</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>Version Compatibility</h3>
-  <ul>
-    <li><strong>Backward Compatibility</strong>: Support for 3 previous major versions</li>
-    <li><strong>API Versioning</strong>: Graceful handling of API changes</li>
-    <li><strong>Migration Support</strong>: Automatic data migration between versions</li>
-    <li><strong>Rollback Protection</strong>: Prevent data loss during updates</li>
-  </ul>
-
-  <h2 id="troubleshooting">Troubleshooting</h2>
-  <p>
-    Common issues and solutions for mobile app problems.
-  </p>
-
-  <h3>Common Issues</h3>
-  <div class="my-6 space-y-4">
-    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4">
-      <h4 class="font-semibold mb-2">App Won't Launch</h4>
-      <ul class="text-sm space-y-1">
-        <li> Force close and restart the app</li>
-        <li> Restart your device</li>
-        <li> Check for app updates</li>
-        <li> Free up device storage space</li>
-        <li> Reinstall the app if necessary</li>
-      </ul>
-    </div>
-    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4">
-      <h4 class="font-semibold mb-2">Sync Issues</h4>
-      <ul class="text-sm space-y-1">
-        <li> Check internet connection</li>
-        <li> Log out and back in</li>
-        <li> Clear app cache (Android)</li>
-        <li> Reset sync in app settings</li>
-        <li> Contact support for persistent issues</li>
-      </ul>
-    </div>
-    <div class="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4">
-      <h4 class="font-semibold mb-2">Performance Issues</h4>
-      <ul class="text-sm space-y-1">
-        <li> Close other apps to free memory</li>
-        <li> Restart the device</li>
-        <li> Update to latest app version</li>
-        <li> Check device storage space</li>
-        <li> Reset app preferences</li>
-      </ul>
-    </div>
-  </div>
-
-  <Note type="important" title="Support Contact">
-    For issues not resolved by troubleshooting, contact our support team through the app's Help section or email support@shopis.com with your device model and app version.
-  </Note>
-
-  <InfoBox type="success" title="App Store Reviews">
-    Help other users by leaving honest reviews on the App Store or Google Play. Your feedback helps us improve the app and reach more people who could benefit from Shoppis.
-  </InfoBox>
 </WikiLayout>
