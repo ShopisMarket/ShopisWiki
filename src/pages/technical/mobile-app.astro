@@ -48,17 +48,18 @@ const headings = [
 </style>
 
 <WikiLayout title={pageTitle}>
-  <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
-    <h1 class="text-2xl sm:text-3xl font-bold">{pageTitle}</h1>
-    <div class="flex gap-2">
-      <a href="#" class="min-h-[44px] text-sm px-3 py-2 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
-        View history
-      </a>
-      <a href="#" class="min-h-[44px] text-sm px-3 py-2 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
-        Discussion
-      </a>
-    </div>
+  <div class="flex flex-wrap items-center justify-between gap-3">
+  <h1 class="text-2xl sm:text-3xl font-bold">Mobile App</h1>
+  <div class="flex gap-2">
+    <a href="#" class="min-h-[44px] text-sm px-3 py-2 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+      View history
+    </a>
+    <a href="#" class="min-h-[44px] text-sm px-3 py-2 border border-neutral-200 dark:border-neutral-800 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800">
+      Discussion
+    </a>
   </div>
+</div>
+
 
   <TableOfContents headings={headings} />
 
