@@ -28,6 +28,10 @@ html {
 .prose h4 {
   @apply text-base sm:text-lg font-medium mt-5 mb-2 text-neutral-900 dark:text-white;
 }
+.prose h5 {
+  @apply text-base sm:text-lg font-medium mt-5 mb-2 text-neutral-900 dark:text-white;
+  color : black;
+}
 
 .prose p {
   @apply my-4 leading-7;
